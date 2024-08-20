@@ -7,8 +7,8 @@
 
 #include "WiFiS3.h"
   
-const char *ssid_Router     = "FYI_2.4G"; //Enter the router name
-const char *password_Router = "freenove208"; //Enter the router password
+const char *ssid_Router     = "********"; //Enter the router name
+const char *password_Router = "********"; //Enter the router password
 
 void setup(){
   Serial.begin(115200);

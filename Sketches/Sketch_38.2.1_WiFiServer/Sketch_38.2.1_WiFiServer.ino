@@ -9,8 +9,8 @@
 #include "WiFiS3.h"
 
 #define port 80
-const char *ssid_Router      = "FYI_2.4G";  //input your wifi name
-const char *password_Router  = "freenove208";  //input your wifi passwords
+const char *ssid_Router      = "********";  //input your wifi name
+const char *password_Router  = "********";  //input your wifi passwords
 WiFiServer  server(port);
 
 void setup()

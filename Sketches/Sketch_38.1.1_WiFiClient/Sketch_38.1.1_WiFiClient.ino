@@ -6,9 +6,9 @@
 **********************************************************************/
 #include "WiFiS3.h"
 
-const char *ssid_Router     =  "FYI_2.4G"; //Enter the router name
-const char *password_Router =  "freenove208"; //Enter the router password
-#define     REMOTE_IP          "192.168.1.128"  //input the remote server which is you want to connect
+const char *ssid_Router     =  "********"; //Enter the router name
+const char *password_Router =  "********"; //Enter the router password
+#define     REMOTE_IP          "********"  //input the remote server which is you want to connect
 #define     REMOTE_PORT         8888       //input the remote port which is the remote provide
 WiFiClient client;
 

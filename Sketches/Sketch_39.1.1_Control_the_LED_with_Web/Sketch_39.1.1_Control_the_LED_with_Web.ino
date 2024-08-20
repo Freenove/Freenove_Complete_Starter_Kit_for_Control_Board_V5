@@ -8,8 +8,8 @@
 #include "WiFiS3.h"
 
 // Replace with your network credentials
- char* ssid     = "FYI_2.4G";
- char* password = "freenove208"; 
+ char* ssid     = "********";
+ char* password = "********"; 
 
 // Set web server port number to 80
 WiFiServer server(80);
