@@ -20,6 +20,12 @@ byte frame[8][12] = {
   { 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0 }
 };
 
+unsigned long frame2[] = {
+  0x0000F010,
+  0x82942042,
+  0x641080F0
+};
+
 const uint32_t fullOn[] = {
   0xffffffff,
   0xffffffff,
@@ -40,6 +46,7 @@ void setup() {
 }
 
 void loop() {
+  //matrix.loadFrame(frame2);
   matrix.renderBitmap(frame, 8, 12);
   delay(250);
 }
