@@ -1,8 +1,10 @@
 /**********************************************************************
-  Filename    : Sketch_20.2.2_4_Digit_7-Segment_Display
-  Description : 4-digit 7-segment Display
-  Auther      : www.freenove.com
-  Modification: 2024/08/05
+  Filename     : Sketch_20.2.2_4_Digit_7-Segment_Display
+  Description  : 4-digit 7-segment Display
+  Auther       : www.freenove.com
+  Modification : 2024/08/05
+  CallbackTimerR4 is provided by Kingsman
+  Urls         : https://github.com/embedded-kiddie/CallbackTimerR4
 **********************************************************************/
 
 #include "Arduino.h"

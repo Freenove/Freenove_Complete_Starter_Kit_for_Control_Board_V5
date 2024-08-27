@@ -3,6 +3,8 @@
   Description : LCD1602 Clock
   Auther      : www.freenove.com
   Modification: 2024/08/05
+  CallbackTimerR4 is provided by Kingsman
+  Urls        : https://github.com/embedded-kiddie/CallbackTimerR4
 **********************************************************************/
 
 #include <LiquidCrystal_I2C.h>
