@@ -6,8 +6,8 @@
 **********************************************************************/
 
 // set pin numbers:
-int led1Pin = 4;            // the number of the LED1 pin
-int led2Pin = 5;            // the number of the LED2 pin
+int led1Pin = 5;            // the number of the LED1 pin
+int led2Pin = 4;            // the number of the LED2 pin
 
 void setup() {
   // initialize the LED pin as an output:
