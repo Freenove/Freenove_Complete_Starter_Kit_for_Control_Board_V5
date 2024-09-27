@@ -25,7 +25,7 @@ void loop() {
   static unsigned int counter;
   if (counter++ % 8 == 0)               // Reduce the self-increasing speed of offset
     offset < 15 ? offset++ : offset = 0;// offset increases
-  // 输出PWM波形
+  // Output PWM waveform
   for (int i = 0; i < 64; i++) {  // The cycle of PWM is 64 cycles
     byte data = 0;                // Define a variable to represent the output state of this loop
     for (int j = 0; j < 8; j++)   // Calculate the output state of this loop

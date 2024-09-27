@@ -13,7 +13,7 @@ void setup() {
   pinMode(sensorPin, INPUT);                       // initialize the sensor pin as input
   pinMode(ledPin, OUTPUT);                         // initialize the LED pin as output
   pinMode(buzzerPin, OUTPUT);                      // initialize the LED pin as output
-  attachInterrupt(sensorPin, sensorEven, CHANGE);  // 上边缘触发中断 0，调用 testProgram 函数
+  attachInterrupt(sensorPin, sensorEven, CHANGE);  
 }
 
 void alarm(int times) {
