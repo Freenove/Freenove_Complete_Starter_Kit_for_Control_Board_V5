@@ -48,11 +48,11 @@ void loop() {
   static byte inDataNum = 0;
   while (Serial.available() > 0)
   {
-    byte inByte = Serial.read();//读取串口数据
-    if (inByte == SerialCommand.transStart)//接收开始标志
+    byte inByte = Serial.read();// Read the serial port data
+    if (inByte == SerialCommand.transStart)// Receive the start flag
       inDataNum = 0;
-    inData[inDataNum++] = inByte;//接收数据
-    if (inByte == SerialCommand.transEnd)//接收结束标志
+    inData[inDataNum++] = inByte;// Receive data
+    if (inByte == SerialCommand.transEnd)// End of receive flag
       if (inData[0] == SerialCommand.transStart)
         break;
   }
@@ -62,26 +62,26 @@ void loop() {
   else
     digitalWrite(ledPin, LOW);
   keyscan();
-  if (inData[0] == SerialCommand.transStart && inData[inDataNum - 1] == SerialCommand.transEnd)//校验开始和结束标志
+  if (inData[0] == SerialCommand.transStart && inData[inDataNum - 1] == SerialCommand.transEnd)// Verify the start and end flags
   {
     Serial.write(SerialCommand.transStart);
     if (inData[1] == SerialCommand.requestEcho)
     {
       Serial.write(SerialCommand.echo);
     }
-    else if (inData[1] == SerialCommand.requestAnalog)//请求一个模拟值
+    else if (inData[1] == SerialCommand.requestAnalog)// Request an analog value
     {
       int analog = analogRead(analogPins[0]);
       Serial.write(SerialCommand.Analog);
       Serial.write(analog / 128);
       Serial.write(analog % 128);
     }
-    else if (inData[1] == SerialCommand.requestDigital)//请求一个数字值
+    else if (inData[1] == SerialCommand.requestDigital)// Request a numeric value
     {
       Serial.write(SerialCommand.Digital);
       Serial.write(keyValue);
     }
-    else if (inData[1] == SerialCommand.requestAnalogs)//请求多个模拟值
+    else if (inData[1] == SerialCommand.requestAnalogs)// Request multiple simulated values
     {
       int analogs[inData[2]];
       for (int i = 0; i < inData[2]; i++)
