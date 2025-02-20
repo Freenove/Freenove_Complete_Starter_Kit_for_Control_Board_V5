@@ -4,7 +4,7 @@ C language
 
 .. toctree::
    :maxdepth: 1
-   :caption: Important Information
+   :caption: Welcome
    :glob:
 
    C/Welcome.rst

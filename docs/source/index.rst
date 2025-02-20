@@ -1,5 +1,5 @@
 ######################################################
-Freenove_Complete_Starter_Kit_for_Control_Board_V5
+Freenove Complete Starter Kit for Control Board V5
 ######################################################
 
 .. toctree::
