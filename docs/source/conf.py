@@ -15,7 +15,6 @@ sys.path.insert(0, pathlib.Path(__file__).parents[2].resolve().as_posix())
 os.system("rm -r freenove_Kit")
 os.system("git clone --depth 1 https://github.com/Freenove/Freenove_Complete_Starter_Kit_for_Control_Board_V5 freenove_Kit")
 
-
 def prepend_to_file(file_path, content):
     with open(file_path, "r+") as file:
         original = file.read()
