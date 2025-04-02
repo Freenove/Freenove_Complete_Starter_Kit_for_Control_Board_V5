@@ -1,5 +1,5 @@
 /**********************************************************************
-  Filename    : Sketch_7.3.1_Control_LED_through_Photoresistor
+  Filename    : Sketch_8.3.1_Control_LED_through_Photoresistor
   Description : Control LED through Photoresistor
   Auther      : www.freenove.com
   Modification: 2024/08/05

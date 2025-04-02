@@ -1,5 +1,5 @@
 /**********************************************************************
-  Filename    : Sketch_19.2.1_LCD1602_Clock
+  Filename    : Sketch_20.2.1_LCD1602_Clock
   Description : LCD1602 Clock
   Auther      : www.freenove.com
   Modification: 2024/08/05

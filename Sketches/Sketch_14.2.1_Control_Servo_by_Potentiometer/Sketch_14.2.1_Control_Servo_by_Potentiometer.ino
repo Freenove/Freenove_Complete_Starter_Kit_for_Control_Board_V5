@@ -1,5 +1,5 @@
 /**********************************************************************
-  Filename    : Sketch_13.2.1_Control_Servo_by_Potentiometer
+  Filename    : Sketch_14.2.1_Control_Servo_by_Potentiometer
   Description : Control Servo by Potentiometer
   Auther      : www.freenove.com
   Modification: 2024/08/05

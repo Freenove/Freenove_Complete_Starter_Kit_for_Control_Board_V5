@@ -1,5 +1,5 @@
 /**********************************************************************
-  Filename    : Sketch_33.2.1_Rotary_Encoder_and_LED
+  Filename    : Sketch_34.2.1_Rotary_Encoder_and_LED
   Description : Rotary Encoder and LED
   Auther      : www.freenove.com 
   Modification: 2024/08/05

@@ -1,5 +1,5 @@
 /**********************************************************************
-  Filename    : Sketch_25.1.1_Temperature_and_Humidity_Sensor
+  Filename    : Sketch_26.1.1_Temperature_and_Humidity_Sensor
   Description : Temperature & Humidity Sensor
   Auther      : www.freenove.com
   Modification: 2024/08/05

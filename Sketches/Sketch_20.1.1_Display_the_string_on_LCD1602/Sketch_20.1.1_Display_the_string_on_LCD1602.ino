@@ -1,5 +1,5 @@
 /**********************************************************************
-  Filename    : Sketch_19.1.1_Display_the_string_on_LCD1602
+  Filename    : Sketch_20.1.1_Display_the_string_on_LCD1602
   Description : Display the string on LCD1602
   Auther      : www.freenove.com
   Modification: 2024/08/05

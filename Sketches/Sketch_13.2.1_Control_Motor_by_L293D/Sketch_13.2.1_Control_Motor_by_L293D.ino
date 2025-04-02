@@ -1,5 +1,5 @@
 /**********************************************************************
-  Filename    : Sketch_12.2.1_Control_Motor_by_L293D
+  Filename    : Sketch_13.2.1_Control_Motor_by_L293D
   Description : Control Motor by L293D
   Auther      : www.freenove.com
   Modification: 2024/08/05

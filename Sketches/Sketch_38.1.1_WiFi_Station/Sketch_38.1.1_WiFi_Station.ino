@@ -1,5 +1,5 @@
 /**********************************************************************
-  Filename    : Sketch_37.1.1_WiFi_Station
+  Filename    : Sketch_38.1.1_WiFi_Station
   Description : Connect to your router using control board 
   Auther      : www.freenove.com
   Modification: 2024/08/05

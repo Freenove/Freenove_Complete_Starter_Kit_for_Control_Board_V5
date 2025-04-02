@@ -1,5 +1,5 @@
 /**********************************************************************
-  Filename    : Sketch 38.1.1_WiFi_Client
+  Filename    : Sketch 39.1.1_WiFi_Client
   Description : Use Control board's WiFi client feature to connect and communicate with a remote IP.
   Auther      : www.freenove.com
   Modification: 2024/08/05

@@ -1,5 +1,5 @@
 /**********************************************************************
-  Filename    : Sketch_31.1.1_Infrared_obstacle_avoidance_sensor_and_LED
+  Filename    : Sketch_32.1.1_Infrared_obstacle_avoidance_sensor_and_LED
   Description : Infrared obstacle avoidance sensor and LED
   Auther      : www.freenove.com
   Modification: 2024/08/05

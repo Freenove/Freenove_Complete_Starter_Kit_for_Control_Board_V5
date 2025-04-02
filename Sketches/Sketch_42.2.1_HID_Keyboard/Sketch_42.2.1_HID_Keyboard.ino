@@ -1,5 +1,5 @@
 /**********************************************************************
-  Filename    : Sketch_41.2.1_HID_Keyboard
+  Filename    : Sketch_42.2.1_HID_Keyboard
   
   Description : This code is designed to provide copy and paste functionality using two buttons with an Arduino Uno R4.
   When the button connected to pin 4 is pressed, a "copy" command (Ctrl + C) is sent to the computer.

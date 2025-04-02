@@ -1,5 +1,5 @@
 /**********************************************************************
-  Filename     : Sketch_4.2.1_Using_timer_to_implement_LED_blinking
+  Filename     : Sketch_7.2.1_Using_timer_to_implement_LED_blinking
   Description  : Using timer to implement LED blinking
   Auther       : www.freenove.com
   Modification : 2024/08/05

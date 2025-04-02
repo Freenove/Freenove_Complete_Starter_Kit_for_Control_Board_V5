@@ -1,5 +1,5 @@
 /**********************************************************************
-  Filename    : Sketch_30.2.1_U_shaped_photoelectric_sensor_and_buzzer
+  Filename    : Sketch_31.2.1_U_shaped_photoelectric_sensor_and_buzzer
   Description : U shaped photoelectric sensor and buzzer
   Auther      : www.freenove.com
   Modification: 2024/08/05

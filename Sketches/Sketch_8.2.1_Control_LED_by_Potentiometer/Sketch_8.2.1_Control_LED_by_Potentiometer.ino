@@ -1,5 +1,5 @@
 /**********************************************************************
-  Filename    : Sketch_7.2.1_Control_LED_by_Potentiometer
+  Filename    : Sketch_8.2.1_Control_LED_by_Potentiometer
   Description : Control LED by Potentiometer
   Auther      : www.freenove.com
   Modification: 2024/08/05

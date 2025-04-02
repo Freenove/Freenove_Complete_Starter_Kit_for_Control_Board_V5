@@ -1,5 +1,5 @@
 /**********************************************************************
-  Filename    : Sketch 38.2.1_WiFi_Server
+  Filename    : Sketch 39.2.1_WiFi_Server
   Description : Use Control board's WiFi server feature to wait for other WiFi devices to connect.
                 And communicate with them once a connection has been established.
   Auther      : www.freenove.com

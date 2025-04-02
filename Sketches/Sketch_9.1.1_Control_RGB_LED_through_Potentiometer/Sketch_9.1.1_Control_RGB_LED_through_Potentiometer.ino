@@ -1,5 +1,5 @@
 /**********************************************************************
-  Filename    : Sketch_8.1.1_Control_RGB_LED_through_Potentiometer
+  Filename    : Sketch_9.1.1_Control_RGB_LED_through_Potentiometer
   Description : Control RGB LED through Potentiometer
   Auther      : www.freenove.com
   Modification: 2024/08/05

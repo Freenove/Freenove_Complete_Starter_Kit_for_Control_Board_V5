@@ -1,5 +1,5 @@
 /**********************************************************************
-  Filename    : Sketch_33.1.1_Rotary_Encoder
+  Filename    : Sketch_34.1.1_Rotary_Encoder
   Description : Rotary Encoder
   Auther      : www.freenove.com
   Modification: 2024/08/05

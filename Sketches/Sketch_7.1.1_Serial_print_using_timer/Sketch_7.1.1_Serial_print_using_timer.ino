@@ -1,5 +1,5 @@
 /**********************************************************************
-  Filename     : SSketch_4.1.1_Serial_print_using_timer
+  Filename     : SSketch_7.1.1_Serial_print_using_timer
   Description  : Serial print using timer
   Auther       : www.freenove.com
   Modification : 2024/08/05
