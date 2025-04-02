@@ -111,7 +111,7 @@ Sketch Acceleration_Detection
 
 Library is a collection of code. We can use code provided by libraries to make programming simple.
 
-Click "Add .ZIP Library..." and then find Adafruit_MPU6050.zip in libraries folder (this folder is in the folder unzipped form the ZIP file we provided). These libraries make it easy to use MPU6050 module. 
+Click "Add .ZIP Library..." and then find **Adafruit_MPU6050.zip**, **Adafruit_BusIO.zip**, **Adafruit_Sensor.zip** in libraries folder (this folder is in the folder unzipped form the ZIP file we provided). These libraries make it easy to use MPU6050 module. 
 
 .. image:: ../_static/imgs/17_Acceleration_sensor/Chapter17_04.png
     :align: center
@@ -122,6 +122,8 @@ When these libraries are added, you can locate them in the libraries under Sketc
     :align: center
 
 Or, you can search Adafruit_MPU6050 on library manager to install.
+
+**Note: Be sure to select 'INSTALL All' during the installation process.**
 
 .. image:: ../_static/imgs/17_Acceleration_sensor/Chapter17_06.png
     :align: center
