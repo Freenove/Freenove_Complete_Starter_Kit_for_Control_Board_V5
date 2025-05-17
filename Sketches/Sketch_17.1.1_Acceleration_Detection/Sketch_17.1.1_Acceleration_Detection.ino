@@ -5,67 +5,40 @@
   Modification: 2024/08/05
 **********************************************************************/
 
-// Reference the library to be used by Adafruit_MPU6050
-#include <Adafruit_MPU6050.h>
-#include <Adafruit_Sensor.h>
-#include <Wire.h>
- 
-// Create an object for the MPU6050 sensor
-Adafruit_MPU6050 mpu;
- 
+#include "IMU_Fusion_SYC.h"
+
+IMU imu(Wire);
+
 void setup() {
-  // Initialize the serial communication
-  Serial.begin(9600);
-  // Check if the MPU6050 sensor is detected
-  if (!mpu.begin()) {
-    Serial.println("Failed to find MPU6050 chip");
-    while (1) {
-      delay(10);
-    }
-  }
-  Serial.println("MPU6050 connection successful!");
- 
-  // set accelerometer range to +-8G
-  mpu.setAccelerometerRange(MPU6050_RANGE_8_G);
-  // set gyro range to +- 500 deg/s
-  mpu.setGyroRange(MPU6050_RANGE_500_DEG);
-  // set filter bandwidth to 21 Hz
-  mpu.setFilterBandwidth(MPU6050_BAND_21_HZ);
-  // Add a delay for stability
-  delay(100);
+  // put your setup code here, to run once:
+  Serial.begin(9600);// Set baud rate
+  Wire.begin();
+  imu.begin(CHOOSE_MPU6050);// IMU initialization
+  imu.MPU6050_CalcGyroOffsets();// MPU6050 calibration
 }
- 
+
 void loop() {
-  // Get new sensor events with the readings
-  sensors_event_t a, g, temp;
-  mpu.getEvent(&a, &g, &temp);
- 
-  // Print out the acceleration readings in m/s^2
-  Serial.print("Acceleration:   X:");
-  Serial.print(a.acceleration.x);
-  Serial.print(", Y:");
-  Serial.print(a.acceleration.y);
-  Serial.print(", Z:");
-  Serial.print(a.acceleration.z);
-  Serial.println(" (m/s^2)");
- 
-  // Print out the rotation readings in rad/s
-  Serial.print("Rotation:       X:");
-  Serial.print(g.gyro.x);
-  Serial.print(", Y:");
-  Serial.print(g.gyro.y);
-  Serial.print(", Z:");
-  Serial.print(g.gyro.z);
-  Serial.println(" (rad/s)");
- 
-  // Print out the temperature reading in degrees Celsius
-  Serial.print("Temperature:    ");
-  Serial.print(temp.temperature);
-  Serial.println(" (degC)");
- 
-  // Add a blank line for readability
-  Serial.println("");
- 
-  // Add a delay to avoid flooding the serial monitor
-  delay(250);
+  // put your main code here, to run repeatedly:
+  imu.Calculate();// calculating data
+  Serial.println("\n****************************************************\n");
+  // Calculated data Output raw accelerometer and gyroscope data
+  Serial.print("accx:");
+  Serial.print(imu.getaccx());
+  Serial.print("\t");
+  Serial.print("accy:");
+  Serial.print(imu.getaccy());
+  Serial.print("\t");
+  Serial.print("accz:");
+  Serial.println(imu.getaccz());
+
+  Serial.print("gyrox:");
+  Serial.print(imu.getgyrox());
+  Serial.print("\t");
+  Serial.print("gyroy:");
+  Serial.print(imu.getgyroy());
+  Serial.print("\t");
+  Serial.print("gyroz:");
+  Serial.println(imu.getgyroz());
+  Serial.println("\n****************************************************\n");
+  delay(1000);
 }
