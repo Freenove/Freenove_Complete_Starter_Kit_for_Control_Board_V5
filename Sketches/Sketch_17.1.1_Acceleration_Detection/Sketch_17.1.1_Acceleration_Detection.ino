@@ -21,7 +21,7 @@ void loop() {
   // put your main code here, to run repeatedly:
   imu.Calculate();// calculating data
   Serial.println("\n****************************************************\n");
-  // Calculated data Output raw accelerometer and gyroscope data
+  // Calculated data Output accelerometer and gyroscope data
   Serial.print("accx:");
   Serial.print(imu.getaccx());
   Serial.print("\t");

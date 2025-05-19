@@ -18,7 +18,8 @@ void setup() {
 }
 
 void loop() {
-  imu.Calculate();                       // Calculating Angle
+  imu.Calculate();                       
+  // Calculating Angle
   Serial.print("\nangleX : ");
   Serial.print(imu.getAngleX());
   Serial.print("\tangleY : ");
