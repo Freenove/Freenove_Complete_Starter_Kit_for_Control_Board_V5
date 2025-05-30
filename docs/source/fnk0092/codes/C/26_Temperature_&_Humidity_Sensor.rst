@@ -9,23 +9,26 @@ Project Temperature & Humidity Sensor
 
 Now, let's try to get the temperature and humidity value of the current environment.
 
-+------------------------------------------------------+
-| Control board x1                                     |
-|                                                      |
-| |Chapter01_00|                                       |
-+--------------------------+---------------------------+
-| Breadboard x1            | GPIO Extension Board x1   |
-|                          |                           |
-| |Chapter02_00|           | |Chapter02_01|            |
-+------------------+-------+---------------------------+
-| USB cable x1     | Jumper M/M x8                     |
-|                  |                                   |
-| |Chapter01_02|   | |Chapter01_03|                    |
-+------------------+------+----------------------------+
-| Resistor 10kΩ x1        | DHT11 x1                   |
-|                         |                            |
-| |Chapter26_01|          |  |Chapter26_00|            |
-+-------------------------+----------------------------+
+.. table::
+    :align: center
+
+    +------------------------------------------------------+
+    | Control board x1                                     |
+    |                                                      |
+    | |Chapter01_00|                                       |
+    +--------------------------+---------------------------+
+    | Breadboard x1            | GPIO Extension Board x1   |
+    |                          |                           |
+    | |Chapter02_00|           | |Chapter02_01|            |
+    +------------------+-------+---------------------------+
+    | USB cable x1     | Jumper M/M x8                     |
+    |                  |                                   |
+    | |Chapter01_02|   | |Chapter01_03|                    |
+    +------------------+------+----------------------------+
+    | Resistor 10kΩ x1        | DHT11 x1                   |
+    |                         |                            |
+    | |Chapter26_01|          |  |Chapter26_00|            |
+    +-------------------------+----------------------------+
 
 .. |Chapter01_00| image:: ../_static/imgs/1_LED_Blink/Chapter01_00.png
 .. |Chapter01_02| image:: ../_static/imgs/1_LED_Blink/Chapter01_02.png
@@ -54,7 +57,6 @@ Circuit
 Use pin 10 on control board to connect DHT11.
 
 .. list-table:: 
-   :width: 100%
    :align: center
 
    * -  Schematic diagram
@@ -72,7 +74,7 @@ Sketch
 =========================
 
 Sketch Temperature_&_Humidity_Sensor
--------------------------
+-----------------------------------------------------
 
 This code uses a library named "DHTlib", if you have not installed it, please do so first.
 
@@ -111,6 +113,7 @@ In the code, we use the dht class provided by the DHT library to control DHT11. 
 Read DHT11 data and send the result to the serial port in the loop() function.
 
 .. code-block:: c
+    :linenos:
 
     // read DHT11 and judge the state according to the return value
     int chk = DHT.read11(dhtPin);

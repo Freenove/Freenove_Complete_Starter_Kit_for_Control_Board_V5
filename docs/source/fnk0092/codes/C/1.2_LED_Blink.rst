@@ -58,12 +58,14 @@ There are two ways to use comments of sketches.
 Contents behind "//" comment out the code in a single line.
 
 .. code-block:: C
+    :linenos:
 
     // this is a comment area in this line.
 
 The content in front of "//" will not be affected.
 
 .. code-block:: C
+    :linenos:
 
     delay(1000);              // wait for a second
 
@@ -72,12 +74,14 @@ The content in front of "//" will not be affected.
 Code can also be commented out by the contents starting with a "/*" and finishing with a "*/" and you can place it anywhere in your code, on the same line or several lines.
 
 .. code-block:: C
+    :linenos:
 
     /* this is comment area. */
 
 Or
 
 .. code-block:: C
+    :linenos:
 
     /* 
         this is a comment line. 
@@ -108,6 +112,7 @@ Variable
 A variable is a kind of data that can be changed. It consists of a name, a value, and a type. Variables need to be defined before using, such as:
 
 .. code-block:: C
+    :linenos:
 
     int i;
 
@@ -116,6 +121,7 @@ A variable is a kind of data that can be changed. It consists of a name, a value
 After declaration of the variable, you can use it. The following is an assignment to a variable:
 
 .. code-block:: C
+    :linenos:
 
     i = 0;                    // after the execution, the value of i is 0
 
@@ -124,6 +130,7 @@ After declaration of the variable, you can use it. The following is an assignmen
 A certain number of variables can be declared in one statement, and a variable can be assigned multiple times. Also, the value of a variable can be passed to other variables. For example:
 
 .. code-block:: C
+    :linenos:
 
     int i, j;
     i = 0;                    // after the execution, the value of i is 0
@@ -136,6 +143,7 @@ Function
 A function is a collection of statements with a sequence of order, which performs a defined task. Let's define a function void blink() as follows:
 
 .. code-block:: C
+    :linenos:
 
     void blink() {
         digitalWrite(13, HIGH);
@@ -153,6 +161,7 @@ A function is a collection of statements with a sequence of order, which perform
 After the function is defined, it is necessary to be called before it is executed. Let's call the function void blink(), as shown below.
 
 .. code-block:: C
+    :linenos:
 
     blink();
 
@@ -164,6 +173,7 @@ When the code is executed to a statement calling the function, the function will
 Some functions have one or more parameters. When you call such functions, you need to write parameters inside "()":
 
 .. code-block:: C
+    :linenos:
 
     digitalWrite(13, HIGH);   // turn the LED on (HIGH is the voltage level)
     delay(1000);              // wait for a second
@@ -172,7 +182,7 @@ Sketch
 ======================
 
 Sketch Control_LED_by_Control_Board
-----------------------
+-----------------------------------------------
 
 In order to make the LED blink, we need to make pin 13 of the control board output high and low level alternately.
 

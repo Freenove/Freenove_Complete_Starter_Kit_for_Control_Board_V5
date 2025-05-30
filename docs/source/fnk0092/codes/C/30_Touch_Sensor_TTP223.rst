@@ -12,27 +12,30 @@ This project will use the touch sensor to control the LED to emit different brig
 Component List
 ============================
 
-+------------------------------------------------------+
-| Control board x1                                     |
-|                                                      |
-| |Chapter01_00|                                       |
-+--------------------------+---------------------------+
-| Breadboard x1            | GPIO Extension Board x1   |
-|                          |                           |
-| |Chapter02_00|           | |Chapter02_01|            |
-+------------------+-------+---------------------------+
-| USB cable x1     | Jumper x5                         |
-|                  |                                   |
-| |Chapter01_02|   | |Chapter01_03|                    |
-+------------------+-----------------------------------+
-| TTP223 Touch Sensor x1                               |
-|                                                      |
-| |Chapter30_00|                                       |
-+-------------------+----------------------------------+
-| LED x1            |      Resistor 220Ω x1            |
-|                   |                                  |
-| |Chapter29_01|    |   |Chapter29_02|                 |
-+-------------------+----------------------------------+        
+.. table::
+    :align: center
+
+    +------------------------------------------------------+
+    | Control board x1                                     |
+    |                                                      |
+    | |Chapter01_00|                                       |
+    +--------------------------+---------------------------+
+    | Breadboard x1            | GPIO Extension Board x1   |
+    |                          |                           |
+    | |Chapter02_00|           | |Chapter02_01|            |
+    +------------------+-------+---------------------------+
+    | USB cable x1     | Jumper x5                         |
+    |                  |                                   |
+    | |Chapter01_02|   | |Chapter01_03|                    |
+    +------------------+-----------------------------------+
+    | TTP223 Touch Sensor x1                               |
+    |                                                      |
+    | |Chapter30_00|                                       |
+    +-------------------+----------------------------------+
+    | LED x1            |      Resistor 220Ω x1            |
+    |                   |                                  |
+    | |Chapter29_01|    |   |Chapter29_02|                 |
+    +-------------------+----------------------------------+        
 
 .. |Chapter01_00| image:: ../_static/imgs/1_LED_Blink/Chapter01_00.png
 .. |Chapter01_02| image:: ../_static/imgs/1_LED_Blink/Chapter01_02.png
@@ -53,17 +56,20 @@ The touch sensor module is a capacitive touch switch module based on TTP223 chip
 
 Below is the pinout of the touch sensor.
 
-+--------+------------------------------+
-|  Pin   |         description:         |
-+========+==============================+
-| symbol | Function                     |
-+--------+------------------------------+
-| SIG    | Output control signal        |
-+--------+------------------------------+
-| VCC    | Power supply pin, +2.0V~5.5V |
-+--------+------------------------------+
-| GND    | GND                          |
-+--------+------------------------------+
+.. table::
+    :class: freenove-ow
+
+    +--------+------------------------------+
+    |  Pin   |         description:         |
+    +========+==============================+
+    | symbol | Function                     |
+    +--------+------------------------------+
+    | SIG    | Output control signal        |
+    +--------+------------------------------+
+    | VCC    | Power supply pin, +2.0V~5.5V |
+    +--------+------------------------------+
+    | GND    | GND                          |
+    +--------+------------------------------+
 
 Please do not use voltage beyond the power supply range to avoid damage to the touch sensor.
 
@@ -71,7 +77,6 @@ Circuit
 ========================
 
 .. list-table:: 
-   :width: 100%
    :align: center
 
    * -  Schematic diagram
@@ -89,7 +94,7 @@ Sketch
 =========================
 
 Sketch Touch_Sensor_and_LED
--------------------------
+--------------------------------------------------
 
 In this code, we use the touch sensor to adjust the brightness of the LED. Every time you touch the sensor with your hand, the brightness of the LED changes.
 
@@ -125,27 +130,30 @@ This project uses a touch sensor to control RGB LED to emit different colors.
 Component List
 ===========================
 
-+------------------------------------------------------+
-| Control board x1                                     |
-|                                                      |
-| |Chapter01_00|                                       |
-+--------------------------+---------------------------+
-| Breadboard x1            | GPIO Extension Board x1   |
-|                          |                           |
-| |Chapter02_00|           | |Chapter02_01|            |
-+------------------+-------+---------------------------+
-| USB cable x1     | Jumper x7                         |
-|                  |                                   |
-| |Chapter01_02|   | |Chapter01_03|                    |
-+------------------+-----------------------------------+
-| TTP223 Touch Sensor x1                               |
-|                                                      |
-| |Chapter30_00|                                       |
-+-------------------+----------------------------------+
-| RGB LED x1        |  Resistor 220Ω x3                |
-|                   |                                  |
-| |Chapter30_03|    |   |Chapter29_02|                 |
-+-------------------+----------------------------------+            
+.. table::
+    :align: center
+
+    +------------------------------------------------------+
+    | Control board x1                                     |
+    |                                                      |
+    | |Chapter01_00|                                       |
+    +--------------------------+---------------------------+
+    | Breadboard x1            | GPIO Extension Board x1   |
+    |                          |                           |
+    | |Chapter02_00|           | |Chapter02_01|            |
+    +------------------+-------+---------------------------+
+    | USB cable x1     | Jumper x7                         |
+    |                  |                                   |
+    | |Chapter01_02|   | |Chapter01_03|                    |
+    +------------------+-----------------------------------+
+    | TTP223 Touch Sensor x1                               |
+    |                                                      |
+    | |Chapter30_00|                                       |
+    +-------------------+----------------------------------+
+    | RGB LED x1        |  Resistor 220Ω x3                |
+    |                   |                                  |
+    | |Chapter30_03|    |   |Chapter29_02|                 |
+    +-------------------+----------------------------------+            
 
 .. |Chapter30_03| image:: ../_static/imgs/30_Touch_Sensor_TTP223/Chapter30_03.png  
 
@@ -153,7 +161,6 @@ Circuit
 ========================
 
 .. list-table:: 
-   :width: 100%
    :align: center
 
    * -  Schematic diagram
@@ -171,7 +178,7 @@ Sketch
 ========================
 
 Sketch Touch_Sensor_and_RGB_LED
-------------------------
+------------------------------------------------
 
 After the program is executed, we can use the touch sensor to adjust the color change of the RGB LED. Every time the sensor is touched, the color of the RGB LED changes. Color changes from red to green to blue.
 

@@ -12,23 +12,26 @@ Now, we'll use Infrared Motion Sensor to detect human motion.
 Component List
 ===============================
 
-+------------------------------------------------------+
-| Control board x1                                     |
-|                                                      |
-| |Chapter01_00|                                       |
-+--------------------------+---------------------------+
-| Breadboard x1            | GPIO Extension Board x1   |
-|                          |                           |
-| |Chapter02_00|           | |Chapter02_01|            |
-+------------------+-------+---------------------------+
-| USB cable x1     | Jumper M/M x8                     |
-|                  |                                   |
-| |Chapter01_02|   | |Chapter01_03|                    |
-+------------------+-----------------------------------+
-| Infrared motion sensor x1                            |
-|                                                      |
-| |Chapter27_00|                                       |
-+------------------------------------------------------+
+.. table::
+    :align: center
+
+    +------------------------------------------------------+
+    | Control board x1                                     |
+    |                                                      |
+    | |Chapter01_00|                                       |
+    +--------------------------+---------------------------+
+    | Breadboard x1            | GPIO Extension Board x1   |
+    |                          |                           |
+    | |Chapter02_00|           | |Chapter02_01|            |
+    +------------------+-------+---------------------------+
+    | USB cable x1     | Jumper M/M x8                     |
+    |                  |                                   |
+    | |Chapter01_02|   | |Chapter01_03|                    |
+    +------------------+-----------------------------------+
+    | Infrared motion sensor x1                            |
+    |                                                      |
+    | |Chapter27_00|                                       |
+    +------------------------------------------------------+
 
 .. |Chapter01_00| image:: ../_static/imgs/1_LED_Blink/Chapter01_00.png
 .. |Chapter01_02| image:: ../_static/imgs/1_LED_Blink/Chapter01_02.png
@@ -74,7 +77,6 @@ Circuit
 Use pin 12 on the control board to connect out-pin of HC-SR501 infrared motion sensor.
 
 .. list-table:: 
-   :width: 100%
    :align: center
 
    * -  Schematic diagram
@@ -92,7 +94,7 @@ Sketch
 ===============================
 
 Sketch Infrared_Motion_Sensor
-----------------------------
+--------------------------------------------------------
 
 Now, write code to get the results measured by the HC-SR501 infrared motion sensor, and display that through LED.
 

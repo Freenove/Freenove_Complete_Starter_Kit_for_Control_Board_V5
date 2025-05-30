@@ -12,35 +12,38 @@ First, use relay to control a Motor.
 Component List
 =============================
 
-+------------------------------------------------------+
-| Control board x1                                     |
-|                                                      |
-| |Chapter01_00|                                       |
-+--------------------------+---------------------------+
-| Breadboard x1            | GPIO Extension Board x1   |
-|                          |                           |
-| |Chapter02_00|           | |Chapter02_01|            |
-+------------------+-------+---------------------------+
-| USB cable x1     | Jumper M/M x9                     |
-|                  |                                   |
-| |Chapter01_02|   | |Chapter01_03|                    |
-+------------------+-----------------------------------+
-| AA Battery holder x1 (Need AA battery x2)            |
-|                                                      |
-| |Chapter13_00|                                       |
-+------------------+-----------------+-----------------+
-| Resistor 10kΩ x2 | Resistor 1kΩ x1 |Resistor 220Ω x1 |
-|                  |                 |                 |
-| |Chapter13_10|   | |Chapter13_11|  |  |Chapter13_12| |
-+------------------+-----------------+-----------------+
-| NPN transistor x1| Relay x1        |Motor x1         |
-|                  |                 |                 |
-| |Chapter13_13|   | |Chapter13_14|  |  |Chapter13_15| |
-+------------------+-----------------+-----------------+
-| Push button x1   | LED x1          |Diode x1         |
-|                  |                 |                 |
-| |Chapter13_16|   | |Chapter13_17|  |  |Chapter13_18| |
-+------------------+-----------------+-----------------+
+.. table::
+    :align: center
+
+    +------------------------------------------------------+
+    | Control board x1                                     |
+    |                                                      |
+    | |Chapter01_00|                                       |
+    +--------------------------+---------------------------+
+    | Breadboard x1            | GPIO Extension Board x1   |
+    |                          |                           |
+    | |Chapter02_00|           | |Chapter02_01|            |
+    +------------------+-------+---------------------------+
+    | USB cable x1     | Jumper M/M x9                     |
+    |                  |                                   |
+    | |Chapter01_02|   | |Chapter01_03|                    |
+    +------------------+-----------------------------------+
+    | AA Battery holder x1 (Need AA battery x2)            |
+    |                                                      |
+    | |Chapter13_00|                                       |
+    +------------------+-----------------+-----------------+
+    | Resistor 10kΩ x2 | Resistor 1kΩ x1 |Resistor 220Ω x1 |
+    |                  |                 |                 |
+    | |Chapter13_10|   | |Chapter13_11|  |  |Chapter13_12| |
+    +------------------+-----------------+-----------------+
+    | NPN transistor x1| Relay x1        |Motor x1         |
+    |                  |                 |                 |
+    | |Chapter13_13|   | |Chapter13_14|  |  |Chapter13_15| |
+    +------------------+-----------------+-----------------+
+    | Push button x1   | LED x1          |Diode x1         |
+    |                  |                 |                 |
+    | |Chapter13_16|   | |Chapter13_17|  |  |Chapter13_18| |
+    +------------------+-----------------+-----------------+
 
 .. |Chapter01_00| image:: ../_static/imgs/1_LED_Blink/Chapter01_00.png
 .. |Chapter01_02| image:: ../_static/imgs/1_LED_Blink/Chapter01_02.png
@@ -126,7 +129,6 @@ Circuit
 Use pin 12 of control board to detect the state of push button switch, and pin 9 to control the relay. As the running of motor needs larger power, we will use two AA batteries to supply power for the motor alone.
 
 .. list-table:: 
-   :width: 100%
    :align: center
 
    * -  Schematic diagram
@@ -146,7 +148,7 @@ Sketch
 ============================
 
 Sketch Control_Motor_by_Relay
-------------------------------
+------------------------------------
 
 Now, write code to detect the state of push button switch. Each time you press the button, the switching status of relay will change. So we control the motor to rotate or stop in this way.
 
@@ -185,6 +187,7 @@ Define a variable to record the time of the last button pin change.
 In the loop() function, the detected pin state of button will be compared with the last detected state. If it changes, record this time point.
 
 .. code-block:: c
+    :linenos:
 
     void loop() {
         int nowButtonState = digitalRead(buttonPin); // Read current state of button pin
@@ -199,6 +202,7 @@ In the loop() function, the detected pin state of button will be compared with t
 If the level stays unchanged over a period of time, it is considered that the bounce area has already been skipped.
 
 .. code-block:: c
+    :linenos:
 
     if (millis() - lastChangeTime > 10) {
         ...
@@ -207,6 +211,7 @@ If the level stays unchanged over a period of time, it is considered that the bo
 After the pin state stays stable, the changed state of button is confirmed, then it will be recorded for the next comparison.
 
 .. code-block:: c
+    :linenos:
 
     if (buttonState != nowButtonState) {  // Confirm button state has changed
       buttonState = nowButtonState;
@@ -237,31 +242,34 @@ Now, we will use dedicated chip L293D to control the motor.
 Component List
 ===========================
 
-+------------------------------------------------------+
-| Control board x1                                     |
-|                                                      |
-| |Chapter01_00|                                       |
-+--------------------------+---------------------------+
-| Breadboard x1            | GPIO Extension Board x1   |
-|                          |                           |
-| |Chapter02_00|           | |Chapter02_01|            |
-+------------------+-------+---------------------------+
-| USB cable x1     | Jumper M/M x10                    |
-|                  |                                   |
-|                  | Jumper F/M x2                     |
-|                  |                                   |
-| |Chapter01_02|   | |Chapter01_03|                    |
-+------------------+-----------------------------------+
-| AA Battery holder x1                                 |
-|                                                      |
-| |Chapter13_00|                                       |
-+------------------+-----------------+-----------------+
-| Motor x1         | L293D x1        | Rotary          |
-|                  |                 |                 |
-|                  |                 | potentiometer x1|
-|                  |                 |                 |
-| |Chapter13_19|   | |Chapter13_20|  |  |Chapter13_21| |
-+------------------+-----------------+-----------------+
+.. table::
+    :align: center
+
+    +------------------------------------------------------+
+    | Control board x1                                     |
+    |                                                      |
+    | |Chapter01_00|                                       |
+    +--------------------------+---------------------------+
+    | Breadboard x1            | GPIO Extension Board x1   |
+    |                          |                           |
+    | |Chapter02_00|           | |Chapter02_01|            |
+    +------------------+-------+---------------------------+
+    | USB cable x1     | Jumper M/M x10                    |
+    |                  |                                   |
+    |                  | Jumper F/M x2                     |
+    |                  |                                   |
+    | |Chapter01_02|   | |Chapter01_03|                    |
+    +------------------+-----------------------------------+
+    | AA Battery holder x1                                 |
+    |                                                      |
+    | |Chapter13_00|                                       |
+    +------------------+-----------------+-----------------+
+    | Motor x1         | L293D x1        | Rotary          |
+    |                  |                 |                 |
+    |                  |                 | potentiometer x1|
+    |                  |                 |                 |
+    | |Chapter13_19|   | |Chapter13_20|  |  |Chapter13_21| |
+    +------------------+-----------------+-----------------+
 
 .. |Chapter13_19| image:: ../_static/imgs/13_Motor/Chapter13_19.png
 .. |Chapter13_20| image:: ../_static/imgs/13_Motor/Chapter13_20.png
@@ -280,23 +288,27 @@ L293D is an IC chip (Integrated Circuit Chip) with a 4-channel motor drive. You 
 
 Port description of L293D module is as follows:
 
-+----------+--------------+---------------------------------------------------------------------------------------------------------------+
-| Pin name | Pin number   | Description                                                                                                   |
-+----------+--------------+---------------------------------------------------------------------------------------------------------------+
-| In x     | 2, 7, 10, 15 | Channel x digital signal input pin                                                                            |
-+----------+--------------+---------------------------------------------------------------------------------------------------------------+
-| Out x    | 3, 6, 11, 14 | Channel x output pin, input high or low level according to In x pin, get connected to +Vmotor or 0V           |
-+----------+--------------+---------------------------------------------------------------------------------------------------------------+
-| Enable1  | 1            | Channel 1 and channel 2 enable pin, high level enable                                                         |
-+----------+--------------+---------------------------------------------------------------------------------------------------------------+
-| Enable2  | 9            | Channel 3 and channel 4 enable pin, high level enable                                                         |
-+----------+--------------+---------------------------------------------------------------------------------------------------------------+
-| 0V       | 4, 5, 12, 13 | Power cathode (GND)                                                                                           |
-+----------+--------------+---------------------------------------------------------------------------------------------------------------+
-| +V       | 16           | Positive electrode (VCC) of power supply, supply voltage 4.5~36V                                              |
-+----------+--------------+---------------------------------------------------------------------------------------------------------------+
-| +Vmotor  | 8            | Positive electrode of load power supply, provide power supply for the Out pin x, the supply voltage is +V~36V |
-+----------+--------------+---------------------------------------------------------------------------------------------------------------+
+.. table::
+    :align: center
+    :class: freenove-ow
+
+    +----------+--------------+---------------------------------------------------------------------------------------------------------------+
+    | Pin name | Pin number   | Description                                                                                                   |
+    +==========+==============+===============================================================================================================+
+    | In x     | 2, 7, 10, 15 | Channel x digital signal input pin                                                                            |
+    +----------+--------------+---------------------------------------------------------------------------------------------------------------+
+    | Out x    | 3, 6, 11, 14 | Channel x output pin, input high or low level according to In x pin, get connected to +Vmotor or 0V           |
+    +----------+--------------+---------------------------------------------------------------------------------------------------------------+
+    | Enable1  | 1            | Channel 1 and channel 2 enable pin, high level enable                                                         |
+    +----------+--------------+---------------------------------------------------------------------------------------------------------------+
+    | Enable2  | 9            | Channel 3 and channel 4 enable pin, high level enable                                                         |
+    +----------+--------------+---------------------------------------------------------------------------------------------------------------+
+    | 0V       | 4, 5, 12, 13 | Power cathode (GND)                                                                                           |
+    +----------+--------------+---------------------------------------------------------------------------------------------------------------+
+    | +V       | 16           | Positive electrode (VCC) of power supply, supply voltage 4.5~36V                                              |
+    +----------+--------------+---------------------------------------------------------------------------------------------------------------+
+    | +Vmotor  | 8            | Positive electrode of load power supply, provide power supply for the Out pin x, the supply voltage is +V~36V |
+    +----------+--------------+---------------------------------------------------------------------------------------------------------------+
 
 For more details, please see datasheet.
 
@@ -324,7 +336,6 @@ Circuit
 Use pin A0 of the control board to detect the voltage of rotary potentiometer; pin 9 and pin 10 to control the motor's rotation direction and pin 11 to output PWM wave to control motor speed.
 
 .. list-table:: 
-   :width: 100%
    :align: center
 
    * -  Schematic diagram
@@ -344,7 +355,7 @@ Sketch
 ========================
 
 Sketch Control_Motor_by_L293D
------------------------
+--------------------------------------------------
 
 Now, write the code to control speed and rotation direction of motor through rotary potentiometer. When the potentiometer stays in the middle position, motor speed will be minimum, and when deviates intermediate position, the speed will increase. Also, if the potentiometer deviates from the middle position of potentiometer clockwise or counterclockwise, the rotation direction of the motor is different.
 

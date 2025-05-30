@@ -12,24 +12,27 @@ First, let's experience the 2D version game.
 Component list
 ===============================
 
-+------------------------------------------------------+
-| Control board x1                                     |
-|                                                      |
-| |Chapter01_00|                                       |
-+--------------------------+---------------------------+
-| Breadboard x1            | GPIO Extension Board x1   |
-|                          |                           |
-| |Chapter02_00|           | |Chapter02_01|            |
-+------------------+-------+---------------------------+
-| USB cable x1     | Jumper M/M x3                     |
-|                  |                                   |
-| |Chapter01_02|   | |Chapter01_03|                    |
-+------------------+-----------------------------------+
-| Rotary potentiometer x2                              |
-|                                                      |
-| |Chapter08_00|                                       |
-+------------------------------------------------------+
+.. table::
+    :align: center
 
+    +------------------------------------------------------+
+    | Control board x1                                     |
+    |                                                      |
+    | |Chapter01_00|                                       |
+    +--------------------------+---------------------------+
+    | Breadboard x1            | GPIO Extension Board x1   |
+    |                          |                           |
+    | |Chapter02_00|           | |Chapter02_01|            |
+    +------------------+-------+---------------------------+
+    | USB cable x1     | Jumper M/M x3                     |
+    |                  |                                   |
+    | |Chapter01_02|   | |Chapter01_03|                    |
+    +------------------+-----------------------------------+
+    | Rotary potentiometer x2                              |
+    |                                                      |
+    | |Chapter08_00|                                       |
+    +------------------------------------------------------+
+    
 .. |Chapter01_00| image:: ../_static/imgs/1_LED_Blink/Chapter01_00.png
 .. |Chapter01_01| image:: ../_static/imgs/1_LED_Blink/Chapter01_01.png
 .. |Chapter01_02| image:: ../_static/imgs/1_LED_Blink/Chapter01_02.png
@@ -45,7 +48,6 @@ Circuit
 Use A0, A1 ports on connect board to detect the voltage of rotary potentiometers.
 
 .. list-table:: 
-   :width: 100%
    :align: center
 
    * -  Schematic diagram

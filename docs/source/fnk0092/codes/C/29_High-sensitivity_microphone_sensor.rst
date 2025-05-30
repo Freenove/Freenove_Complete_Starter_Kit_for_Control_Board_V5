@@ -12,28 +12,30 @@ This project will use a high-sensitivity microphone sensor to make a sound-contr
 Component List
 ================================
 
-+------------------------------------------------------+
-| Control board x1                                     |
-|                                                      |
-| |Chapter01_00|                                       |
-+--------------------------+---------------------------+
-| Breadboard x1            | GPIO Extension Board x1   |
-|                          |                           |
-| |Chapter02_00|           | |Chapter02_01|            |
-+------------------+-------+---------------------------+
-| USB cable x1     | Jumper x5                         |
-|                  |                                   |
-| |Chapter01_02|   | |Chapter01_03|                    |
-+------------------+-----------------------------------+
-| High-sensitivity microphone sensor x1                |
-|                                                      |
-| |Chapter29_00|                                       |
-+-------------------+----------------------------------+
-| LED x1            |      Resistor 220Ω x1            |
-|                   |                                  |
-| |Chapter29_01|    |   |Chapter29_02|                 |
-+-------------------+----------------------------------+        
+.. table::
+    :align: center
 
+    +------------------------------------------------------+
+    | Control board x1                                     |
+    |                                                      |
+    | |Chapter01_00|                                       |
+    +--------------------------+---------------------------+
+    | Breadboard x1            | GPIO Extension Board x1   |
+    |                          |                           |
+    | |Chapter02_00|           | |Chapter02_01|            |
+    +------------------+-------+---------------------------+
+    | USB cable x1     | Jumper x5                         |
+    |                  |                                   |
+    | |Chapter01_02|   | |Chapter01_03|                    |
+    +------------------+-----------------------------------+
+    | High-sensitivity microphone sensor x1                |
+    |                                                      |
+    | |Chapter29_00|                                       |
+    +-------------------+----------------------------------+
+    | LED x1            |      Resistor 220Ω x1            |
+    |                   |                                  |
+    | |Chapter29_01|    |   |Chapter29_02|                 |
+    +-------------------+----------------------------------+        
 
 .. |Chapter01_00| image:: ../_static/imgs/1_LED_Blink/Chapter01_00.png
 .. |Chapter01_02| image:: ../_static/imgs/1_LED_Blink/Chapter01_02.png
@@ -61,17 +63,20 @@ Below is the pinout of the high-sensitivity microphone sensor.
 Pin description:
 -------------------------------
 
-+--------+------------------------------+
-| symbol | Function                     |
-+========+==============================+
-| DO     | Digital signal output        |
-+--------+------------------------------+
-| VCC    | Power supply pin, +3.3V~5.0V |
-+--------+------------------------------+
-| GND    | GND                          |
-+--------+------------------------------+
-| AO     | Analog signal output         |
-+--------+------------------------------+
+.. table::
+    :class: freenove-ow
+
+    +--------+------------------------------+
+    | symbol | Function                     |
+    +========+==============================+
+    | DO     | Digital signal output        |
+    +--------+------------------------------+
+    | VCC    | Power supply pin, +3.3V~5.0V |
+    +--------+------------------------------+
+    | GND    | GND                          |
+    +--------+------------------------------+
+    | AO     | Analog signal output         |
+    +--------+------------------------------+
 
 Since the default sensitivity of the high-sensitivity microphone sensor is high, the two LED lights on the module are lit up after power-on, and the sensitivity should be adjusted to an appropriate value at this time. When the potentiometer is adjusted clockwise, the module identification sensitivity increases; When counterclockwise adjustment potentiometer, module recognition sensitivity decreases. Please adjust the potentiometer before using the module to make its sensitivity reach the appropriate value. Under normal circumstances, you need counterclockwise rotation of the potentiometer, so that the output of the module LED off, when the sensitivity is low can be appropriate clockwise adjustment of the potentiometer, please ensure that your sensor output LED is extinguished when energized, in order to identify the sound.
 
@@ -81,7 +86,6 @@ Circuit
 ========================
 
 .. list-table:: 
-   :width: 100%
    :align: center
 
    * -  Schematic diagram
@@ -99,7 +103,7 @@ Sketch
 ==========================
 
 Sketch High_sensitivity_microphone_sensor_and_LED
------------------------------
+----------------------------------------------------------
 
 After the program is executed, when you speak to the sensor, the LED will turn on for 5 seconds. After 5 seconds, the LED will turn off. When the sensor does not recognize the sound, the LED will turn off.
 

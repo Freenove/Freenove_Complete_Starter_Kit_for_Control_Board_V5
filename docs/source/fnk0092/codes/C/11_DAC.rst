@@ -66,7 +66,6 @@ Circuit
 Use pin 12 of control board to detect the state of push button switch, and pin 9 to drive active buzzer.
 
 .. list-table:: 
-   :width: 100%
    :align: center
 
    * -  Schematic diagram

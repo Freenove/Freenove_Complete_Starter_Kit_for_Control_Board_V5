@@ -11,7 +11,6 @@ Component List
 =================================
 
 .. list-table:: 
-   :width: 100%
    :align: center
 
    * -  Control board x1
@@ -32,7 +31,7 @@ PWM
 
 PWM, Pulse-Width Modulation, is a very effective method for using digital signals to control analog circuits. Digital processors cannot directly output analog signals. PWM technology makes it very convenient to achieve this conversion (translation of digital to analog signals).
 
-PWM technology uses digital pins to send certain frequencies of square waves, that is, the output of high levels and low levels, which alternately last for a while. The total time for each set of high levels and low levels is generally fixed, which is called the period (Note: the reciprocal of the period is frequency). The time of high level outputs are generally called “pulse width”, and the duty cycle is the percentage of the ratio of pulse duration, or pulse width (PW) to the total period (T) of the waveform. 
+PWM technology uses digital pins to send certain frequencies of square waves, that is, the output of high levels and low levels, which alternately last for a while. The total time for each set of high levels and low levels is generally fixed, which is called the period (Note: the reciprocal of the period is frequency). The time of high level outputs are generally called "pulse width", and the duty cycle is the percentage of the ratio of pulse duration, or pulse width (PW) to the total period (T) of the waveform. 
 
 The longer the output of high levels last, the longer the duty cycle and the higher the corresponding voltage in the analog signal will be. The following figures show how the analog signal voltages vary between 0V-5V (high level is 5V) corresponding to the pulse width 0%-100%:
 
@@ -52,6 +51,7 @@ Return value of function
 We have learned and used the function without return value, now we will learn how to use the function with return value. A function with return value is shown as follow:
 
 .. code-block:: c
+    :linenos:
 
     int sum(int i, int j) {
         int k = i + j;
@@ -67,6 +67,7 @@ When the return statement is executed, the function will return immediately rega
 A function with return value is called as follows:
 
 .. code-block:: c
+    :linenos:
 
     int a = 1, b = 2, c = 0;
     c = sum(1, 2);            // after the execution the value of c is 3
@@ -74,12 +75,14 @@ A function with return value is called as follows:
 A function with a return value can also be used as a parameter of functions, for example:
 
 .. code-block:: c
+    :linenos:
 
     delay(sum(100, 200));
 
 It is equivalent to the following code:
 
 .. code-block:: c
+    :linenos:
 
     delay(300);
 
@@ -89,6 +92,7 @@ return
 We have learned the role of the return statement in a function with a return value. It can also be used in functions without a return value, and there is no data behind the return keyword:
 
 .. code-block:: c
+    :linenos:
 
     return;
 
@@ -114,6 +118,7 @@ Sketch 4.1.1
 Now let us use sketch to make Board LED emit different brightness of light. We will transmit signal to output the PWM waves with duty cycle of 10%, and 50% to let the LED emit different brightness of the light.
 
 .. code-block:: c
+    :linenos:
 
     // set pin numbers:
     int ledPin = 13;           // the number of the LED pin
@@ -135,6 +140,7 @@ Now let us use sketch to make Board LED emit different brightness of light. We w
 We set the ports to output PWM waves with different duty cycle. Firstly map 10% to the range of 0-255, and then output the PWM wave with duty cycle of 10%, 
 
 .. code-block:: c
+    :linenos:
 
     analogWrite(ledPin, map(10, 0, 100, 0, 255));
 
@@ -175,11 +181,12 @@ Sketch
 ===========================
 
 Sketch LEDs Emit Different Brightness
---------------------------
+-----------------------------------------------------
 
 Now complete the sketch to make brightness of LED change from dark to bright, and then from bright to dark. That is to make the duty cycle of the PWM wave change from 0%-100%, and then from 100%-0% cyclically.
 
 .. code-block:: c
+    :linenos:
 
     // set pin numbers:
     int ledPin = 13;             // the number of the LED pin
@@ -206,7 +213,7 @@ Now complete the sketch to make brightness of LED change from dark to bright, an
         }
     }
 
-Through two “for” loops, the duty cycle of the PWM wave changes from 0% to 100%, and then from 100% to 0% cyclically. delay(ms) function is used to control the change rate in the "for" loop, and you can try to modify the parameters to modify the change rate of brightness.
+Through two "for" loops, the duty cycle of the PWM wave changes from 0% to 100%, and then from 100% to 0% cyclically. delay(ms) function is used to control the change rate in the "for" loop, and you can try to modify the parameters to modify the change rate of brightness.
 
 Verify and upload the code, then you will see that the brightness of the LED changes from dark to light, and from the light to dark cyclically.
 

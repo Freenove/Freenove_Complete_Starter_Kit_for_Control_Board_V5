@@ -12,23 +12,26 @@ This project uses a rotary encoder to make a simple counter.
 Component List
 ===============================
 
-+------------------------------------------------------+
-| Control board x1                                     |
-|                                                      |
-| |Chapter01_00|                                       |
-+--------------------------+---------------------------+
-| Breadboard x1            | GPIO Extension Board x1   |
-|                          |                           |
-| |Chapter02_00|           | |Chapter02_01|            |
-+------------------+-------+---------------------------+
-| USB cable x1     | Jumper M/M x8                     |
-|                  |                                   |
-| |Chapter01_02|   | |Chapter01_03|                    |
-+------------------+-----------------------------------+
-| Rotary encoder x1                                    |
-|                                                      |
-| |Chapter34_00|                                       |
-+------------------------------------------------------+
+.. table::
+    :align: center
+
+    +------------------------------------------------------+
+    | Control board x1                                     |
+    |                                                      |
+    | |Chapter01_00|                                       |
+    +--------------------------+---------------------------+
+    | Breadboard x1            | GPIO Extension Board x1   |
+    |                          |                           |
+    | |Chapter02_00|           | |Chapter02_01|            |
+    +------------------+-------+---------------------------+
+    | USB cable x1     | Jumper M/M x8                     |
+    |                  |                                   |
+    | |Chapter01_02|   | |Chapter01_03|                    |
+    +------------------+-----------------------------------+
+    | Rotary encoder x1                                    |
+    |                                                      |
+    | |Chapter34_00|                                       |
+    +------------------------------------------------------+
 
 .. |Chapter01_00| image:: ../_static/imgs/1_LED_Blink/Chapter01_00.png
 .. |Chapter01_02| image:: ../_static/imgs/1_LED_Blink/Chapter01_02.png
@@ -65,7 +68,6 @@ Circuit
 ============================
 
 .. list-table:: 
-   :width: 100%
    :align: center
 
    * -  Schematic diagram
@@ -119,30 +121,30 @@ This project uses a rotary encoder to adjust the LEDs to emit different brightne
 Component List
 ===========================
 
-Component List
-=============================
+.. table::
+    :align: center
 
-+------------------------------------------------------+
-| Control board x1                                     |
-|                                                      |
-| |Chapter01_00|                                       |
-+--------------------------+---------------------------+
-| Breadboard x1            | GPIO Extension Board x1   |
-|                          |                           |
-| |Chapter02_00|           | |Chapter02_01|            |
-+------------------+-------+---------------------------+
-| USB cable x1     | Jumper x8                         |
-|                  |                                   |
-| |Chapter01_02|   | |Chapter01_03|                    |
-+------------------+-----------------------------------+
-| Rotary encoder x1                                    |
-|                                                      |
-| |Chapter34_00|                                       |
-+-------------------+----------------------------------+
-| LED x1            |  Resistor 220Ω x1                |
-|                   |                                  |
-| |Chapter29_01|    |   |Chapter29_02|                 |
-+-------------------+----------------------------------+        
+    +------------------------------------------------------+
+    | Control board x1                                     |
+    |                                                      |
+    | |Chapter01_00|                                       |
+    +--------------------------+---------------------------+
+    | Breadboard x1            | GPIO Extension Board x1   |
+    |                          |                           |
+    | |Chapter02_00|           | |Chapter02_01|            |
+    +------------------+-------+---------------------------+
+    | USB cable x1     | Jumper x8                         |
+    |                  |                                   |
+    | |Chapter01_02|   | |Chapter01_03|                    |
+    +------------------+-----------------------------------+
+    | Rotary encoder x1                                    |
+    |                                                      |
+    | |Chapter34_00|                                       |
+    +-------------------+----------------------------------+
+    | LED x1            |  Resistor 220Ω x1                |
+    |                   |                                  |
+    | |Chapter29_01|    |   |Chapter29_02|                 |
+    +-------------------+----------------------------------+        
 
 .. |Chapter29_01| image:: ../_static/imgs/29_High-sensitivity_microphone_sensor/Chapter29_01.png  
 .. |Chapter29_02| image:: ../_static/imgs/29_High-sensitivity_microphone_sensor/Chapter29_02.png  
@@ -151,7 +153,6 @@ Circuit
 =============================
 
 .. list-table:: 
-   :width: 100%
    :align: center
 
    * -  Schematic diagram

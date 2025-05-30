@@ -13,7 +13,6 @@ Component List
 ======================================
 
 .. list-table:: 
-   :width: 100%
    :align: center
 
    * -  Control board x1
@@ -89,7 +88,7 @@ In the Scan page, swipe down to refresh the name of Bluetooth that the phone sea
 .. image:: ../_static/imgs/41_Bluetooth_(WiFi_Board)/Chapter41_05.png
     :align: center
 
-Click “Receive”. Select the appropriate Data format in the box to the right of Data Format. For example, HEX for hexadecimal, utf-string for character, Binary for Binary, etc. Then click SUBSCRIBE.
+Click "Receive". Select the appropriate Data format in the box to the right of Data Format. For example, HEX for hexadecimal, utf-string for character, Binary for Binary, etc. Then click SUBSCRIBE.
 
 .. image:: ../_static/imgs/41_Bluetooth_(WiFi_Board)/Chapter41_06.png
     :align: center
@@ -104,7 +103,7 @@ The last received data will be printed when the READ AGAIN button on the app is 
 .. image:: ../_static/imgs/41_Bluetooth_(WiFi_Board)/Chapter41_08.png
     :align: center
 
-Similarly, you can select “Send” on your phone. Set Data format, and then enter anything in the sending box and click Write to send.
+Similarly, you can select "Send" on your phone. Set Data format, and then enter anything in the sending box and click Write to send.
 
 .. image:: ../_static/imgs/41_Bluetooth_(WiFi_Board)/Chapter41_09.png
     :align: center
@@ -143,6 +142,7 @@ Write a Callback function for BLE server to manage connection of BLE.
 When the mobile phone send data to control board via BLE Bluetooth, it will print them out with serial port; When the serial port of control board receive data, it will send them to mobile via BLE Bluetooth.
 
 .. code-block:: c
+    :linenos:
 
         if (Serial.available() > 0) {
             String str = Serial.readString();
@@ -175,23 +175,26 @@ In this section, we will further learn how to use Bluetooth to control an LED.
 Component List
 ================================
 
-+---------------------------------------+
-| Control board x1                      |
-|                                       |
-| |Chapter41_11|                        |
-+---------------------------------------+
-| Breadboard x1                         |
-|                                       |
-| |Chapter41_12|                        |
-+-------------------+-------------------+
-| Micro USB Wire x1 | Micro USB Wire x1 |
-|                   |                   |
-| |Chapter41_13|    | |Chapter41_14|    |
-+-------------------+-------------------+
-| LED x1            | Resistor 220Ω x1  |
-|                   |                   |
-| |Chapter41_15|    | |Chapter41_16|    |
-+-------------------+-------------------+
+.. table::
+    :align: center
+
+    +---------------------------------------+
+    | Control board x1                      |
+    |                                       |
+    | |Chapter41_11|                        |
+    +---------------------------------------+
+    | Breadboard x1                         |
+    |                                       |
+    | |Chapter41_12|                        |
+    +-------------------+-------------------+
+    | Micro USB Wire x1 | Micro USB Wire x1 |
+    |                   |                   |
+    | |Chapter41_13|    | |Chapter41_14|    |
+    +-------------------+-------------------+
+    | LED x1            | Resistor 220Ω x1  |
+    |                   |                   |
+    | |Chapter41_15|    | |Chapter41_16|    |
+    +-------------------+-------------------+
 
 .. |Chapter41_11| image:: ../_static/imgs/41_Bluetooth_(WiFi_Board)/Chapter41_11.png
 .. |Chapter41_12| image:: ../_static/imgs/41_Bluetooth_(WiFi_Board)/Chapter41_12.png
@@ -208,7 +211,6 @@ Circuit
 Connect the control board to your computer with the USB cable.
 
 .. list-table:: 
-   :width: 100%
    :align: center
 
    * -  Schematic diagram

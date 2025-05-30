@@ -23,7 +23,6 @@ Component List
 ====================================
 
 .. list-table:: 
-   :width: 100%
    :align: center
 
    * -  Pin header x2
@@ -50,7 +49,6 @@ Circuit
 We will solder the following circuit on the Perfboard.
 
 .. list-table:: 
-   :width: 100%
    :align: center
 
    * -  Schematic diagram
@@ -77,7 +75,6 @@ Insert the components in the Perfboard following the Hardware Connection image a
 Here is a diagram after soldering from both sides of the Perfboard:
 
 .. list-table:: 
-   :width: 100%
    :align: center
 
    * -  Front
@@ -108,7 +105,6 @@ Component List
 =============================
 
 .. list-table:: 
-   :width: 100%
    :align: center
 
    * -  Pin header x5
@@ -132,7 +128,6 @@ Circuit
 Solder the following circuit on the Perfboard.
 
 .. list-table:: 
-   :width: 100%
    :align: center
 
    * -  Schematic diagram
@@ -155,7 +150,6 @@ Insert the components in the Perfboard, and solder the circuit on the back per e
 Here is a diagram after soldering from both sides of the Perfboard:
 
 .. list-table:: 
-   :width: 100%
    :align: center
 
    * -  Front

@@ -12,23 +12,26 @@ In this project, we use ultrasonic ranging module to measure distance, and print
 Component List
 ===============================
 
-+------------------------------------------------------+
-| Control board x1                                     |
-|                                                      |
-| |Chapter01_00|                                       |
-+--------------------------+---------------------------+
-| Breadboard x1            | GPIO Extension Board x1   |
-|                          |                           |
-| |Chapter02_00|           | |Chapter02_01|            |
-+------------------+-------+---------------------------+
-| USB cable x1     | Jumper M/M x8                     |
-|                  |                                   |
-| |Chapter01_02|   | |Chapter01_03|                    |
-+------------------+-----------------------------------+
-| Ultrasonic ranging module x1                         |
-|                                                      |
-| |Chapter28_00|                                       |
-+------------------------------------------------------+
+.. table::
+    :align: center
+
+    +------------------------------------------------------+
+    | Control board x1                                     |
+    |                                                      |
+    | |Chapter01_00|                                       |
+    +--------------------------+---------------------------+
+    | Breadboard x1            | GPIO Extension Board x1   |
+    |                          |                           |
+    | |Chapter02_00|           | |Chapter02_01|            |
+    +------------------+-------+---------------------------+
+    | USB cable x1     | Jumper M/M x8                     |
+    |                  |                                   |
+    | |Chapter01_02|   | |Chapter01_03|                    |
+    +------------------+-----------------------------------+
+    | Ultrasonic ranging module x1                         |
+    |                                                      |
+    | |Chapter28_00|                                       |
+    +------------------------------------------------------+
 
 .. |Chapter01_00| image:: ../_static/imgs/1_LED_Blink/Chapter01_00.png
 .. |Chapter01_02| image:: ../_static/imgs/1_LED_Blink/Chapter01_02.png
@@ -55,17 +58,20 @@ The Ultrasonic Ranging Module uses the principle that ultrasonic waves will refl
 
 Pin description:
 
-+----------+------------+-------------------------------------------------------+
-| Pin name | Pin number | Description                                           |
-+----------+------------+-------------------------------------------------------+
-| Vcc      | 1          | Positive electrode of power supply, the voltage is 5V |
-+----------+------------+-------------------------------------------------------+
-| Trig     | 2          | Triger pin                                            |
-+----------+------------+-------------------------------------------------------+
-| Echo     | 3          | Echo pin                                              |
-+----------+------------+-------------------------------------------------------+
-| Gnd      | 4          | Negative electrode of power supply                    |
-+----------+------------+-------------------------------------------------------+
+.. table::
+    :class: freenove-ow
+
+    +----------+------------+-------------------------------------------------------+
+    | Pin name | Pin number | Description                                           |
+    +==========+============+=======================================================+
+    | Vcc      | 1          | Positive electrode of power supply, the voltage is 5V |
+    +----------+------------+-------------------------------------------------------+
+    | Trig     | 2          | Triger pin                                            |
+    +----------+------------+-------------------------------------------------------+
+    | Echo     | 3          | Echo pin                                              |
+    +----------+------------+-------------------------------------------------------+
+    | Gnd      | 4          | Negative electrode of power supply                    |
+    +----------+------------+-------------------------------------------------------+
 
 Instructions for use: output a high-level pulse in Trig pin lasting for least 10uS, the module begins to transmit ultrasonic waves. At the same time, the Echo pin is pulled up. When the module receives the returned ultrasonic waves from encountering an obstacle, the Echo pin will be pulled down. The duration of high level in the Echo pin is the total time of the ultrasonic wave from transmitting to receiving, s=vt/2. This is done constantly.
 
@@ -75,7 +81,6 @@ Circuit
 The connection of the control board and HC-SR04 is shown below.
 
 .. list-table:: 
-   :width: 100%
    :align: center
 
    * -  Schematic diagram

@@ -13,7 +13,6 @@ Component List
 =====================================
 
 .. list-table:: 
-   :width: 100%
    :align: center
 
    * -  Control board x1
@@ -79,7 +78,7 @@ Upload the code to the control board, open the serial monitor and set the board 
 .. image:: ../_static/imgs/40_Control_LED_with_Web_(WiFi_Board)/Chapter40_02.png
     :align: center
 
-When Control Board successfully connects to “ssid_Router”, serial monitor will print out the IP address assigned to Control Board by the router. Access http://192.168.1.26 in a computer browser on the LAN. As shown in the following figure:
+When Control Board successfully connects to "ssid_Router", serial monitor will print out the IP address assigned to Control Board by the router. Access http://192.168.1.26 in a computer browser on the LAN. As shown in the following figure:
 
 .. image:: ../_static/imgs/40_Control_LED_with_Web_(WiFi_Board)/Chapter40_02.png
     :align: center

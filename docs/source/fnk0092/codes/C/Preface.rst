@@ -20,7 +20,6 @@ The control board is the core of a circuit. After programming, it can be used to
 There are multiple versions of Freenove control board. Your purchase may be one of the following:
 
 .. list-table:: 
-   :width: 100%
    :header-rows: 1 
    :align: center
    
@@ -37,7 +36,6 @@ Diagram of the Freenove control board is shown below:
 
 .. image:: ../_static/imgs/Preface/Preface02.png
     :align: center
-
 
 - Digital I/O ports is used to connect to other components or modules, to receive an input signal, or to send a control signal. Usually, we name it by adding a "D" in front of the number, such as D13 (pin 13).
 

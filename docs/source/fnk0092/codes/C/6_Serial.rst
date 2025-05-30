@@ -13,7 +13,6 @@ Component List
 ======================================
 
 .. list-table:: 
-   :width: 100%
    :align: center
 
    * -  Control board x1
@@ -34,11 +33,14 @@ As mentioned earlier, computers use a binary signal. A binary signal is called 1
 
 As to binary number 10010110, "0" usually presents the lowest value in code.
 
-+----------+-----+-----+-----+-----+-----+-----+-----+-----+
-| Sequence | 7   | 6   | 5   | 4   | 3   | 2   | 1   | 0   |
-+----------+-----+-----+-----+-----+-----+-----+-----+-----+
-| Number   | 1   | 0   | 0   | 1   | 0   | 1   | 1   | 0   |
-+----------+-----+-----+-----+-----+-----+-----+-----+-----+
+.. table::
+    :align: center
+
+    +----------+-----+-----+-----+-----+-----+-----+-----+-----+
+    | Sequence | 7   | 6   | 5   | 4   | 3   | 2   | 1   | 0   |
+    +----------+-----+-----+-----+-----+-----+-----+-----+-----+
+    | Number   | 1   | 0   | 0   | 1   | 0   | 1   | 1   | 0   |
+    +----------+-----+-----+-----+-----+-----+-----+-----+-----+
 
 When a binary number need to be converted to decimal number, first, the nth number of it need be multiplied by n power of 2, then sum all multiplicative results. Take 10010110 as an example:
 
@@ -101,7 +103,7 @@ Sketch
 =============================
 
 Sketch Send_data_through_Serial
------------------------------
+--------------------------------------------------------
 
 Now, write code to send some texts to the Serial Monitor window
 
@@ -166,7 +168,7 @@ Sketch
 ==========================
 
 Sketch Receive_Data_through_Serial_Port
------------------------------
+--------------------------------------------------------
 
 Now, write code to receive the characters from Serial Monitor window, and send it back.
 
@@ -198,23 +200,26 @@ Component List
 
 If the kit you bought does not include the following components, you can use only the control board and USB cable to finish this project.
 
-+------------------------------------------------------+
-| Control board x1                                     |
-|                                                      |
-| |Chapter01_00|                                       |
-+------------------------------------------------------+
-| Breadboard x1                                        |
-|                                                      |
-| |Chapter02_00|                                       |
-+------------------+-----------------------------------+
-| USB cable x1     | Jumper M/M x4                     |
-|                  |                                   |
-| |Chapter01_02|   | |Chapter01_03|                    |
-+------------------+-----------------------------------+
-| LED x2           | Resistor 220Ω x2                  |
-|                  |                                   |
-| |Chapter01_04|   | |Chapter01_05|                    |
-+------------------+-----------------------------------+
+.. table::
+    :align: center
+
+    +------------------------------------------------------+
+    | Control board x1                                     |
+    |                                                      |
+    | |Chapter01_00|                                       |
+    +------------------------------------------------------+
+    | Breadboard x1                                        |
+    |                                                      |
+    | |Chapter02_00|                                       |
+    +------------------+-----------------------------------+
+    | USB cable x1     | Jumper M/M x4                     |
+    |                  |                                   |
+    | |Chapter01_02|   | |Chapter01_03|                    |
+    +------------------+-----------------------------------+
+    | LED x2           | Resistor 220Ω x2                  |
+    |                  |                                   |
+    | |Chapter01_04|   | |Chapter01_05|                    |
+    +------------------+-----------------------------------+
 
 .. |Chapter01_00| image:: ../_static/imgs/1_LED_Blink/Chapter01_00.png
 .. |Chapter01_02| image:: ../_static/imgs/1_LED_Blink/Chapter01_02.png
@@ -229,7 +234,6 @@ Circuit
 Here we will use pin 11 of the control board to output PWM to drive 1 LED.
 
 .. list-table:: 
-   :width: 100%
    :align: center
 
    * -  Schematic diagram

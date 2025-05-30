@@ -12,23 +12,26 @@ Now, let's use Processing and control board to achieve the tetris game.
 Component list
 =============================
 
-+------------------------------------------------------+
-| Control board x1                                     |
-|                                                      |
-| |Chapter01_00|                                       |
-+--------------------------+---------------------------+
-| Breadboard x1            | GPIO Extension Board x1   |
-|                          |                           |
-| |Chapter02_00|           | |Chapter02_01|            |
-+------------------+-------+---------------------------+
-| USB cable x1     | Jumper M/M x3                     |
-|                  |                                   |
-| |Chapter01_02|   | |Chapter01_03|                    |
-+------------------+------+----------------------------+
-| Push button x4          | Resistor 10kΩ x4           |
-|                         |                            |
-| |Chapter07_00|          |  |Chapter07_01|            |
-+-------------------------+----------------------------+
+.. table::
+    :align: center
+
+    +------------------------------------------------------+
+    | Control board x1                                     |
+    |                                                      |
+    | |Chapter01_00|                                       |
+    +--------------------------+---------------------------+
+    | Breadboard x1            | GPIO Extension Board x1   |
+    |                          |                           |
+    | |Chapter02_00|           | |Chapter02_01|            |
+    +------------------+-------+---------------------------+
+    | USB cable x1     | Jumper M/M x3                     |
+    |                  |                                   |
+    | |Chapter01_02|   | |Chapter01_03|                    |
+    +------------------+------+----------------------------+
+    | Push button x4          | Resistor 10kΩ x4           |
+    |                         |                            |
+    | |Chapter07_00|          |  |Chapter07_01|            |
+    +-------------------------+----------------------------+
 
 .. |Chapter01_00| image:: ../_static/imgs/1_LED_Blink/Chapter01_00.png
 .. |Chapter01_01| image:: ../_static/imgs/1_LED_Blink/Chapter01_01.png
@@ -46,7 +49,6 @@ Circuit
 Use GPIO4, GPIO5, GPIO6, GPIO7 port on control board to control the movement of the block.
 
 .. list-table:: 
-   :width: 100%
    :align: center
 
    * -  Schematic diagram

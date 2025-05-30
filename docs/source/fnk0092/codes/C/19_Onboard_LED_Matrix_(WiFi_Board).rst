@@ -13,7 +13,6 @@ Component List
 ==============================
 
 .. list-table:: 
-   :width: 100%
    :align: center
 
    * -  Schematic diagram
@@ -67,25 +66,29 @@ Unsigned long variables store 32 bits, and dividing 96 by 32 gives us 3, indicat
 
 The following is the data of converting the binary values of each row of the LED matrix to hexadecimal from left to right:
 
-+--------+----------------+-------------+
-| Column | Binary         | Hexadecimal |
-+--------+----------------+-------------+
-| 1      | 0000 0000 0000 | 0x000       |
-+--------+----------------+-------------+
-| 2      | 0000 1111 0000 | 0x0F0       |
-+--------+----------------+-------------+
-| 3      | 0001 0000 1000 | 0x108       |
-+--------+----------------+-------------+
-| 4      | 0010 1001 0100 | 0x294       |
-+--------+----------------+-------------+
-| 5      | 0010 0000 0100 | 0x204       |
-+--------+----------------+-------------+
-| 6      | 0010 0110 0100 | 0x264       |
-+--------+----------------+-------------+
-| 7      | 0001 0000 1000 | 0x108       |
-+--------+----------------+-------------+
-| 8      | 0000 1111 0000 | 0x0F0       |
-+--------+----------------+-------------+
+.. table::
+    :align: center
+    :class: freenove-ow
+
+    +--------+----------------+-------------+
+    | Column | Binary         | Hexadecimal |
+    +========+================+=============+
+    | 1      | 0000 0000 0000 | 0x000       |
+    +--------+----------------+-------------+
+    | 2      | 0000 1111 0000 | 0x0F0       |
+    +--------+----------------+-------------+
+    | 3      | 0001 0000 1000 | 0x108       |
+    +--------+----------------+-------------+
+    | 4      | 0010 1001 0100 | 0x294       |
+    +--------+----------------+-------------+
+    | 5      | 0010 0000 0100 | 0x204       |
+    +--------+----------------+-------------+
+    | 6      | 0010 0110 0100 | 0x264       |
+    +--------+----------------+-------------+
+    | 7      | 0001 0000 1000 | 0x108       |
+    +--------+----------------+-------------+
+    | 8      | 0000 1111 0000 | 0x0F0       |
+    +--------+----------------+-------------+
 
 The above 8 sets of data are converted into 3 groups as follows:
 
@@ -108,6 +111,7 @@ The above 8 sets of data are converted into 3 groups as follows:
 From this we can conclude that the 32-bit integer array of a smiley face is as follows.
 
 .. code-block:: c
+    :linenos:
 
     unsigned long frame[] = {
         0x0000F010,
@@ -118,6 +122,7 @@ From this we can conclude that the 32-bit integer array of a smiley face is as f
 Uploading the above data to the control board will display the corresponding pattern. Additionally, if you have multiple different frames, you can load and display them as below:
 
 .. code-block:: c
+    :linenos:
 
     const uint32_t happy[] = {
     0x19819,
@@ -180,6 +185,7 @@ Activate the LED matrix by adding the line "matrix.begin();" under void setup() 
 After the program initializes, it first lights up the entire LED matrix and then turns off the LED matrix, and subsequently continuously displays the smiling face graphic.
 
 .. code-block:: c
+    :linenos:
 
     matrix.begin();  // Initialize the LED matrix
     matrix.loadFrame(fullOn);
@@ -208,7 +214,6 @@ Component List
 ============================
 
 .. list-table:: 
-   :width: 100%
    :align: center
 
    * -  Schematic diagram
@@ -223,7 +228,7 @@ Sketch
 ===============================
 
 Sketch LED_Matrix_Scrolling_Text
------------------------------
+--------------------------------------
 
 When you upload the sketch to the control board, you will observe the onboard LED matrix displaying dynamic scenes. The text "Hello World!" will be presented in a scrolling manner.
 
@@ -284,23 +289,26 @@ Play a bounce game with an LED matrix.
 Component List
 =====================================
 
-+------------------------------------------------------+
-| Control board x1                                     |
-|                                                      |
-| |Chapter01_00|                                       |
-+--------------------------+---------------------------+
-| Breadboard x1            | GPIO Extension Board x1   |
-|                          |                           |
-| |Chapter02_00|           | |Chapter02_01|            |
-+------------------+-------+---------------------------+
-| USB cable x1     | Jumper M/M x4                     |
-|                  |                                   |
-| |Chapter01_02|   | |Chapter01_03|                    |
-+------------------+-----------------------------------+
-| Rotary potentiometer x1                              |
-|                                                      |
-| |Chapter19_05|                                       |
-+------------------------------------------------------+
+.. table::
+    :align: center
+
+    +------------------------------------------------------+
+    | Control board x1                                     |
+    |                                                      |
+    | |Chapter01_00|                                       |
+    +--------------------------+---------------------------+
+    | Breadboard x1            | GPIO Extension Board x1   |
+    |                          |                           |
+    | |Chapter02_00|           | |Chapter02_01|            |
+    +------------------+-------+---------------------------+
+    | USB cable x1     | Jumper M/M x4                     |
+    |                  |                                   |
+    | |Chapter01_02|   | |Chapter01_03|                    |
+    +------------------+-----------------------------------+
+    | Rotary potentiometer x1                              |
+    |                                                      |
+    | |Chapter19_05|                                       |
+    +------------------------------------------------------+
 
 .. |Chapter01_00| image:: ../_static/imgs/1_LED_Blink/Chapter01_00.png
 .. |Chapter01_02| image:: ../_static/imgs/1_LED_Blink/Chapter01_02.png
@@ -315,7 +323,6 @@ Circuit
 The voltage of the rotary potentiometer is detected with the A0 pin on the control board to control the movement of the bat.
 
 .. list-table:: 
-   :width: 100%
    :align: center
 
    * -  Schematic diagram
@@ -333,7 +340,7 @@ Sketch
 ==========================
 
 Sketch LED_Matrix_Bounce_Game
-----------------------------
+-----------------------------------------------------
 
 This is a simple ball bounce game, using a potentiometer to control the movement of the bat, when your bat fails to catch the ball, the game will end and the led matrix will show "OUT", and then start the game again.
 
@@ -353,23 +360,26 @@ Play a snake game with an LED matrix.
 Component List 
 ============================
 
-+------------------------------------------------------+
-| Control board x1                                     |
-|                                                      |
-| |Chapter01_00|                                       |
-+--------------------------+---------------------------+
-| Breadboard x1            | GPIO Extension Board x1   |
-|                          |                           |
-| |Chapter02_00|           | |Chapter02_01|            |
-+------------------+-------+---------------------------+
-| USB cable x1     | Jumper M/M x3                     |
-|                  |                                   |
-| |Chapter01_02|   | |Chapter19_08|                    |
-+------------------+-----------------------------------+
-| Joystick x1                                          |
-|                                                      |
-| |Chapter16_00|                                       |
-+------------------------------------------------------+
+.. table::
+    :align: center
+
+    +------------------------------------------------------+
+    | Control board x1                                     |
+    |                                                      |
+    | |Chapter01_00|                                       |
+    +--------------------------+---------------------------+
+    | Breadboard x1            | GPIO Extension Board x1   |
+    |                          |                           |
+    | |Chapter02_00|           | |Chapter02_01|            |
+    +------------------+-------+---------------------------+
+    | USB cable x1     | Jumper M/M x3                     |
+    |                  |                                   |
+    | |Chapter01_02|   | |Chapter19_08|                    |
+    +------------------+-----------------------------------+
+    | Joystick x1                                          |
+    |                                                      |
+    | |Chapter16_00|                                       |
+    +------------------------------------------------------+
 
 .. |Chapter19_08| image:: ../_static/imgs/19_Onboard_LED_Matrix_(WiFi_Board)/Chapter19_08.png
 .. |Chapter16_00| image:: ../_static/imgs/16_Joystick/Chapter16_00.png   
@@ -380,7 +390,6 @@ Circuit
 Use pin A0 and pin A1 on control board to detect the voltage value of two rotary potentiometers inside Joystick.
 
 .. list-table:: 
-   :width: 100%
    :align: center
 
    * -  Schematic diagram
@@ -398,7 +407,7 @@ Sketch
 ======================
 
 Sketch LED_Matrix_Snake_Game
------------------------
+--------------------------------------------------
 
 This is a simple snake game, using a Joystick to control the direction of movement of the snake head, when the snake head contacts the body of the snake, the game will end, the led matrix will show "OUT", and then start the game again.
 

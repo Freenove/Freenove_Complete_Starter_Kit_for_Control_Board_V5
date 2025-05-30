@@ -12,27 +12,30 @@ This project uses a U-shaped photoelectric sensor to control the state of the LE
 Component List
 ===============================
 
-+------------------------------------------------------+
-| Control board x1                                     |
-|                                                      |
-| |Chapter01_00|                                       |
-+--------------------------+---------------------------+
-| Breadboard x1            | GPIO Extension Board x1   |
-|                          |                           |
-| |Chapter02_00|           | |Chapter02_01|            |
-+------------------+-------+---------------------------+
-| USB cable x1     | Jumper x5                         |
-|                  |                                   |
-| |Chapter01_02|   | |Chapter01_03|                    |
-+------------------+-----------------------------------+
-| U-shaped photoelectric sensor x1                     |
-|                                                      |
-| |Chapter31_00|                                       |
-+-------------------+----------------------------------+
-| LED x1            |      Resistor 220Ω x1            |
-|                   |                                  |
-| |Chapter29_01|    |   |Chapter29_02|                 |
-+-------------------+----------------------------------+        
+.. table::
+    :align: center
+
+    +------------------------------------------------------+
+    | Control board x1                                     |
+    |                                                      |
+    | |Chapter01_00|                                       |
+    +--------------------------+---------------------------+
+    | Breadboard x1            | GPIO Extension Board x1   |
+    |                          |                           |
+    | |Chapter02_00|           | |Chapter02_01|            |
+    +------------------+-------+---------------------------+
+    | USB cable x1     | Jumper x5                         |
+    |                  |                                   |
+    | |Chapter01_02|   | |Chapter01_03|                    |
+    +------------------+-----------------------------------+
+    | U-shaped photoelectric sensor x1                     |
+    |                                                      |
+    | |Chapter31_00|                                       |
+    +-------------------+----------------------------------+
+    | LED x1            |      Resistor 220Ω x1            |
+    |                   |                                  |
+    | |Chapter29_01|    |   |Chapter29_02|                 |
+    +-------------------+----------------------------------+        
 
 .. |Chapter01_00| image:: ../_static/imgs/1_LED_Blink/Chapter01_00.png
 .. |Chapter01_02| image:: ../_static/imgs/1_LED_Blink/Chapter01_02.png
@@ -58,17 +61,20 @@ Below is the pinout of the touch sensor.
 Pin description:
 -------------------------------
 
-+--------+------------------------------------------+
-| symbol |                 Function                 |
-+========+==========================================+
-| VCC    | Power supply pin, +3.3V~5.5V             |
-+--------+------------------------------------------+
-| DO     | Output control signal(High or low level) |
-+--------+------------------------------------------+
-| AO     | Output invalid                           |
-+--------+------------------------------------------+
-| GND    | GND                                      |
-+--------+------------------------------------------+
+.. table::
+    :class: freenove-ow
+
+    +--------+------------------------------------------+
+    | symbol |                 Function                 |
+    +========+==========================================+
+    | VCC    | Power supply pin, +3.3V~5.5V             |
+    +--------+------------------------------------------+
+    | DO     | Output control signal(High or low level) |
+    +--------+------------------------------------------+
+    | AO     | Output invalid                           |
+    +--------+------------------------------------------+
+    | GND    | GND                                      |
+    +--------+------------------------------------------+
 
 :red:`Please do not use the voltage beyond the power supply range to avoid damage to the U-shaped photoelectric sensor.`
 
@@ -78,7 +84,6 @@ Circuit
 ========================
 
 .. list-table:: 
-   :width: 100%
    :align: center
 
    * -  Schematic diagram
@@ -98,7 +103,7 @@ Sketch
 =========================
 
 Sketch U_shaped_photoelectric_sensor_and_LED
--------------------------
+----------------------------------------------------
 
 When you use the module whose output signal is low level, after the program is executed, when the photoelectric sensor is blocked, the LED lights up, when the photoelectric sensor is not blocked, the LED turns off.
 
@@ -122,36 +127,39 @@ This project uses U-shaped photoelectric sensor to make a simple sound and light
 Component List
 =================================
 
-+-------------------------------------------------------------+
-| Control board x1                                            |
-|                                                             |
-| |Chapter01_00|                                              |
-+--------------------------+----------------------------------+
-| Breadboard x1            | GPIO Extension Board x1          |
-|                          |                                  |
-| |Chapter02_00|           | |Chapter02_01|                   |
-+------------------+-------+----------------------------------+
-| USB cable x1     | Jumper x8                                |
-|                  |                                          |
-| |Chapter01_02|   | |Chapter01_03|                           |
-+------------------+------------------------------------------+
-| U-shaped photoelectric sensor x1                            |
-|                                                             |
-| |Chapter31_00|                                              |
-+-------------------+-----------------------------------------+
-| LED x1            |  Resistor 220Ω x1                       |
-|                   |                                         |
-| |Chapter29_01|    |   |Chapter29_02|                        |
-+-------------------+-------------------+---------------------+        
-| Active buzzer x1  | NPN transistorx1  | Resistor 1kΩx1      |
-|                   |                   |                     |
-|                   | (S8050)           |                     |
-|                   |                   |                     |
-| |Chapter31_02|    |   |Chapter31_03|  |  |Chapter10_10|     |
-+-------------------+-------------------+---------------------+ 
+.. table::
+    :align: center
+
+    +-------------------------------------------------------------+
+    | Control board x1                                            |
+    |                                                             |
+    | |Chapter01_00|                                              |
+    +--------------------------+----------------------------------+
+    | Breadboard x1            | GPIO Extension Board x1          |
+    |                          |                                  |
+    | |Chapter02_00|           | |Chapter02_01|                   |
+    +------------------+-------+----------------------------------+
+    | USB cable x1     | Jumper x8                                |
+    |                  |                                          |
+    | |Chapter01_02|   | |Chapter01_03|                           |
+    +------------------+------------------------------------------+
+    | U-shaped photoelectric sensor x1                            |
+    |                                                             |
+    | |Chapter31_00|                                              |
+    +-------------------+-----------------------------------------+
+    | LED x1            |  Resistor 220Ω x1                       |
+    |                   |                                         |
+    | |Chapter29_01|    |   |Chapter29_02|                        |
+    +-------------------+-------------------+---------------------+        
+    | Active buzzer x1  | NPN transistorx1  | Resistor 1kΩx1      |
+    |                   |                   |                     |
+    |                   | (S8050)           |                     |
+    |                   |                   |                     |
+    | |Chapter31_02|    |   |Chapter31_03|  |  |Chapter10_10|     |
+    +-------------------+-------------------+---------------------+ 
 
 .. |Chapter31_04| image:: ../_static/imgs/31_U-shaped_photoelectric_sensor/Chapter31_04.png 
-.. |Chapter31_02| image:: ../_static/imgs/31_U-shaped_photoelectric_sensor/Chapter31_02.png 
+.. |Chapter31_02| image:: ../_static/imgs/31_U-shaped_photoelectric_sensor/Chapter31_02.png
 .. |Chapter31_03| image:: ../_static/imgs/31_U-shaped_photoelectric_sensor/Chapter31_03.png  
 .. |Chapter24_01| image:: ../_static/imgs/24_Vibration_Switch/Chapter24_01.png
 .. |Chapter10_10| image:: ../_static/imgs/10_Buzzer/Chapter10_10.png
@@ -160,7 +168,6 @@ Circuit
 =============================
 
 .. list-table:: 
-   :width: 100%
    :align: center
 
    * -  Schematic diagram
@@ -180,7 +187,7 @@ Sketch
 ===============================
 
 Sketch U_shaped_photoelectric_sensor_and_buzzer
--------------------------------
+----------------------------------------------------------
 
 After the program is executed, every time the U-shaped photoelectric sensor is blocked by hand, the buzzer will sound an alarm, and the LED will flash to remind.
 
@@ -195,6 +202,7 @@ The following is the program code:
 The attachInterrupt() function associates the sensor pins with sensorEven().Because there are high level triggering module and low level triggering module in the U-type photoelectric sensor, we use the double-edge detection method here to make the program compatible with the module in your hand. When sensorPin detects low level or high level, it will call and execute the sensorEven() function.
 
 .. code-block:: c
+    :linenos:
 
     attachInterrupt(sensorPin, sensorEven, CHANGE);
     ...

@@ -13,7 +13,6 @@ Component List
 ======================================
 
 .. list-table:: 
-   :width: 100%
    :align: center
 
    * -  Control board x1
@@ -71,7 +70,7 @@ Install ControlP5.
 .. image:: ../_static/imgs/39_TCP_IP_(WiFi_Board)/Chapter39_04.png
     :align: center
 
-Open the “Sketches\\Sketches\\Sketch_37.1_WiFiClient\\sketchWiFi\\sketchWiFi.pde”, and click "Run".
+Open the "Sketches\\Sketches\\Sketch_37.1_WiFiClient\\sketchWiFi\\sketchWiFi.pde", and click "Run".
 
 .. image:: ../_static/imgs/39_TCP_IP_(WiFi_Board)/Chapter39_05.png
     :align: center
@@ -121,7 +120,7 @@ Connect the board to the computer using the USB cable.
 Sketch
 ========================
 
-Before running the Sketch, please open “sketchWiFi.pde.” first, and click “Run”.
+Before running the Sketch, please open "sketchWiFi.pde." first, and click "Run".
 
 .. image:: ../_static/imgs/39_TCP_IP_(WiFi_Board)/Chapter39_08.png
     :align: center
@@ -136,7 +135,7 @@ Next, open WiFiClient.ino. Before running it, please change the following inform
 .. image:: ../_static/imgs/39_TCP_IP_(WiFi_Board)/Chapter39_10.png
     :align: center
 
-REMOTE_IP needs to be filled in according to the interface of sketchWiFi.pde. Taking this tutorial as an example, its REMOTE_IP is “192.168.1.128”. Generally, by default, the ports do not need to change its value. 
+REMOTE_IP needs to be filled in according to the interface of sketchWiFi.pde. Taking this tutorial as an example, its REMOTE_IP is "192.168.1.128". Generally, by default, the ports do not need to change its value. 
 
 Click LISTENING, turn on TCP SERVER's data listening function and wait for control board(wifi) to connect.
 
@@ -256,7 +255,6 @@ Component List
 ===============================
 
 .. list-table:: 
-   :width: 100%
    :align: center
 
    * -  Control board x1
@@ -297,7 +295,7 @@ Serial Monitor
 
 Processing:
 
-Open the “ **Sketches\\Sketch_38.2.1_WiFiServer\\sketchWiFi\\sketchWiFi.pde** ”.
+Open the " **Sketches\\Sketch_38.2.1_WiFiServer\\sketchWiFi\\sketchWiFi.pde** ".
 
 Based on the messages printed by the serial monitor, enter correct IP address and serial port in Processing to establish connection and make communication.
 

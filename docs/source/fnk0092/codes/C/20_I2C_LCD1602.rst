@@ -7,7 +7,6 @@ In the previous chapter, we have used the LED matrix to display images and chara
 There are multiple versions of LCD1602. Your purchase may be one of the following:
 
 .. list-table:: 
-   :width: 100%
    :align: center
 
    * -  I2C LCD1602
@@ -28,23 +27,26 @@ In this chapter, we will learn about the LCD1602 Display Screen.Firstly, use I2C
 Component List
 ================================
 
-+------------------------------------------------------+
-| Control board x1                                     |
-|                                                      |
-| |Chapter01_00|                                       |
-+--------------------------+---------------------------+
-| Breadboard x1            | GPIO Extension Board x1   |
-|                          |                           |
-| |Chapter02_00|           | |Chapter02_01|            |
-+------------------+-------+---------------------------+
-| USB cable x1     | Jumper M/M x3                     |
-|                  |                                   |
-| |Chapter01_02|   | |Chapter01_03|                    |
-+------------------+-----------------------------------+
-| I2C LCD1602 Module x1                                |
-|                                                      |
-| |Chapter20_02|                                       |
-+------------------------------------------------------+
+.. table::
+    :align: center
+
+    +------------------------------------------------------+
+    | Control board x1                                     |
+    |                                                      |
+    | |Chapter01_00|                                       |
+    +--------------------------+---------------------------+
+    | Breadboard x1            | GPIO Extension Board x1   |
+    |                          |                           |
+    | |Chapter02_00|           | |Chapter02_01|            |
+    +------------------+-------+---------------------------+
+    | USB cable x1     | Jumper M/M x3                     |
+    |                  |                                   |
+    | |Chapter01_02|   | |Chapter01_03|                    |
+    +------------------+-----------------------------------+
+    | I2C LCD1602 Module x1                                |
+    |                                                      |
+    | |Chapter20_02|                                       |
+    +------------------------------------------------------+
 
 .. |Chapter01_00| image:: ../_static/imgs/1_LED_Blink/Chapter01_00.png
 .. |Chapter01_02| image:: ../_static/imgs/1_LED_Blink/Chapter01_02.png
@@ -76,7 +78,6 @@ Circuit
 The connection of control board and I2C LCD1602 is shown below.
 
 .. list-table:: 
-   :width: 100%
    :align: center
 
    * -  Schematic diagram
@@ -94,7 +95,7 @@ Sketch
 ===========================
 
 Sketch Display_the_string_on_LCD1602
---------------------------
+------------------------------------------
 
 This code uses a library named "LiquidCrystal_I2C", if you have not installed it, please do so first.
 
@@ -133,6 +134,7 @@ Following are the LiquidCrystal_I2C library used for controlling LCD:
 LiquidCrystal_I2C library provides LiquidCrystal_I2C class that controls LCD1602. When we instantiate a LiquidCrystal_I2C object, we can input some parameters. And these parameters are the row/column numbers of the I2C addresses and screen that connect to LCD1602:
 
 .. code-block:: c
+    :linenos:
 
     LiquidCrystal_I2C lcd(0x27, 16, 2); // set the LCD address to 0x27 for a 16 chars and 2 line display
 
@@ -197,23 +199,26 @@ In the previous chapter, we have used I2C LCD1602 to display some strings, and n
 Component List
 ============================
 
-+-----------------------------------------------------------------+
-| Control board x1                                                |
-|                                                                 |
-| |Chapter01_00|                                                  |
-+--------------------------+--------------------------------------+
-| Breadboard x1            | GPIO Extension Board x1              |
-|                          |                                      |
-| |Chapter02_00|           | |Chapter02_01|                       |
-+------------------+-------+--------------------------------------+
-| USB cable x1     | Jumper M/M x3                                |
-|                  |                                              |
-| |Chapter01_02|   | |Chapter01_03|                               |
-+------------------+----+----------------+------------------------+
-| I2C LCD1602 Module x1 | Thermistor x1  | Resistor 10kΩ x1       |
-|                       |                |                        |
-| |Chapter20_02|        | |Chapter20_08| |  |Chapter20_09|        |
-+-----------------------+----------------+------------------------+
+.. table::
+    :align: center
+
+    +-----------------------------------------------------------------+
+    | Control board x1                                                |
+    |                                                                 |
+    | |Chapter01_00|                                                  |
+    +--------------------------+--------------------------------------+
+    | Breadboard x1            | GPIO Extension Board x1              |
+    |                          |                                      |
+    | |Chapter02_00|           | |Chapter02_01|                       |
+    +------------------+-------+--------------------------------------+
+    | USB cable x1     | Jumper M/M x3                                |
+    |                  |                                              |
+    | |Chapter01_02|   | |Chapter01_03|                               |
+    +------------------+----+----------------+------------------------+
+    | I2C LCD1602 Module x1 | Thermistor x1  | Resistor 10kΩ x1       |
+    |                       |                |                        |
+    | |Chapter20_02|        | |Chapter20_08| |  |Chapter20_09|        |
+    +-----------------------+----------------+------------------------+
 
 .. |Chapter20_08| image:: ../_static/imgs/20_I2C_LCD1602/Chapter20_08.png
 .. |Chapter20_09| image:: ../_static/imgs/20_I2C_LCD1602/Chapter20_09.png
@@ -235,7 +240,6 @@ Circuit
 The connection is shown below. Pin A0 is used to detect the voltage of thermistor.
 
 .. list-table:: 
-   :width: 100%
    :align: center
 
    * -  Schematic diagram
@@ -298,6 +302,7 @@ After every interrupt, the second plus 1.
 In the loop () function, the information on the LCD display will be refreshed at set intervals.
 
 .. code-block:: c
+    :linenos:
 
     void loop() {
         ...

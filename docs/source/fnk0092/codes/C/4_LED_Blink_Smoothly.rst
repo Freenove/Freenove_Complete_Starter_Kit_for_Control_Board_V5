@@ -12,23 +12,26 @@ Now, let us use control board to make 4 LED emit different brightness of light.
 Component List
 ====================================
 
-+------------------------------------------------------+
-| Control board x1                                     |
-|                                                      |
-| |Chapter01_00|                                       |
-+--------------------------+---------------------------+
-| Breadboard x1            | GPIO Extension Board x1   |
-|                          |                           |
-| |Chapter02_00|           | |Chapter02_01|            |
-+------------------+-------+---------------------------+
-| USB cable x1     | Jumper M/M x8                     |
-|                  |                                   |
-| |Chapter01_02|   | |Chapter01_03|                    |
-+------------------+-----------------------------------+
-| LED x4           | Resistor 220Ω x4                  |
-|                  |                                   |
-| |Chapter01_04|   | |Chapter01_05|                    |
-+------------------+-----------------------------------+
+.. table::
+    :align: center
+
+    +------------------------------------------------------+
+    | Control board x1                                     |
+    |                                                      |
+    | |Chapter01_00|                                       |
+    +--------------------------+---------------------------+
+    | Breadboard x1            | GPIO Extension Board x1   |
+    |                          |                           |
+    | |Chapter02_00|           | |Chapter02_01|            |
+    +------------------+-------+---------------------------+
+    | USB cable x1     | Jumper M/M x8                     |
+    |                  |                                   |
+    | |Chapter01_02|   | |Chapter01_03|                    |
+    +------------------+-----------------------------------+
+    | LED x4           | Resistor 220Ω x4                  |
+    |                  |                                   |
+    | |Chapter01_04|   | |Chapter01_05|                    |
+    +------------------+-----------------------------------+
 
 .. |Chapter01_00| image:: ../_static/imgs/1_LED_Blink/Chapter01_00.png
 .. |Chapter01_02| image:: ../_static/imgs/1_LED_Blink/Chapter01_02.png
@@ -68,6 +71,7 @@ Return value of function
 We have learned and used the function without return value, now we will learn how to use the function with return value. A function with return value is shown as follow:
 
 .. code-block:: c
+    :linenos:
 
     int sum(int i, int j) {
         int k = i + j;
@@ -83,6 +87,7 @@ When the return statement is executed, the function will return immediately rega
 A function with return value is called as follows:
 
 .. code-block:: c
+    :linenos:
 
     int a = 1, b = 2, c = 0;
     c = sum(1, 2);            // after the execution the value of c is 3
@@ -90,12 +95,14 @@ A function with return value is called as follows:
 A function with a return value can also be used as a parameter of functions, for example:
 
 .. code-block:: c
+    :linenos:
 
     delay(sum(100, 200));
 
 It is equivalent to the following code:
 
 .. code-block:: c
+    :linenos:
 
     delay(300);
 
@@ -105,6 +112,7 @@ return
 We have learned the role of the return statement in a function with a return value. It can also be used in functions without a return value, and there is no data behind the return keyword:
 
 .. code-block:: c
+    :linenos:
 
     return;
 
@@ -119,7 +127,6 @@ Circuit
 Use pin 5, 6, 9, 10 on the control board to drive 4 LEDs.
 
 .. list-table:: 
-   :width: 100%
    :align: center
 
    * -  Schematic diagram
@@ -133,12 +140,11 @@ Use pin 5, 6, 9, 10 on the control board to drive 4 LEDs.
 .. |Chapter04_02| image:: ../_static/imgs/4_LED_Blink_Smoothly/Chapter04_02.png
 .. |Chapter04_03| image:: ../_static/imgs/4_LED_Blink_Smoothly/Chapter04_03.png
 
-
 Sketch
 ==============================
 
 Sketch LEDs_Emit_Different_Brightness
-------------------------------
+---------------------------------------------------------
 
 Now let us use sketch to make 4 LEDs emit different brightness of light. We will transmit signal to make the 4 ports connected to LEDs output the PWM waves with duty cycle of 2%, 10%, 50%, and 100% to let the LEDs emit different brightness of the light.
 
@@ -186,7 +192,6 @@ Circuit
 Remove some LEDs and resistors connected to pin 6, 9, 10 on the control board in the circuit of the previous section. 
 
 .. list-table:: 
-   :width: 100%
    :align: center
 
    * -  Schematic diagram

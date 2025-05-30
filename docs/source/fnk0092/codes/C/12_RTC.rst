@@ -13,7 +13,6 @@ Component List
 ======================================
 
 .. list-table:: 
-   :width: 100%
    :align: center
 
    * -  Control board x1

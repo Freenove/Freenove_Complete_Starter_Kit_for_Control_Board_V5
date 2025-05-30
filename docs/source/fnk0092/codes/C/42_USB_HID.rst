@@ -12,23 +12,26 @@ In this project, we learn how to emulate a mouse control.
 Component List
 ==============================
 
-+----------------------------------------------------------------------------+
-| Control board x1                                                           |
-|                                                                            |
-| |Chapter01_00|                                                             |
-+--------------------------+-------------------------------------------------+
-| Breadboard x1            | GPIO Extension Board x1                         |
-|                          |                                                 |
-| |Chapter02_00|           | |Chapter02_01|                                  |
-+------------------+-------+-------------------------------------------------+
-| USB cable x1     | Jumper M/M x12                                          |
-|                  |                                                         |
-| |Chapter01_02|   | |Chapter01_03|                                          |
-+------------------+------+--------------------------------------------------+
-| Resistor 10kΩ x8        | Push button Switch x4                            |
-|                         |                                                  |
-| |Chapter42_00|          |  |Chapter42_01|                                  |
-+-------------------------+--------------------------------------------------+
+.. table::
+    :align: center
+
+    +----------------------------------------------------------------------------+
+    | Control board x1                                                           |
+    |                                                                            |
+    | |Chapter01_00|                                                             |
+    +--------------------------+-------------------------------------------------+
+    | Breadboard x1            | GPIO Extension Board x1                         |
+    |                          |                                                 |
+    | |Chapter02_00|           | |Chapter02_01|                                  |
+    +------------------+-------+-------------------------------------------------+
+    | USB cable x1     | Jumper M/M x12                                          |
+    |                  |                                                         |
+    | |Chapter01_02|   | |Chapter01_03|                                          |
+    +------------------+------+--------------------------------------------------+
+    | Resistor 10kΩ x8        | Push button Switch x4                            |
+    |                         |                                                  |
+    | |Chapter42_00|          |  |Chapter42_01|                                  |
+    +-------------------------+--------------------------------------------------+
 
 .. |Chapter01_00| image:: ../_static/imgs/1_LED_Blink/Chapter01_00.png
 .. |Chapter01_02| image:: ../_static/imgs/1_LED_Blink/Chapter01_02.png
@@ -56,7 +59,6 @@ Circuit
 ============================
 
 .. list-table:: 
-   :width: 100%
    :align: center
 
    * -  Schematic diagram
@@ -83,7 +85,7 @@ The following is the program code:
 .. literalinclude:: ../../../freenove_Kit/Sketches/Sketch_42.1.1_HID_Mouse/Sketch_42.1.1_HID_Mouse.ino
     :linenos: 
     :language: c
-    :lines: 1-95
+    :lines: 1-50
     :dedent:
 
 Include the mouse library for mouse control.
@@ -110,29 +112,31 @@ In this project, we will control keyboard input through buttons.
 Component List 
 =========================
 
-+----------------------------------------------------------------------------+
-| Control board x1                                                           |
-|                                                                            |
-| |Chapter01_00|                                                             |
-+--------------------------+-------------------------------------------------+
-| Breadboard x1            | GPIO Extension Board x1                         |
-|                          |                                                 |
-| |Chapter02_00|           | |Chapter02_01|                                  |
-+------------------+-------+-------------------------------------------------+
-| USB cable x1     | Jumper M/M x12                                          |
-|                  |                                                         |
-| |Chapter01_02|   | |Chapter01_03|                                          |
-+------------------+------+--------------------------------------------------+
-| Resistor 10kΩ x8        | Push button Switch x4                            |
-|                         |                                                  |
-| |Chapter42_00|          |  |Chapter42_01|                                  |
-+-------------------------+--------------------------------------------------+
+.. table::
+    :align: center
+
+    +----------------------------------------------------------------------------+
+    | Control board x1                                                           |
+    |                                                                            |
+    | |Chapter01_00|                                                             |
+    +--------------------------+-------------------------------------------------+
+    | Breadboard x1            | GPIO Extension Board x1                         |
+    |                          |                                                 |
+    | |Chapter02_00|           | |Chapter02_01|                                  |
+    +------------------+-------+-------------------------------------------------+
+    | USB cable x1     | Jumper M/M x12                                          |
+    |                  |                                                         |
+    | |Chapter01_02|   | |Chapter01_03|                                          |
+    +------------------+------+--------------------------------------------------+
+    | Resistor 10kΩ x8        | Push button Switch x4                            |
+    |                         |                                                  |
+    | |Chapter42_00|          |  |Chapter42_01|                                  |
+    +-------------------------+--------------------------------------------------+
 
 Circuit
 ============================
 
 .. list-table:: 
-   :width: 100%
    :align: center
 
    * -  Schematic diagram

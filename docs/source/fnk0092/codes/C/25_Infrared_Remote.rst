@@ -12,29 +12,32 @@ First, we need to understand how infrared remote control works, and then get the
 Component List
 =================================
 
-+------------------------------------------------------+
-| Control board x1                                     |
-|                                                      |
-| |Chapter01_00|                                       |
-+--------------------------+---------------------------+
-| Breadboard x1            | GPIO Extension Board x1   |
-|                          |                           |
-| |Chapter02_00|           | |Chapter02_01|            |
-+------------------+-------+---------------------------+
-| USB cable x1     | Jumper M/M x8                     |
-|                  |                                   |
-| |Chapter01_02|   | |Chapter01_03|                    |
-+------------------+-----------------------------------+
-| Infrared remote x1                                   |
-|                                                      |
-| (May need CR2025 battery x1, please check the holder)|
-|                                                      |
-| |Chapter25_00|                                       |
-+---------------------+--------------------------------+
-| Infrared receiver x1| Resistor 10kΩ x1               |
-|                     |                                |
-| |Chapter25_01|      | |Chapter25_02|                 |
-+---------------------+--------------------------------+
+.. table::
+    :align: center
+
+    +------------------------------------------------------+
+    | Control board x1                                     |
+    |                                                      |
+    | |Chapter01_00|                                       |
+    +--------------------------+---------------------------+
+    | Breadboard x1            | GPIO Extension Board x1   |
+    |                          |                           |
+    | |Chapter02_00|           | |Chapter02_01|            |
+    +------------------+-------+---------------------------+
+    | USB cable x1     | Jumper M/M x8                     |
+    |                  |                                   |
+    | |Chapter01_02|   | |Chapter01_03|                    |
+    +------------------+-----------------------------------+
+    | Infrared remote x1                                   |
+    |                                                      |
+    | (May need CR2025 battery x1, please check the holder)|
+    |                                                      |
+    | |Chapter25_00|                                       |
+    +---------------------+--------------------------------+
+    | Infrared receiver x1| Resistor 10kΩ x1               |
+    |                     |                                |
+    | |Chapter25_01|      | |Chapter25_02|                 |
+    +---------------------+--------------------------------+
 
 .. |Chapter01_00| image:: ../_static/imgs/1_LED_Blink/Chapter01_00.png
 .. |Chapter01_02| image:: ../_static/imgs/1_LED_Blink/Chapter01_02.png
@@ -70,7 +73,6 @@ Circuit
 Use pin 12 on the control board to connect IR receiver.
 
 .. list-table:: 
-   :width: 100%
    :align: center
 
    * -  Schematic diagram
@@ -88,7 +90,7 @@ Sketch
 =========================
 
 Sketch Infrared_Remote_Control
--------------------------
+--------------------------------------------------
 
 Before writing code, we need to import the library needed.
 
@@ -118,6 +120,7 @@ First, include header file. Each time you use the infrared sensor, you need to i
 Second, define an infrared receive pin and the infrared sensor is initialized.
 
 .. code-block:: c
+    :linenos:
 
     // Define the pin numbers for the IR receiver
     const int IR_RECEIVE_PIN = 12;
@@ -153,37 +156,40 @@ Now, let us try to control a LED through infrared remote.
 Component List
 ===================================
 
-+------------------------------------------------------+
-| Control board x1                                     |
-|                                                      |
-| |Chapter01_00|                                       |
-+--------------------------+---------------------------+
-| Breadboard x1            | GPIO Extension Board x1   |
-|                          |                           |
-| |Chapter02_00|           | |Chapter02_01|            |
-+------------------+-------+---------------------------+
-| USB cable x1     | Jumper M/M x11                    |
-|                  |                                   |
-| |Chapter01_02|   | |Chapter01_03|                    |
-+------------------+-----------------------------------+
-| Infrared remote x1                                   |
-|                                                      |
-| (May need CR2025 battery x1, please check the holder)|
-|                                                      |
-| |Chapter25_00|                                       |
-+---------------------+--------------------------------+
-| Infrared receiver x1| LED x1                         |
-|                     |                                |
-| |Chapter25_01|      | |Chapter25_11|                 |
-+---------------------+--------------------------------+
-| NPN transistor x1   | Active buzzer x1               |
-|                     |                                |
-| |Chapter25_09|      | |Chapter25_10|                 |
-+-----------------+---+--------------+-----------------+
-| Resistor 220Ω x1| Resistor 1kΩ x1  | Resistor 10kΩ x1|
-|                 |                  |                 |
-| |Chapter25_12|  | |Chapter25_13|   | |Chapter25_02|  |
-+-----------------+------------------+-----------------+
+.. table::
+    :align: center
+
+    +------------------------------------------------------+
+    | Control board x1                                     |
+    |                                                      |
+    | |Chapter01_00|                                       |
+    +--------------------------+---------------------------+
+    | Breadboard x1            | GPIO Extension Board x1   |
+    |                          |                           |
+    | |Chapter02_00|           | |Chapter02_01|            |
+    +------------------+-------+---------------------------+
+    | USB cable x1     | Jumper M/M x11                    |
+    |                  |                                   |
+    | |Chapter01_02|   | |Chapter01_03|                    |
+    +------------------+-----------------------------------+
+    | Infrared remote x1                                   |
+    |                                                      |
+    | (May need CR2025 battery x1, please check the holder)|
+    |                                                      |
+    | |Chapter25_00|                                       |
+    +---------------------+--------------------------------+
+    | Infrared receiver x1| LED x1                         |
+    |                     |                                |
+    | |Chapter25_01|      | |Chapter25_11|                 |
+    +---------------------+--------------------------------+
+    | NPN transistor x1   | Active buzzer x1               |
+    |                     |                                |
+    | |Chapter25_09|      | |Chapter25_10|                 |
+    +-----------------+---+--------------+-----------------+
+    | Resistor 220Ω x1| Resistor 1kΩ x1  | Resistor 10kΩ x1|
+    |                 |                  |                 |
+    | |Chapter25_12|  | |Chapter25_13|   | |Chapter25_02|  |
+    +-----------------+------------------+-----------------+
 
 .. |Chapter25_09| image:: ../_static/imgs/25_Infrared_Remote/Chapter25_09.png   
 .. |Chapter25_10| image:: ../_static/imgs/25_Infrared_Remote/Chapter25_10.png
@@ -197,7 +203,6 @@ Circuit
 Connect pin 12 on the control board to IR receiver to simulate a desk lamp. And drive buzzer through pin 13, drive LED through pin 5. 
 
 .. list-table:: 
-   :width: 100%
    :align: center
 
    * -  Schematic diagram
@@ -215,7 +220,7 @@ Sketch
 =============================
 
 Sketch Control_LED_through_Infrared_Remote
-----------------------------
+--------------------------------------------------------
 
 Now, write code to get the commands sent from IR remote, and control the LED light on/off or emit light with different brightness, and control the buzzer to generate a confirmation sound when it receives the command.
 

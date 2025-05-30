@@ -18,23 +18,26 @@ Component List
 
 Only the black control board is used to display the hardware connection in this document.
 
-+------------------------------------------------------+
-| Control board x1                                     |
-|                                                      |
-| |Chapter01_00|                                       |
-+------------------------------------------------------+
-| Breadboard x1                                        |
-|                                                      |
-| |Chapter01_01|                                       |
-+------------------+-----------------------------------+
-| USB cable x1     | Jumper M/M x2                     |
-|                  |                                   |
-| |Chapter01_02|   | |Chapter01_03|                    |
-+------------------+------------------+----------------+
-| LED x1           | Resistor 220Ω x1 | Push button x1 |
-|                  |                  |                |
-| |Chapter01_04|   | |Chapter01_05|   | |Chapter01_06| |
-+------------------+------------------+----------------+
+.. table:: 
+    :align: center
+
+    +------------------------------------------------------+
+    | Control board x1                                     |
+    |                                                      |
+    | |Chapter01_00|                                       |
+    +------------------------------------------------------+
+    | Breadboard x1                                        |
+    |                                                      |
+    | |Chapter01_01|                                       |
+    +------------------+-----------------------------------+
+    | USB cable x1     | Jumper M/M x2                     |
+    |                  |                                   |
+    | |Chapter01_02|   | |Chapter01_03|                    |
+    +------------------+------------------+----------------+
+    | LED x1           | Resistor 220Ω x1 | Push button x1 |
+    |                  |                  |                |
+    | |Chapter01_04|   | |Chapter01_05|   | |Chapter01_06| |
+    +------------------+------------------+----------------+
 
 .. |Chapter01_00| image:: ../_static/imgs/1_LED_Blink/Chapter01_00.png
 .. |Chapter01_01| image:: ../_static/imgs/1_LED_Blink/Chapter01_01.png
@@ -188,7 +191,6 @@ Firstly, connect components with jumpers according to "hardware connection". Sec
     In this book, we use the regular board as an example to make the circuits. The connection is the same on the control board with WiFi function.
 
 .. list-table:: 
-   :width: 100%
    :align: center
 
    * -  Schematic diagram
@@ -254,31 +256,35 @@ Comments are the words used to explain for the sketches, and they won't affect t
 
 There are two ways to use comments of sketches.
 
-1.	Symbol "//"
+1. Symbol "//"
 
 Contents behind "//" comment out the code in a single line.
 
 .. code-block:: C
+    :linenos:
 
     // this is a comment area in this line.
 
 The content in front of "//" will not be affected.
 
 .. code-block:: C
+    :linenos:
 
     delay(1000);              // wait for a second
 
-2.	Symbol "/*"and "*/"
+2. Symbol "/*"and "*/"
 
 Code can also be commented out by the contents starting with a "/*" and finishing with a "*/" and you can place it anywhere in your code, on the same line or several lines.
 
 .. code-block:: C
+    :linenos:
 
     /* this is comment area. */
 
 Or
 
 .. code-block:: C
+    :linenos:
 
     /* 
         this is a comment line. 
@@ -309,6 +315,7 @@ Variable
 A variable is a kind of data that can be changed. It consists of a name, a value, and a type. Variables need to be defined before using, such as:
 
 .. code-block:: C
+    :linenos:
 
     int i;
 
@@ -317,6 +324,7 @@ A variable is a kind of data that can be changed. It consists of a name, a value
 After declaration of the variable, you can use it. The following is an assignment to a variable:
 
 .. code-block:: C
+    :linenos:
 
     i = 0;                    // after the execution, the value of i is 0
 
@@ -325,6 +333,7 @@ After declaration of the variable, you can use it. The following is an assignmen
 A certain number of variables can be declared in one statement, and a variable can be assigned multiple times. Also, the value of a variable can be passed to other variables. For example:
 
 .. code-block:: C
+    :linenos:
 
     int i, j;
     i = 0;                    // after the execution, the value of i is 0
@@ -337,6 +346,7 @@ Function
 A function is a collection of statements with a sequence of order, which performs a defined task. Let's define a function void blink() as follows:
 
 .. code-block:: C
+    :linenos:
 
     void blink() {
         digitalWrite(13, HIGH);
@@ -365,6 +375,7 @@ When the code is executed to a statement calling the function, the function will
 Some functions have one or more parameters. When you call such functions, you need to write parameters inside "()":
 
 .. code-block:: C
+    :linenos:
 
     digitalWrite(13, HIGH);   // turn the LED on (HIGH is the voltage level)
     delay(1000);              // wait for a second
@@ -375,7 +386,6 @@ Circuit
 Now, we will use IO port of control board to provide power for the LED. Pin 13 of the control board is the digital pin. It can output high level or low level. In this way, control board can control the state of LED.
 
 .. list-table:: 
-   :width: 100%
    :align: center
 
    * -  Schematic diagram
@@ -391,7 +401,7 @@ Sketch
 ======================
 
 Sketch Control_LED_by_Control_Board
-----------------------
+-------------------------------------------------
 
 In order to make the LED blink, we need to make pin 13 of the control board output high and low level alternately.
 
@@ -471,7 +481,7 @@ The board used in this section is as shown below:
 
 Before using the expanding GPIO pins, please complete the following configuration first. 
 
-Copy "pins_arduino.h" and "variant.cpp" under the file path "/Libraries/Expanding_GPIO_Pins" to the file path "C:\Users\Freenove\AppData\Local\Arduino15\pa ckages\arduino\hardware\renesas_uno\1.1.0\variants\MINIMA ".
+Copy "pins_arduino.h" and "variant.cpp" under the file path "/Libraries/Expanding_GPIO_Pins" to the file path "C:\\Users\\Freenove\\AppData\\Local\\Arduino15\\pa ckages\\arduino\\hardware\\renesas_uno\\1.1.0\\variants\\MINIMA ".
 
 .. image:: ../_static/imgs/1_LED_Blink/Chapter01_30.png
     :align: center
@@ -480,44 +490,46 @@ The path may vary due to different versions of board package installed.
 
 The configuration is completed onve the files are copied the files to the above path. The definition of the expanding GPIOs is as shown in the table below.
 
-+----------------------------+----------------------------+
-| GPIOs on the control board | Definition of Arduino GPIO |
-+----------------------------+----------------------------+
-| P003                       | D27                        |
-+----------------------------+----------------------------+
-| P400                       | D28                        |
-+----------------------------+----------------------------+
-| P401                       | D29                        |
-+----------------------------+----------------------------+
-| P402                       | D30                        |
-+----------------------------+----------------------------+
-| P411                       | D31                        |
-+----------------------------+----------------------------+
-| P410                       | D32                        |
-+----------------------------+----------------------------+
-| P409                       | D33                        |
-+----------------------------+----------------------------+
-| P408                       | D34                        |
-+----------------------------+----------------------------+
-| P004                       | D35                        |
-+----------------------------+----------------------------+
-| P011                       | D36                        |
-+----------------------------+----------------------------+
-| P015                       | D37                        |
-+----------------------------+----------------------------+
-| P113                       | D38                        |
-+----------------------------+----------------------------+
-| P205                       | D39                        |
-+----------------------------+----------------------------+
-| P206                       | D40                        |
-+----------------------------+----------------------------+
+.. table:: 
+    :class: freenove-ow
+
+    +----------------------------+----------------------------+
+    | GPIOs on the control board | Definition of Arduino GPIO |
+    +============================+============================+
+    | P003                       | D27                        |
+    +----------------------------+----------------------------+
+    | P400                       | D28                        |
+    +----------------------------+----------------------------+
+    | P401                       | D29                        |
+    +----------------------------+----------------------------+
+    | P402                       | D30                        |
+    +----------------------------+----------------------------+
+    | P411                       | D31                        |
+    +----------------------------+----------------------------+
+    | P410                       | D32                        |
+    +----------------------------+----------------------------+
+    | P409                       | D33                        |
+    +----------------------------+----------------------------+
+    | P408                       | D34                        |
+    +----------------------------+----------------------------+
+    | P004                       | D35                        |
+    +----------------------------+----------------------------+
+    | P011                       | D36                        |
+    +----------------------------+----------------------------+
+    | P015                       | D37                        |
+    +----------------------------+----------------------------+
+    | P113                       | D38                        |
+    +----------------------------+----------------------------+
+    | P205                       | D39                        |
+    +----------------------------+----------------------------+
+    | P206                       | D40                        |
+    +----------------------------+----------------------------+
 
 Now, let's try to use the expanding GPIO pins to light up an LED. Open the Blinking sketch, modify the control pin according to the pin definition shown in the above table. Here we take P003 on the control board as an example, so we modify the control pin of the LED to 27.
 
 Build the circuit as below, and upload the sketch to the board.
 
 .. list-table:: 
-   :width: 100%
    :align: center
 
    * -  Schematic diagram
@@ -530,6 +542,7 @@ Build the circuit as below, and upload the sketch to the board.
 .. |Chapter01_32| image:: ../_static/imgs/1_LED_Blink/Chapter01_32.png
 
 .. code-block:: c
+    :linenos:
 
     // the setup function runs once when you press reset or power the board
     void setup() {

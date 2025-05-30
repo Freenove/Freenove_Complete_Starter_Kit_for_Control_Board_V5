@@ -12,27 +12,30 @@ This project uses hall sensor to control the state of LED.
 Component List
 =============================
 
-+------------------------------------------------------+
-| Control board x1                                     |
-|                                                      |
-| |Chapter01_00|                                       |
-+--------------------------+---------------------------+
-| Breadboard x1            | GPIO Extension Board x1   |
-|                          |                           |
-| |Chapter02_00|           | |Chapter02_01|            |
-+--------------------------+---------------------------+
-|  Jumper x5                                           |
-|                                                      |
-|  |Chapter01_03|                                      |
-+-------------------+----------------------------------+
-| Hall sensor x1    |  Speaker x1                      |
-|                   |                                  |
-| |Chapter33_00|    |   |Chapter33_01|                 |
-+-------------------+----------------------------------+
-| LED x1            |  Resistor 220Ω x1                |
-|                   |                                  |
-| |Chapter29_01|    |   |Chapter29_02|                 |
-+-------------------+----------------------------------+        
+.. table::
+    :align: center
+
+    +------------------------------------------------------+
+    | Control board x1                                     |
+    |                                                      |
+    | |Chapter01_00|                                       |
+    +--------------------------+---------------------------+
+    | Breadboard x1            | GPIO Extension Board x1   |
+    |                          |                           |
+    | |Chapter02_00|           | |Chapter02_01|            |
+    +--------------------------+---------------------------+
+    |  Jumper x5                                           |
+    |                                                      |
+    |  |Chapter01_03|                                      |
+    +-------------------+----------------------------------+
+    | Hall sensor x1    |  Speaker x1                      |
+    |                   |                                  |
+    | |Chapter33_00|    |   |Chapter33_01|                 |
+    +-------------------+----------------------------------+
+    | LED x1            |  Resistor 220Ω x1                |
+    |                   |                                  |
+    | |Chapter29_01|    |   |Chapter29_02|                 |
+    +-------------------+----------------------------------+        
 
 .. |Chapter01_00| image:: ../_static/imgs/1_LED_Blink/Chapter01_00.png
 .. |Chapter01_02| image:: ../_static/imgs/1_LED_Blink/Chapter01_02.png
@@ -58,17 +61,20 @@ Below is the pinout of the Hall sensor.
 
 :orange:`description:`
 
-+--------+------------------------------+
-| symbol |           Function           |
-+========+==============================+
-| VCC    | Power supply pin, +3.3V~5.5V |
-+--------+------------------------------+
-| DO     | Output control signal        |
-+--------+------------------------------+
-| AO     | Output invalid               |
-+--------+------------------------------+
-| GND    | GND                          |
-+--------+------------------------------+
+.. table::
+    :class: freenove-ow
+
+    +--------+------------------------------+
+    | symbol |           Function           |
+    +========+==============================+
+    | VCC    | Power supply pin, +3.3V~5.5V |
+    +--------+------------------------------+
+    | DO     | Output control signal        |
+    +--------+------------------------------+
+    | AO     | Output invalid               |
+    +--------+------------------------------+
+    | GND    | GND                          |
+    +--------+------------------------------+
 
 :red:`Please do not use voltage beyond the power supply range to avoid damage to the Hall sensor.`
 
@@ -78,7 +84,6 @@ Circuit
 ========================
 
 .. list-table:: 
-   :width: 100%
    :align: center
 
    * -  Schematic diagram
@@ -120,33 +125,36 @@ This project uses Hall sensor to make a simple magnetic field detection sound an
 Component List
 ===============================
 
-+-----------------------------------------------------------------+
-| Control board x1                                                |
-|                                                                 |
-| |Chapter01_00|                                                  |
-+--------------------------+--------------------------------------+
-| Breadboard x1            | GPIO Extension Board x1              |
-|                          |                                      |
-| |Chapter02_00|           | |Chapter02_01|                       |
-+--------------------------+--------------------------------------+
-|  Jumper x5                                                      |
-|                                                                 |
-|  |Chapter01_03|                                                 |
-+-------------------+---------------------------------------------+
-| Hall sensor x1    |  Speaker x1                                 |
-|                   |                                             |
-| |Chapter33_00|    |   |Chapter33_01|                            |
-+-------------------+---------------------------------------------+
-| LED x1            |  Resistor 220Ω x1                           |
-|                   |                                             |
-| |Chapter29_01|    |   |Chapter29_02|                            |
-+-------------------+---------------------+-----------------------+   
-| NPN transistorx1  |  Resistor 1kΩ x1    |  Active buzzer x1     |
-|                   |                     |                       |
-| (S8050)           |                     |                       |
-|                   |                     |                       |
-| |Chapter33_04|    |   |Chapter33_05|    |  |Chapter33_06|       |
-+-------------------+---------------------+-----------------------+   
+.. table::
+    :align: center
+
+    +-----------------------------------------------------------------+
+    | Control board x1                                                |
+    |                                                                 |
+    | |Chapter01_00|                                                  |
+    +--------------------------+--------------------------------------+
+    | Breadboard x1            | GPIO Extension Board x1              |
+    |                          |                                      |
+    | |Chapter02_00|           | |Chapter02_01|                       |
+    +--------------------------+--------------------------------------+
+    |  Jumper x5                                                      |
+    |                                                                 |
+    |  |Chapter01_03|                                                 |
+    +-------------------+---------------------------------------------+
+    | Hall sensor x1    |  Speaker x1                                 |
+    |                   |                                             |
+    | |Chapter33_00|    |   |Chapter33_01|                            |
+    +-------------------+---------------------------------------------+
+    | LED x1            |  Resistor 220Ω x1                           |
+    |                   |                                             |
+    | |Chapter29_01|    |   |Chapter29_02|                            |
+    +-------------------+---------------------+-----------------------+   
+    | NPN transistorx1  |  Resistor 1kΩ x1    |  Active buzzer x1     |
+    |                   |                     |                       |
+    | (S8050)           |                     |                       |
+    |                   |                     |                       |
+    | |Chapter33_04|    |   |Chapter33_05|    |  |Chapter33_06|       |
+    +-------------------+---------------------+-----------------------+   
 
 .. |Chapter33_04| image:: ../_static/imgs/33_Hall_sensor/Chapter33_04.png  
 .. |Chapter33_05| image:: ../_static/imgs/33_Hall_sensor/Chapter33_05.png  
@@ -158,7 +166,6 @@ Circuit
 =====================================
 
 .. list-table:: 
-   :width: 100%
    :align: center
 
    * -  Schematic diagram

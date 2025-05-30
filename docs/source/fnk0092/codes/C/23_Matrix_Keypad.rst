@@ -9,23 +9,26 @@ Project Get Input Characters
 
 First, try to understand the keypad, and get the input characters.
 
-+------------------------------------------------------+
-| Control board x1                                     |
-|                                                      |
-| |Chapter01_00|                                       |
-+--------------------------+---------------------------+
-| Breadboard x1            | GPIO Extension Board x1   |
-|                          |                           |
-| |Chapter02_00|           | |Chapter02_01|            |
-+------------------+-------+---------------------------+
-| USB cable x1     | Jumper M/M x8                     |
-|                  |                                   |
-| |Chapter01_02|   | |Chapter01_03|                    |
-+------------------+-----------------------------------+
-| 4x4 keypad x1                                        |
-|                                                      |
-| |Chapter23_00|                                       |
-+------------------------------------------------------+
+.. table::
+    :align: center
+
+    +------------------------------------------------------+
+    | Control board x1                                     |
+    |                                                      |
+    | |Chapter01_00|                                       |
+    +--------------------------+---------------------------+
+    | Breadboard x1            | GPIO Extension Board x1   |
+    |                          |                           |
+    | |Chapter02_00|           | |Chapter02_01|            |
+    +------------------+-------+---------------------------+
+    | USB cable x1     | Jumper M/M x8                     |
+    |                  |                                   |
+    | |Chapter01_02|   | |Chapter01_03|                    |
+    +------------------+-----------------------------------+
+    | 4x4 keypad x1                                        |
+    |                                                      |
+    | |Chapter23_00|                                       |
+    +------------------------------------------------------+
 
 .. |Chapter01_00| image:: ../_static/imgs/1_LED_Blink/Chapter01_00.png
 .. |Chapter01_02| image:: ../_static/imgs/1_LED_Blink/Chapter01_02.png
@@ -58,7 +61,6 @@ Circuit
 Use pin 11-4 on control board to connect 4x4 keypad.
 
 .. list-table:: 
-   :width: 100%
    :align: center
 
    * -  Schematic diagram
@@ -76,7 +78,7 @@ Sketch
 ==========================
 
 Sketch Get_Input_Characters
--------------------------
+--------------------------------------------------
 
 Before writing code, we need to import the library needed.
 
@@ -140,27 +142,27 @@ Now, let us try to use keypad to make a combination lock.
 Component List
 ======================================
 
-+-----------------------------------------------------------------------------+
-| Control board x1                                                            |
-|                                                                             |
-| |Chapter01_00|                                                              |
-+--------------------------+--------------------------------------------------+
-| Breadboard x1            | GPIO Extension Board x1                          |
-|                          |                                                  |
-| |Chapter02_00|           | |Chapter02_01|                                   |
-+------------------+-------+--------------------------------------------------+
-| USB cable x1     | Jumper M/M x15                                           |
-|                  |                                                          |
-| |Chapter01_02|   | |Chapter01_03|                                           |
-+------------------+-------+--------------------------------------------------+
-| 4x4 keypad x1            | Servo x1                                         |
-|                          |                                                  |
-| |Chapter23_00|           | |Chapter23_07|                                   |
-+-----------------+--------+-----------------+--------------------------------+
-|NPN transistor x1|Active buzzer x1          | Resistor 220Ω x8               |
-|                 |                          |                                |
-| |Chapter23_10|  | |Chapter23_11|           |   |Chapter23_12|               |
-+-----------------+--------------------------+--------------------------------+
++----------------------------------------------------------------+
+| Control board x1                                               |
+|                                                                |
+| |Chapter01_00|                                                 |
++--------------------------+-------------------------------------+
+| Breadboard x1            | GPIO Extension Board x1             |
+|                          |                                     |
+| |Chapter02_00|           | |Chapter02_01|                      |
++------------------+-------+-------------------------------------+
+| USB cable x1     | Jumper M/M x15                              |
+|                  |                                             |
+| |Chapter01_02|   | |Chapter01_03|                              |
++------------------+-------+-------------------------------------+
+| 4x4 keypad x1            | Servo x1                            |
+|                          |                                     |
+| |Chapter23_00|           | |Chapter23_07|                      |
++-----------------+--------+-----------------+-------------------+
+|NPN transistor x1|Active buzzer x1          | Resistor 220Ω x8  |
+|                 |                          |                   |
+| |Chapter23_10|  | |Chapter23_11|           |   |Chapter23_12|  |
++-----------------+--------------------------+-------------------+
 
 .. |Chapter23_07| image:: ../_static/imgs/23_Matrix_Keypad/Chapter23_07.png
 .. |Chapter23_10| image:: ../_static/imgs/23_Matrix_Keypad/Chapter23_10.png
@@ -173,7 +175,6 @@ Circuit
 Use pin 11-4 on the control board to connect 4x4 keypad, pin 13 to drive buzzer and pin 12 to drive servo. Servos can be used to drive the mechanical switch and turn on the switch when the password is correct.
 
 .. list-table:: 
-   :width: 100%
    :align: center
 
    * -  Schematic diagram
@@ -214,6 +215,7 @@ First we define a correct password with four characters.
 Make a prompt sound every time when a key is pressed and save the pressed characters.
 
 .. code-block:: c
+    :linenos:
 
     if (keyPressed) {
         // Make a prompt tone each time press the key.

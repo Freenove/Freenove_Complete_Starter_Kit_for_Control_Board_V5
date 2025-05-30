@@ -12,27 +12,30 @@ We will use the control board to get the status of the push button switch, and s
 Component List
 ===================================
 
-+------------------------------------------------------+
-| Control board x1                                     |
-|                                                      |
-| |Chapter01_00|                                       |
-+--------------------------+---------------------------+
-| Breadboard x1            | GPIO Extension Board x1   |
-|                          |                           |
-| |Chapter02_00|           | |Chapter02_01|            |
-+------------------+-------+---------------------------+
-| USB cable x1     | Jumper M/M x4                     |
-|                  |                                   |
-| |Chapter01_02|   | |Chapter01_03|                    |
-+------------------+-----------------------------------+
-| LED x1           | Resistor 220Ω x1                  |
-|                  |                                   |
-| |Chapter01_04|   | |Chapter01_05|                    |
-+------------------+-----------------------------------+
-| Resistor 10kΩ x1 | Push button x1                    |
-|                  |                                   |
-| |Chapter05_00|   | |Chapter01_06|                    |
-+------------------+-----------------------------------+
+.. table::
+    :align: center
+
+    +------------------------------------------------------+
+    | Control board x1                                     |
+    |                                                      |
+    | |Chapter01_00|                                       |
+    +--------------------------+---------------------------+
+    | Breadboard x1            | GPIO Extension Board x1   |
+    |                          |                           |
+    | |Chapter02_00|           | |Chapter02_01|            |
+    +------------------+-------+---------------------------+
+    | USB cable x1     | Jumper M/M x4                     |
+    |                  |                                   |
+    | |Chapter01_02|   | |Chapter01_03|                    |
+    +------------------+-----------------------------------+
+    | LED x1           | Resistor 220Ω x1                  |
+    |                  |                                   |
+    | |Chapter01_04|   | |Chapter01_05|                    |
+    +------------------+-----------------------------------+
+    | Resistor 10kΩ x1 | Push button x1                    |
+    |                  |                                   |
+    | |Chapter05_00|   | |Chapter01_06|                    |
+    +------------------+-----------------------------------+
 
 .. |Chapter01_00| image:: ../_static/imgs/1_LED_Blink/Chapter01_00.png
 .. |Chapter01_02| image:: ../_static/imgs/1_LED_Blink/Chapter01_02.png
@@ -68,32 +71,31 @@ Circuit
 Use pin 12 of control board to detect the status of push button, and pin 9 to drive LED. 
 
 .. list-table:: 
-   :width: 100%
    :align: center
 
    * -  Schematic diagram
-   * -  |Chapter05_03|
+   * -  |Chapter05_05|
    * -  Hardware connection 
      
         If you need any support, please feel free to contact us via: support@freenove.com
 
-   * -  |Chapter05_04|
+   * -  |Chapter05_06|
 
-.. |Chapter05_03| image:: ../_static/imgs/5_Control_LED_with_Push_Button_Switch/Chapter05_03.png
-.. |Chapter05_04| image:: ../_static/imgs/5_Control_LED_with_Push_Button_Switch/Chapter05_04.png
+.. |Chapter05_05| image:: ../_static/imgs/5_Control_LED_with_Push_Button_Switch/Chapter05_05.png
+.. |Chapter05_06| image:: ../_static/imgs/5_Control_LED_with_Push_Button_Switch/Chapter05_06.png
 
 Sketch
 =========================
 
 Sketch Control_LED_Through_Push_Button
--------------------------
+--------------------------------------------------
 
 Now, write code to detect the state of push button, and show it through LED.
 
 .. literalinclude:: ../../../freenove_Kit/Sketches/Sketch_5.1.1_Control_LED_Through_Push_Button/Sketch_5.1.1_Control_LED_Through_Push_Button.ino
     :linenos: 
     :language: c
-    :lines: 1-31
+    :lines: 1-21
     :dedent:
 
 After the port is initialized, the LED will be turned on or off in accordance with the state of the pin connected to push button switch.
@@ -139,7 +141,7 @@ Sketch
 =================================
 
 Sketch Change_LED_State_by_Push_Button
---------------------------
+---------------------------------------------------
 
 Now, write a code to detect the state of the push button switch. Every time you pressed it, the state of LED will be changed. 
 

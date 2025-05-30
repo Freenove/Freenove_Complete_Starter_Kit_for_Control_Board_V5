@@ -12,23 +12,26 @@ Now, try to make two LEDs blink on control board.
 Component List
 ===============================
 
-+------------------------------------------------------+
-| Control board x1                                     |
-|                                                      |
-| |Chapter01_00|                                       |
-+--------------------------+---------------------------+
-| Breadboard x1            | GPIO Extension Board x1   |
-|                          |                           |
-| |Chapter02_00|           | |Chapter02_01|            |
-+------------------+-------+---------------------------+
-| USB cable x1     | Jumper M/M x4                     |
-|                  |                                   |
-| |Chapter01_02|   | |Chapter01_03|                    |
-+------------------+-----------------------------------+
-| LED x2           | Resistor 220Ω x2                  |
-|                  |                                   |
-| |Chapter01_04|   | |Chapter01_05|                    |
-+------------------+-----------------------------------+
+.. table::
+    :align: center
+
+    +------------------------------------------------------+
+    | Control board x1                                     |
+    |                                                      |
+    | |Chapter01_00|                                       |
+    +--------------------------+---------------------------+
+    | Breadboard x1            | GPIO Extension Board x1   |
+    |                          |                           |
+    | |Chapter02_00|           | |Chapter02_01|            |
+    +------------------+-------+---------------------------+
+    | USB cable x1     | Jumper M/M x4                     |
+    |                  |                                   |
+    | |Chapter01_02|   | |Chapter01_03|                    |
+    +------------------+-----------------------------------+
+    | LED x2           | Resistor 220Ω x2                  |
+    |                  |                                   |
+    | |Chapter01_04|   | |Chapter01_05|                    |
+    +------------------+-----------------------------------+
 
 .. |Chapter01_00| image:: ../_static/imgs/1_LED_Blink/Chapter01_00.png
 .. |Chapter01_02| image:: ../_static/imgs/1_LED_Blink/Chapter01_02.png
@@ -49,12 +52,14 @@ Parameters of function
 In the last chapter, we have used a function with a parameter, such as:
 
 .. code-block:: c
+    :linenos:
     
     delay(1000);              // wait for a second
 
 Next, we will define a function with a parameter as below:
 
 .. code-block:: c
+    :linenos:
     
     void functionA(int i) {
         i = i + 1;
@@ -63,6 +68,7 @@ Next, we will define a function with a parameter as below:
 "i" is the parameter of this function. "int" is the type of i. When calling this function, it is necessary to enter the parameter of int type:
 
 .. code-block:: c
+    :linenos:
     
     functionA(1);
 
@@ -74,6 +80,7 @@ The input parameter will be assigned to "i" and involved in the calculation of t
 A function can define more than one parameter and the type of the parameters can be different:
 
 .. code-block:: c
+    :linenos:
     
     void functionB(int i, char j) {
         char k = 'a';
@@ -89,6 +96,7 @@ Data of Boolean type can only be assigned to "true" or "false".
 "true" generally represents a certain relationship which is tenable and correct, and "false" is the opposite.
 
 .. code-block:: c
+    :linenos:
     
     boolean isTrue;
     isTrue = true;            // after the execution, "isTrue" is assigned to true.
@@ -107,6 +115,7 @@ The logic operators have "&&" (and), "||" (or), "!" (non), and the calculation o
 For example: 
 
 .. code-block:: c
+    :linenos:
 
     boolean isTrue;
     isTrue = true && false;   // after the execution, "isTrue"is assigned to false.
@@ -121,6 +130,7 @@ Relational operator is used to judge whether the relationship of the two amount 
 For example, the results of "1<2" is true and the result of "1>2" is false:
 
 .. code-block:: c
+    :linenos:
 
     boolean isTrue;
     isTrue = 1 < 2;           // after the execution, "isTrue"is true.
@@ -157,7 +167,6 @@ Circuit
 Use pin 4 and pin 5 of the control board to drive these two LEDs respectively.
 
 .. list-table:: 
-   :width: 100%
    :align: center
 
    * -  Schematic diagram
@@ -204,6 +213,7 @@ Sketch Two_LEDs_Blink
 In the last sketch, we can see that the following two sections of the code are similar, so we will use one function to replace them to simplify the code.
 
 .. code-block:: c
+    :linenos:
 
     digitalWrite(led1Pin, HIGH);   // turn the LED1 on
     digitalWrite(led2Pin, LOW);    // turn the LED2 off

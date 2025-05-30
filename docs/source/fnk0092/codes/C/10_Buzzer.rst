@@ -98,7 +98,6 @@ Circuit
 Use pin 12 of control board to detect the state of push button switch, and pin 9 to drive active buzzer.
 
 .. list-table:: 
-   :width: 100%
    :align: center
 
    * -  Schematic diagram
@@ -123,7 +122,7 @@ Now, write code to detect the state of push button, and drive active buzzer to m
 .. literalinclude:: ../../../freenove_Kit/Sketches/Sketch_10.1.1_Active_Buzzer/Sketch_10.1.1_Active_Buzzer.ino
     :linenos: 
     :language: c
-    :lines: 1-31
+    :lines: 1-21
     :dedent:
 
 In the code, we check the state of push button switch. When it is pressed, the output high level controls transistor to get conducted, and drives active buzzer to make a sound.
@@ -167,7 +166,6 @@ Circuit
 Use pin 9 port of control board to drive a passive buzzer.
 
 .. list-table:: 
-   :width: 100%
    :align: center
 
    * -  Schematic diagram

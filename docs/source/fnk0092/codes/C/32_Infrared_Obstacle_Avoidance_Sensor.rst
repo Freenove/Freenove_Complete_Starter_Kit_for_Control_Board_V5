@@ -12,27 +12,30 @@ This project uses infrared obstacle avoidance sensor to change the state of LED.
 Component List
 ====================================
 
-+------------------------------------------------------+
-| Control board x1                                     |
-|                                                      |
-| |Chapter01_00|                                       |
-+--------------------------+---------------------------+
-| Breadboard x1            | GPIO Extension Board x1   |
-|                          |                           |
-| |Chapter02_00|           | |Chapter02_01|            |
-+------------------+-------+---------------------------+
-| USB cable x1     | Jumper x5                         |
-|                  |                                   |
-| |Chapter01_02|   | |Chapter01_03|                    |
-+------------------+-----------------------------------+
-| Infrared obstacle avoidance sensor x1                |
-|                                                      |
-| |Chapter32_00|                                       |
-+-------------------+----------------------------------+
-| LED x1            |  Resistor 220Ω x1                |
-|                   |                                  |
-| |Chapter29_01|    |   |Chapter29_02|                 |
-+-------------------+----------------------------------+        
+.. table::
+    :align: center
+
+    +------------------------------------------------------+
+    | Control board x1                                     |
+    |                                                      |
+    | |Chapter01_00|                                       |
+    +--------------------------+---------------------------+
+    | Breadboard x1            | GPIO Extension Board x1   |
+    |                          |                           |
+    | |Chapter02_00|           | |Chapter02_01|            |
+    +------------------+-------+---------------------------+
+    | USB cable x1     | Jumper x5                         |
+    |                  |                                   |
+    | |Chapter01_02|   | |Chapter01_03|                    |
+    +------------------+-----------------------------------+
+    | Infrared obstacle avoidance sensor x1                |
+    |                                                      |
+    | |Chapter32_00|                                       |
+    +-------------------+----------------------------------+
+    | LED x1            |  Resistor 220Ω x1                |
+    |                   |                                  |
+    | |Chapter29_01|    |   |Chapter29_02|                 |
+    +-------------------+----------------------------------+        
 
 .. |Chapter01_00| image:: ../_static/imgs/1_LED_Blink/Chapter01_00.png
 .. |Chapter01_02| image:: ../_static/imgs/1_LED_Blink/Chapter01_02.png
@@ -57,15 +60,18 @@ Below is the pinout of infrared obstacle avoidance sensor.
 
 :orange:`Pin description:`
 
-+--------+------------------------------+
-| symbol |           Function           |
-+========+==============================+
-| OUT    | Output control signal        |
-+--------+------------------------------+
-| VCC    | Power supply pin, +3.3V~5.0V |
-+--------+------------------------------+
-| GND    | GND                          |
-+--------+------------------------------+
+.. table::
+    :class: freenove-ow
+
+    +--------+------------------------------+
+    | symbol |           Function           |
+    +========+==============================+
+    | OUT    | Output control signal        |
+    +--------+------------------------------+
+    | VCC    | Power supply pin, +3.3V~5.0V |
+    +--------+------------------------------+
+    | GND    | GND                          |
+    +--------+------------------------------+
 
 Please do not use the voltage beyond the power supply range to avoid damage to the infrared obstacle avoidance sensor.
 
@@ -73,7 +79,6 @@ Circuit
 ========================
 
 .. list-table:: 
-   :width: 100%
    :align: center
 
    * -  Schematic diagram
@@ -93,7 +98,7 @@ Sketch
 =======================
 
 Sketch Infrared_obstacle_avoidance_sensor_and_LED
-------------------------
+--------------------------------------------------------------
 
 After the program is executed, when you block the sensor with your hand at a certain distance or the sensor encounters an obstacle, the LED will turn on, and when the sensor is not blocked or the sensor does not encounter an obstacle, the LED will turn off.
 
@@ -113,36 +118,36 @@ This project uses an infrared obstacle avoidance sensor to make a simple reminde
 Component List
 =================================
 
-Component List
-===============================
+.. table::
+    :align: center
 
-+--------------------------------------------------------------------+
-| Control board x1                                                   |
-|                                                                    |
-| |Chapter01_00|                                                     |
-+--------------------------+-----------------------------------------+
-| Breadboard x1            | GPIO Extension Board x1                 |
-|                          |                                         |
-| |Chapter02_00|           | |Chapter02_01|                          |
-+------------------+-------+-----------------------------------------+
-| USB cable x1     | Jumper x5                                       |
-|                  |                                                 |
-| |Chapter01_02|   | |Chapter01_03|                                  |
-+------------------+-------------------------------------------------+
-| Infrared obstacle avoidance sensor x1                              |
-|                                                                    |
-| |Chapter32_00|                                                     |
-+-------------------+------------------------------------------------+
-| LED x1            |  Resistor 220Ω x1                              |
-|                   |                                                |
-| |Chapter29_01|    |   |Chapter29_02|                               |
-+-------------------+-------------------+----------------------------+      
-| Active buzzer x1  |  NPN transistorx1 |  Resistor 1kΩx1            |
-|                   |                   |                            |
-|                   |  (S8050)          |                            |
-|                   |                   |                            |
-| |Chapter32_05|    |   |Chapter32_04|  |   |Chapter10_10|           |
-+-------------------+-------------------+----------------------------+      
+    +--------------------------------------------------------------------+
+    | Control board x1                                                   |
+    |                                                                    |
+    | |Chapter01_00|                                                     |
+    +--------------------------+-----------------------------------------+
+    | Breadboard x1            | GPIO Extension Board x1                 |
+    |                          |                                         |
+    | |Chapter02_00|           | |Chapter02_01|                          |
+    +------------------+-------+-----------------------------------------+
+    | USB cable x1     | Jumper x5                                       |
+    |                  |                                                 |
+    | |Chapter01_02|   | |Chapter01_03|                                  |
+    +------------------+-------------------------------------------------+
+    | Infrared obstacle avoidance sensor x1                              |
+    |                                                                    |
+    | |Chapter32_00|                                                     |
+    +-------------------+------------------------------------------------+
+    | LED x1            |  Resistor 220Ω x1                              |
+    |                   |                                                |
+    | |Chapter29_01|    |   |Chapter29_02|                               |
+    +-------------------+-------------------+----------------------------+      
+    | Active buzzer x1  |  NPN transistorx1 |  Resistor 1kΩx1            |
+    |                   |                   |                            |
+    |                   |  (S8050)          |                            |
+    |                   |                   |                            |
+    | |Chapter32_05|    |   |Chapter32_04|  |   |Chapter10_10|           |
+    +-------------------+-------------------+----------------------------+      
 
 .. |Chapter32_03| image:: ../_static/imgs/32_Infrared_Obstacle_Avoidance_Sensor/Chapter32_03.png  
 .. |Chapter32_04| image:: ../_static/imgs/32_Infrared_Obstacle_Avoidance_Sensor/Chapter32_04.png
@@ -153,7 +158,6 @@ Circuit
 ========================
 
 .. list-table:: 
-   :width: 100%
    :align: center
 
    * -  Schematic diagram
@@ -171,7 +175,7 @@ Sketch
 ====================
 
 Sketch Infrared_obstacle_avoidance_sensor_and_buzzer
--------------------
+---------------------------------------------------------
 
 After the program is executed, when you block the sensor with your hand at a certain distance or the sensor encounters an obstacle, the buzzer will sound a reminder, and the LED will flash to remind you.
 

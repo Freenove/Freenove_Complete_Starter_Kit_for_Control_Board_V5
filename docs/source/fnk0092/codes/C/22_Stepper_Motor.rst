@@ -15,25 +15,28 @@ Component List
 Component List
 ============================
 
-+-----------------------------------------------------------------+
-| Control board x1                                                |
-|                                                                 |
-| |Chapter01_00|                                                  |
-+--------------------------+--------------------------------------+
-| Breadboard x1            | GPIO Extension Board x1              |
-|                          |                                      |
-| |Chapter02_00|           | |Chapter02_01|                       |
-+------------------+-------+--------------------------------------+
-| USB cable x1     | Jumper M/M x3                                |
-|                  |                                              |
-| |Chapter01_02|   | |Chapter01_03|                               |
-+------------------+--------------------+-------------------------+
-| ULN2003 stepper motor driver x1       | Stepper motor x1        |
-|                                       |                         |
-|                                       |                         |
-|                                       |                         |
-| |Chapter22_01|                        |  |Chapter22_00|         |
-+---------------------------------------+-------------------------+
+.. table::
+    :align: center
+
+    +-----------------------------------------------------------+
+    | Control board x1                                          |
+    |                                                           |
+    | |Chapter01_00|                                            |
+    +--------------------------+--------------------------------+
+    | Breadboard x1            | GPIO Extension Board x1        |
+    |                          |                                |
+    | |Chapter02_00|           | |Chapter02_01|                 |
+    +------------------+-------+--------------------------------+
+    | USB cable x1     | Jumper M/M x3                          |
+    |                  |                                        |
+    | |Chapter01_02|   | |Chapter01_03|                         |
+    +------------------+--------------------+-------------------+
+    | ULN2003 stepper motor driver x1       | Stepper motor x1  |
+    |                                       |                   |
+    |                                       |                   |
+    |                                       |                   |
+    | |Chapter22_01|                        |  |Chapter22_00|   |
+    +---------------------------------------+-------------------+
 
 .. |Chapter01_00| image:: ../_static/imgs/1_LED_Blink/Chapter01_00.png
 .. |Chapter01_02| image:: ../_static/imgs/1_LED_Blink/Chapter01_02.png
@@ -87,7 +90,6 @@ Circuit
 Use pin 11, 10, 9, 8 on the control board to control the ULN2003 stepper motor driver, and connect it to the stepper motor.
 
 .. list-table:: 
-   :width: 100%
    :align: center
 
    * -  Schematic diagram
@@ -105,7 +107,7 @@ Sketch
 =======================
 
 Sketch Drive_Stepper_Motor
------------------------
+--------------------------------------------------
 
 Now write code to control the stepper motor through ULN2003 stepper motor driver.
 
@@ -118,9 +120,10 @@ Now write code to control the stepper motor through ULN2003 stepper motor driver
 In the code, we define a function to make the motor rotate for a step. And the parameter determines the rotation direction of the stepper motor.
 
 .. code-block:: c
+    :linenos:
 
     void moveOneStep(bool dir) {
-    ...
+        ...
     }
 
 A variable is defined in this function and we use four low bits to show the state of 4 ports. These ports are connected in order, so the variable can be assigned to 0x01 and we can use the shifting method to change the bit of the connected port.

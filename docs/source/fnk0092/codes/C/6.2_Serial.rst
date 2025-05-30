@@ -13,7 +13,6 @@ Component List
 ======================================
 
 .. list-table:: 
-   :width: 100%
    :align: center
 
    * -  Control board x1
@@ -101,7 +100,7 @@ Sketch
 =============================
 
 Sketch Send_data_through_Serial
------------------------------
+--------------------------------------------------------
 
 Now, write code to send some texts to the Serial Monitor window
 
@@ -166,7 +165,7 @@ Sketch
 ==========================
 
 Sketch Receive_Data_through_Serial_Port
------------------------------
+--------------------------------------------------------
 
 Now, write code to receive the characters from Serial Monitor window, and send it back.
 
@@ -197,7 +196,6 @@ Component List
 ======================================
 
 .. list-table:: 
-   :width: 100%
    :align: center
 
    * -  Control board x1

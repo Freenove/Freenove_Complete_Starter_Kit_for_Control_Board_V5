@@ -59,7 +59,6 @@ Circuit
 Use pin A0 and pin A1 on control board to detect the voltage value of two rotary potentiometers inside Joystick, and use pin 8 port to detect the vertical button.
 
 .. list-table:: 
-   :width: 100%
    :align: center
 
    * -  Schematic diagram

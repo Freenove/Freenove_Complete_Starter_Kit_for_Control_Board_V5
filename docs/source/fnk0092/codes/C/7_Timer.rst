@@ -11,7 +11,6 @@ Component List
 ======================================
 
 .. list-table:: 
-   :width: 100%
    :align: center
 
    * -  Control board x1
@@ -61,7 +60,7 @@ open Arduino IDE, click Sketch -> Include Library -> Add .ZIP Library, In the po
     :align: center
 
 Sketch Serial_print_using_timer
---------------------------------
+----------------------------------------------------------------
 
 .. literalinclude:: ../../../freenove_Kit/Sketches/Sketch_7.1.1_Serial_print_using_timer/Sketch_7.1.1_Serial_print_using_timer.ino
     :linenos: 
@@ -83,7 +82,6 @@ Component List
 ======================================
 
 .. list-table:: 
-   :width: 100%
    :align: center
 
    * -  Schematic diagram
@@ -108,7 +106,7 @@ Sketch
 =================================
 
 Sketch Using_timer_to_implement_LED_blinking
-----------------------------------
+--------------------------------------------------------------------
 
 .. literalinclude:: ../../../freenove_Kit/Sketches/Sketch_7.2.1_Using_timer_to_implement_LED_blinking/Sketch_7.2.1_Using_timer_to_implement_LED_blinking.ino
     :linenos: 

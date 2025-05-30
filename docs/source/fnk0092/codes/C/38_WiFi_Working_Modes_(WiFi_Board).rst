@@ -59,7 +59,7 @@ After making sure the router name and password are entered correctly, compile an
 .. image:: ../_static/imgs/38_WiFi_Working_Modes_(WiFi_Board)/Chapter38_02.png
     :align: center
 
-When control board successfully connects to “ssid_Router”, serial monitor will print out the IP address assigned to control board by the router.
+When control board successfully connects to "ssid_Router", serial monitor will print out the IP address assigned to control board by the router.
 
 The following is the program code:
 

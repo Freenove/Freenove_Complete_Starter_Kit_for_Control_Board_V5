@@ -12,27 +12,30 @@ In this project, we will read the unique ID number (UID) of the RFID card, recog
 Component List
 ==============================
 
-+----------------------------------------------------------------------------+
-| Control board x1                                                           |
-|                                                                            |
-| |Chapter01_00|                                                             |
-+--------------------------+-------------------------------------------------+
-| Breadboard x1            | GPIO Extension Board x1                         |
-|                          |                                                 |
-| |Chapter02_00|           | |Chapter02_01|                                  |
-+------------------+-------+-------------------------------------------------+
-| USB cable x1     | Jumper M/M x3                                           |
-|                  |                                                         |
-| |Chapter01_02|   | |Chapter01_03|                                          |
-+------------------+------+--------------------------------------------------+
-| RFID Module(RC522) x1   | Mifare1 S50 Standard card x1                     |
-|                         |                                                  |
-| |Chapter37_00|          |  |Chapter37_01|                                  |
-+-------------------------+--------------------------------------------------+
-| Mifare1 S50 Non-standard card x1                                           |
-|                                                                            |
-| |Chapter37_02|                                                             |
-+----------------------------------------------------------------------------+
+.. table::
+    :align: center
+
+    +-----------------------------------------------------------+
+    | Control board x1                                          |
+    |                                                           |
+    | |Chapter01_00|                                            |
+    +--------------------------+--------------------------------+
+    | Breadboard x1            | GPIO Extension Board x1        |
+    |                          |                                |
+    | |Chapter02_00|           | |Chapter02_01|                 |
+    +------------------+-------+--------------------------------+
+    | USB cable x1     | Jumper M/M x3                          |
+    |                  |                                        |
+    | |Chapter01_02|   | |Chapter01_03|                         |
+    +------------------+------+---------------------------------+
+    | RFID Module(RC522) x1   | Mifare1 S50 Standard card x1    |
+    |                         |                                 |
+    | |Chapter37_00|          |  |Chapter37_01|                 |
+    +-------------------------+---------------------------------+
+    | Mifare1 S50 Non-standard card x1                          |
+    |                                                           |
+    | |Chapter37_02|                                            |
+    +-----------------------------------------------------------+
 
 .. |Chapter01_00| image:: ../_static/imgs/1_LED_Blink/Chapter01_00.png
 .. |Chapter01_02| image:: ../_static/imgs/1_LED_Blink/Chapter01_02.png
@@ -77,35 +80,38 @@ Mifare1 S50 is often called Mifare Standard with the capacity of 1K bytes. And e
     
 The Mifare1 S50 capacity (1K byte) is divided into 16 sectors (Sector0-Sector15). Each sector contains 4 data block (Block0-Block3. 64 blocks of 16 sectors will be numbered according to absolute address, from 0 to 63). And each block contains 16 bytes (Byte0-Byte15), 64*16=1024. As is shown in the following table:
 
-+------------+-----------+--------------------------------------+---------------+--------------------+
-| Sector No. | Block No. |             Storage area             |  Block type   | Absolute block No. |
-+============+===========+======================================+===============+====================+
-|            | block 0   | vendor code                          | vendor block  | 0                  |
-|            +-----------+--------------------------------------+---------------+--------------------+
-| sector 0   | block 1   |                                      | data block    | 1                  |
-|            +-----------+--------------------------------------+---------------+--------------------+
-|            | block 2   |                                      | data block    | 2                  |
-|            +-----------+--------------------------------------+---------------+--------------------+
-|            | block 3   | Password A-access control-password B | control block | 3                  |
-+------------+-----------+--------------------------------------+---------------+--------------------+
-|            | block 0   |                                      | data block    | 4                  |
-|            +-----------+--------------------------------------+---------------+--------------------+
-| sector 1   | block 1   |                                      | data block    | 5                  |
-|            +-----------+--------------------------------------+---------------+--------------------+
-|            | block 2   |                                      | data block    | 6                  |
-|            +-----------+--------------------------------------+---------------+--------------------+
-|            | block 3   | Password A-access control-password B | control block | 7                  |
-+------------+-----------+--------------------------------------+---------------+--------------------+
-| ...        | ...       | ...                                  | ...           |                    |
-+------------+-----------+--------------------------------------+---------------+--------------------+
-|            | block 0   |                                      | data block    | 60                 |
-|            +-----------+--------------------------------------+---------------+--------------------+
-| sector 15  | block 1   |                                      | data block    | 61                 |
-|            +-----------+--------------------------------------+---------------+--------------------+
-|            | block 2   |                                      | data block    | 62                 |
-|            +-----------+--------------------------------------+---------------+--------------------+
-|            | block 3   | Password A-access control-password B | control block | 63                 |
-+------------+-----------+--------------------------------------+---------------+--------------------+
+.. table::
+    :align: center
+
+    +------------+-----------+--------------------------------------+---------------+--------------------+
+    | Sector No. | Block No. |             Storage area             |  Block type   | Absolute block No. |
+    +============+===========+======================================+===============+====================+
+    |            | block 0   | vendor code                          | vendor block  | 0                  |
+    |            +-----------+--------------------------------------+---------------+--------------------+
+    | sector 0   | block 1   |                                      | data block    | 1                  |
+    |            +-----------+--------------------------------------+---------------+--------------------+
+    |            | block 2   |                                      | data block    | 2                  |
+    |            +-----------+--------------------------------------+---------------+--------------------+
+    |            | block 3   | Password A-access control-password B | control block | 3                  |
+    +------------+-----------+--------------------------------------+---------------+--------------------+
+    |            | block 0   |                                      | data block    | 4                  |
+    |            +-----------+--------------------------------------+---------------+--------------------+
+    | sector 1   | block 1   |                                      | data block    | 5                  |
+    |            +-----------+--------------------------------------+---------------+--------------------+
+    |            | block 2   |                                      | data block    | 6                  |
+    |            +-----------+--------------------------------------+---------------+--------------------+
+    |            | block 3   | Password A-access control-password B | control block | 7                  |
+    +------------+-----------+--------------------------------------+---------------+--------------------+
+    | ...        | ...       | ...                                  | ...           |                    |
+    +------------+-----------+--------------------------------------+---------------+--------------------+
+    |            | block 0   |                                      | data block    | 60                 |
+    |            +-----------+--------------------------------------+---------------+--------------------+
+    | sector 15  | block 1   |                                      | data block    | 61                 |
+    |            +-----------+--------------------------------------+---------------+--------------------+
+    |            | block 2   |                                      | data block    | 62                 |
+    |            +-----------+--------------------------------------+---------------+--------------------+
+    |            | block 3   | Password A-access control-password B | control block | 63                 |
+    +------------+-----------+--------------------------------------+---------------+--------------------+
 
 Each sector has a set of independent password and access control which are put in the last block of each sector, and the block is also known as sector trailer, that is Block 3 in each sector. Sector 0, block 0 (namely absolute address 0) of S50 is used to store the vendor code, which has been solidified and can’t be changed, and the card serial number is stored here. In addition to the manufacturer and the control block, the rest of the cards are data blocks, which can be used to store data. Data block can be used for two kinds of applications:
 
@@ -131,7 +137,6 @@ Circuit
 ============================
 
 .. list-table:: 
-   :width: 100%
    :align: center
 
    * -  Schematic diagram

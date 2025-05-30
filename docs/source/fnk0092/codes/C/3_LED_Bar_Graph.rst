@@ -12,23 +12,26 @@ Let us use control board to control a bar graph LED consisting of 10 LEDs.
 Component List
 ===================================
 
-+------------------------------------------------------+
-| Control board x1                                     |
-|                                                      |
-| |Chapter01_00|                                       |
-+--------------------------+---------------------------+
-| Breadboard x1            | GPIO Extension Board x1   |
-|                          |                           |
-| |Chapter02_00|           | |Chapter02_01|            |
-+------------------+-------+---------------------------+
-| USB cable x1     | Jumper M/M x10                    |
-|                  |                                   |
-| |Chapter01_02|   | |Chapter01_03|                    |
-+------------------+-----------------------------------+
-| LED bar graph x1 | Resistor 220Ω x10                 |
-|                  |                                   |
-| |Chapter03_00|   | |Chapter01_05|                    |
-+------------------+-----------------------------------+
+.. table::
+    :align: center
+
+    +------------------------------------------------------+
+    | Control board x1                                     |
+    |                                                      |
+    | |Chapter01_00|                                       |
+    +--------------------------+---------------------------+
+    | Breadboard x1            | GPIO Extension Board x1   |
+    |                          |                           |
+    | |Chapter02_00|           | |Chapter02_01|            |
+    +------------------+-------+---------------------------+
+    | USB cable x1     | Jumper M/M x10                    |
+    |                  |                                   |
+    | |Chapter01_02|   | |Chapter01_03|                    |
+    +------------------+-----------------------------------+
+    | LED bar graph x1 | Resistor 220Ω x10                 |
+    |                  |                                   |
+    | |Chapter03_00|   | |Chapter01_05|                    |
+    +------------------+-----------------------------------+
 
 .. |Chapter01_00| image:: ../_static/imgs/1_LED_Blink/Chapter01_00.png
 .. |Chapter01_02| image:: ../_static/imgs/1_LED_Blink/Chapter01_02.png
@@ -62,24 +65,28 @@ Array
 Array is used to record a set of variables. An array is defined as below:
 
 .. code-block:: c
+    :linenos:
 
     int a[10];
 
 "int" is the type of the array and "10" represents the amount of elements of the array. This array can store 10 int types of elements as below.
 
 .. code-block:: c
+    :linenos:
 
     int a[10] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
 
 Or there is another form that the number of elements is the size of the array:
 
 .. code-block:: c
+    :linenos:
 
     int a[] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
 
 We can reference elements of an array as below:
 
 .. code-block:: c
+    :linenos:
 
     int i, j;
     i = a[0];
@@ -91,16 +98,20 @@ Among them, "[]" is the array index, with a[0] as the first elements in the arra
 For example, now we define an array b[] below:
 
 .. code-block:: c
+    :linenos:
 
     int b[] = {5, 6, 7, 8};
 
 The value of each element in array b[] is as follows:
 
-+------+------+------+------+
-| b[0] | b[1] | b[2] | b[3] |
-+------+------+------+------+
-| 5    | 6    | 7    | 8    |
-+------+------+------+------+
+.. table::
+    :align: center
+
+    +------+------+------+------+
+    | b[0] | b[1] | b[2] | b[3] |
+    +------+------+------+------+
+    | 5    | 6    | 7    | 8    |
+    +------+------+------+------+
 
 This is just the use of one-dimensional array. And there are two-dimensional arrays, three-dimensional arrays, and multi-dimensional arrays. Readers interested of this part can develop your own learning.
 
@@ -110,6 +121,7 @@ Loop
 The loop statement is used to perform repetitive work such as the initialization to all the elements of an array.
 
 .. code-block:: c
+    :linenos:
 
     while(expression)
     functionX();
@@ -117,6 +129,7 @@ The loop statement is used to perform repetitive work such as the initialization
 When there is more than one statement to be executed, the form is as follows:
 
 .. code-block:: c
+    :linenos:
 
     while(expression){
         functionX();
@@ -126,6 +139,7 @@ When there is more than one statement to be executed, the form is as follows:
 The first step of the execution is judging the expression inside "()". If the result is false, the statements inside "{}" will not be executed; if result is true, the statements will be executed.
 
 .. code-block:: c
+    :linenos:
 
     int i = 0;
     while (i < 2)
@@ -141,6 +155,7 @@ Third time: i<2, i=2 is not tenable, execution of loop statements is completed. 
 "do while" and "while" is similar. The difference is that the loop statements of "do while" is executed before judging expression. The result of the judgment will decide whether or not to go on the next execution:
 
 .. code-block:: c
+    :linenos:
 
     do {
         functionX();
@@ -149,6 +164,7 @@ Third time: i<2, i=2 is not tenable, execution of loop statements is completed. 
 "for" is another loop statement, and its form is as follows:
 
 .. code-block:: c
+    :linenos:
 
     for (expression1; expression2; expression 3)
     functionX();
@@ -156,6 +172,7 @@ Third time: i<2, i=2 is not tenable, execution of loop statements is completed. 
 When there is more than one statement to be executed, the form is as follows:
 
 .. code-block:: c
+    :linenos:
 
     for (expression 1; expression 2; expression 3) {
         functionX();
@@ -167,6 +184,7 @@ Expression 1 is generally used to initialize variables; expression 2 is a judgem
 For example:
 
 .. code-block:: c
+    :linenos:
 
     int i = 0, j = 0;
     for (i = 0; i < 2; i++)
@@ -191,7 +209,6 @@ Circuit
 Let us use pin 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 of the control board to drive LED bar graph.
 
 .. list-table:: 
-   :width: 100%
    :align: center
 
    * -  Schematic diagram
@@ -211,7 +228,7 @@ Sketch
 Now let us complete the sketch to control LED bar graph.
 
 Sketch LED_bar_graph_Display
----------------------
+------------------------------------------------
 
 First, write a sketch to achieve the LED light water.
 

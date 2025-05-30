@@ -12,23 +12,26 @@ ADC is used to convert analog signals into digital signals. Control chip on the 
 Component List
 ==============================
 
-+------------------------------------------------------+
-| Control board x1                                     |
-|                                                      |
-| |Chapter01_00|                                       |
-+--------------------------+---------------------------+
-| Breadboard x1            | GPIO Extension Board x1   |
-|                          |                           |
-| |Chapter02_00|           | |Chapter02_01|            |
-+------------------+-------+---------------------------+
-| USB cable x1     | Jumper M/M x3                     |
-|                  |                                   |
-| |Chapter01_02|   | |Chapter01_03|                    |
-+------------------+-----------------------------------+
-| Rotary potentiometer x1                              |
-|                                                      |
-| |Chapter08_00|                                       |
-+------------------------------------------------------+
+.. table::
+    :align: center
+
+    +------------------------------------------------------+
+    | Control board x1                                     |
+    |                                                      |
+    | |Chapter01_00|                                       |
+    +--------------------------+---------------------------+
+    | Breadboard x1            | GPIO Extension Board x1   |
+    |                          |                           |
+    | |Chapter02_00|           | |Chapter02_01|            |
+    +------------------+-------+---------------------------+
+    | USB cable x1     | Jumper M/M x3                     |
+    |                  |                                   |
+    | |Chapter01_02|   | |Chapter01_03|                    |
+    +------------------+-----------------------------------+
+    | Rotary potentiometer x1                              |
+    |                                                      |
+    | |Chapter08_00|                                       |
+    +------------------------------------------------------+
 
 .. |Chapter01_00| image:: ../_static/imgs/1_LED_Blink/Chapter01_00.png
 .. |Chapter01_01| image:: ../_static/imgs/1_LED_Blink/Chapter01_01.png
@@ -88,7 +91,6 @@ Circuit
 Use pin A0 on the control board to detect the voltage of rotary potentiometer.
 
 .. list-table:: 
-   :width: 100%
    :align: center
 
    * -  Schematic diagram
@@ -149,25 +151,26 @@ In the previous section, we have finished reading ADC value and converting it in
 Component List
 =============================
 
-+----------------------------------------------------------------------------------+
-| Control board x1                                                                 |
-|                                                                                  |
-| |Chapter01_00|                                                                   |
-+----------------------------------------+-----------------------------------------+
-| Breadboard x1                          | GPIO Extension Board x1                 |
-|                                        |                                         |
-| |Chapter01_01|                         |  |Chapter02_01|                         |
-+------------------+---------------------+-----------------------------------------+
-| USB cable x1     | Jumper M/M x2                                                 |
-|                  |                                                               |
-| |Chapter01_02|   | |Chapter01_03|                                                |
-+------------------+------------------+--------------------------------------------+
-| LED x1           | Resistor 220Ω x1 | Rotary                                     |
-|                  |                  |                                            |
-|                  |                  | potentiometer x1                           |
-|                  |                  |                                            |
-| |Chapter01_04|   | |Chapter01_05|   | |Chapter08_00|                             |
-+------------------+------------------+--------------------------------------------+
+.. table::
+    :align: center
+
+    +-------------------------------------------------------------------+
+    | Control board x1                                                  |
+    |                                                                   |
+    | |Chapter01_00|                                                    |
+    +------------------+------------------------------------------------+
+    | Breadboard x1    | GPIO Extension Board x1                        |
+    |                  |                                                |
+    | |Chapter01_01|   |  |Chapter02_01|                                |
+    +------------------+------------------------------------------------+
+    | USB cable x1     | Jumper M/M x2                                  |
+    |                  |                                                |
+    | |Chapter01_02|   | |Chapter01_03|                                 |
+    +------------------+------------------+-----------------------------+
+    | LED x1           | Resistor 220Ω x1 | Rotary potentiometer x1     |
+    |                  |                  |                             |
+    | |Chapter01_04|   | |Chapter01_05|   | |Chapter08_00|              |
+    +------------------+------------------+-----------------------------+
 
 .. |Chapter01_05| image:: ../_static/imgs/1_LED_Blink/Chapter01_05.png
 
@@ -177,7 +180,6 @@ Circuit
 Use pin A0 on control board to detect the voltage of rotary potentiometer, and use pin 9 to control one LED.
 
 .. list-table:: 
-   :width: 100%
    :align: center
 
    * -  Schematic diagram
@@ -195,7 +197,7 @@ Sketch
 ============================
 
 Sketch Control_LED_by_Potentiometer
-----------------------------
+-------------------------------------------------------
 
 Now, write the code to detect the voltage of rotary potentiometer, and control LED to emit light with different brightness according to that.
 
@@ -220,27 +222,30 @@ In the previous section, we have finished reading ADC value and converted it int
 Component List
 =============================================
 
-+------------------------------------------------------+
-| Control board x1                                     |
-|                                                      |
-| |Chapter01_00|                                       |
-+--------------------------+---------------------------+
-| Breadboard x1            | GPIO Extension Board x1   |
-|                          |                           |
-| |Chapter02_00|           | |Chapter02_01|            |
-+------------------+-------+---------------------------+
-| USB cable x1     | Jumper M/M x4                     |
-|                  |                                   |
-| |Chapter01_02|   | |Chapter01_03|                    |
-+------------------+-----------------------------------+
-| LED x1           | Resistor 220Ω x1                  |
-|                  |                                   |
-| |Chapter01_04|   | |Chapter01_05|                    |
-+------------------+-----------------------------------+
-| Resistor 10kΩ x1 | Photoresistor x1                  |
-|                  |                                   |
-| |Chapter05_00|   | |Chapter08_11|                    |
-+------------------+-----------------------------------+
+.. table::
+    :align: center
+
+    +------------------------------------------------------+
+    | Control board x1                                     |
+    |                                                      |
+    | |Chapter01_00|                                       |
+    +------------------+-----------------------------------+
+    | Breadboard x1    | GPIO Extension Board x1           |
+    |                  |                                   |
+    | |Chapter02_00|   | |Chapter02_01|                    |
+    +------------------+-----------------------------------+
+    | USB cable x1     | Jumper M/M x4                     |
+    |                  |                                   |
+    | |Chapter01_02|   | |Chapter01_03|                    |
+    +------------------+-----------------------------------+
+    | LED x1           | Resistor 220Ω x1                  |
+    |                  |                                   |
+    | |Chapter01_04|   | |Chapter01_05|                    |
+    +------------------+-----------------------------------+
+    | Resistor 10kΩ x1 | Photoresistor x1                  |
+    |                  |                                   |
+    | |Chapter05_00|   | |Chapter08_11|                    |
+    +------------------+-----------------------------------+
 
 .. |Chapter01_06| image:: ../_static/imgs/1_LED_Blink/Chapter01_06.png
 .. |Chapter05_00| image:: ../_static/imgs/5_Control_LED_with_Push_Button_Switch/Chapter05_00.png
@@ -270,7 +275,6 @@ Circuit
 Use pin A0 on control board to detect the voltage of photoresistor, and use pin 9 to control one LED.
 
 .. list-table:: 
-   :width: 100%
    :align: center
 
    * -  Schematic diagram
@@ -288,7 +292,7 @@ Sketch
 ==========================
 
 Sketch Control_LED_through_Photoresistor
----------------------------
+------------------------------------------------------
 
 Now, write code to detect the voltage of rotary potentiometer, and control LED to emit light with different brightness according to that.
 

@@ -66,7 +66,7 @@ Select Libraries in the pop-up window.
 .. image:: ../_static/imgs/Preface/Preface08.png
     :align: center
 
-Input “ControlP5” in the searching box, and then select the option as below. Click “Install” and wait for the installation to finish.
+Input "ControlP5" in the searching box, and then select the option as below. Click "Install" and wait for the installation to finish.
 
 .. image:: ../_static/imgs/Preface/Preface09.png
     :align: center
@@ -76,7 +76,7 @@ First Use
 
 In the editor, type the following:
 
-.. code-block:: c
+.. code-block:: java
 
     ellipse(50, 50, 80, 80);
 

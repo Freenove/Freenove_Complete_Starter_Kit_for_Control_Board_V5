@@ -14,23 +14,26 @@ Firstly, let us learn how to use the 74HC595 chip, which is very helpful for us 
 Component List
 ================================
 
-+------------------------------------------------------+
-| Control board x1                                     |
-|                                                      |
-| |Chapter01_00|                                       |
-+--------------------------+---------------------------+
-| Breadboard x1            | GPIO Extension Board x1   |
-|                          |                           |
-| |Chapter02_00|           | |Chapter02_01|            |
-+------------------+-------+---------------------------+
-| USB cable x1     | Jumper M/M x15                    |
-|                  |                                   |
-| |Chapter01_02|   | |Chapter01_03|                    |
-+----------------+-+--------------+--------------------+
-| 74HC595 x1     |LED bar graph x1| Resistor 220Ω x8   |
-|                |                |                    |
-| |Chapter18_00| | |Chapter18_01| |   |Chapter18_02|   |
-+----------------+----------------+--------------------+
+.. table::
+    :align: center
+
+    +------------------------------------------------------+
+    | Control board x1                                     |
+    |                                                      |
+    | |Chapter01_00|                                       |
+    +--------------------------+---------------------------+
+    | Breadboard x1            | GPIO Extension Board x1   |
+    |                          |                           |
+    | |Chapter02_00|           | |Chapter02_01|            |
+    +------------------+-------+---------------------------+
+    | USB cable x1     | Jumper M/M x15                    |
+    |                  |                                   |
+    | |Chapter01_02|   | |Chapter01_03|                    |
+    +----------------+-+--------------+--------------------+
+    | 74HC595 x1     |LED bar graph x1| Resistor 220Ω x8   |
+    |                |                |                    |
+    | |Chapter18_00| | |Chapter18_01| |   |Chapter18_02|   |
+    +----------------+----------------+--------------------+
 
 .. |Chapter01_00| image:: ../_static/imgs/1_LED_Blink/Chapter01_00.png
 .. |Chapter01_02| image:: ../_static/imgs/1_LED_Blink/Chapter01_02.png
@@ -51,27 +54,39 @@ The conversion between binary and decimal system has been mentioned before. When
 
 One Hexadecimal bit can present one number between 0-15. In order to facilitate writing, the numbers greater than 9 are written into the letter A-F (case-insensitive) such as 0x2A. The corresponding relationship is as follows:
 
-+-----------+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+
-| Number    | 0   | 1   | 2   | 3   | 4   | 5   | 6   | 7   | 8   | 9   | 10  | 11  | 12  | 13  | 14  | 15  |
-+-----------+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+
-| Represent | 0   | 1   | 2   | 3   | 4   | 5   | 6   | 7   | 8   | 9   | A   | B   | C   | D   | E   | F   |
-+-----------+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+
+.. table::
+    :align: center
+    :class: freenove-ow
+
+    +-----------+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+
+    | Number    | 0   | 1   | 2   | 3   | 4   | 5   | 6   | 7   | 8   | 9   | 10  | 11  | 12  | 13  | 14  | 15  |
+    +===========+=====+=====+=====+=====+=====+=====+=====+=====+=====+=====+=====+=====+=====+=====+=====+=====+
+    | Represent | 0   | 1   | 2   | 3   | 4   | 5   | 6   | 7   | 8   | 9   | A   | B   | C   | D   | E   | F   |
+    +-----------+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+
 
 Conversion between hexadecimal and decimal system is similar to the conversion between hexadecimal and binary such as the sixteen digit 0x12:
 
-+----------+-----+-----+
-| Sequence | 1   | 0   |
-+----------+-----+-----+
-| Number   | 1   | 2   |
-+----------+-----+-----+
+.. table::
+    :align: center
+    :class: freenove-ow
+
+    +----------+-----+-----+
+    | Sequence | 1   | 0   |
+    +==========+=====+=====+
+    | Number   | 1   | 2   |
+    +----------+-----+-----+
 
 Conversion between hexadecimal and decimal system is similar to the conversion between hexadecimal and binary such as the sixteen digit 0x12:
 
-+----------+-----+-----+
-| Sequence | 1   | 0   |
-+----------+-----+-----+
-| Number   | 1   | 2   |
-+----------+-----+-----+
+.. table::
+    :align: center
+    :class: freenove-ow
+
+    +----------+-----+-----+
+    | Sequence | 1   | 0   |
+    +==========+=====+=====+
+    | Number   | 1   | 2   |
+    +----------+-----+-----+
 
 When a hexadecimal number need to be converted to decimal number, first, the nth number of it need be multiplied by n power of 16, then sum all multiplicative results. Take 0x12 as an example:
 
@@ -86,17 +101,25 @@ The result is of the conversion 0x12.
 
 When you write code, sometimes it is convenient to use hexadecimal, especially involving bit operation, because 1 hexadecimal number can be expressed by 4 binary number (2^4=16). The corresponding relationship between 4 bit binary numbers and 1 hexadecimal number is shown as follows:
 
-+-------------------------+------+------+------+------+------+------+------+------+
-| 4 bit binary            | 0000 | 0001 | 0010 | 0011 | 0100 | 0101 | 0110 | 0111 |
-+-------------------------+------+------+------+------+------+------+------+------+
-| 1 figure of hexadecimal | 0    | 1    | 2    | 3    | 4    | 5    | 6    | 7    |
-+-------------------------+------+------+------+------+------+------+------+------+
+.. table::
+    :align: center
+    :class: freenove-ow
 
-+-------------------------+------+------+------+------+------+------+------+------+
-| 4  bit binary           | 1000 | 1001 | 1010 | 1011 | 1100 | 1101 | 1110 | 1111 |
-+-------------------------+------+------+------+------+------+------+------+------+
-| 1 figure of hexadecimal | 8    | 9    | A    | B    | C    | D    | E    | F    |
-+-------------------------+------+------+------+------+------+------+------+------+
+    +-------------------------+------+------+------+------+------+------+------+------+
+    | 4 bit binary            | 0000 | 0001 | 0010 | 0011 | 0100 | 0101 | 0110 | 0111 |
+    +=========================+======+======+======+======+======+======+======+======+
+    | 1 figure of hexadecimal | 0    | 1    | 2    | 3    | 4    | 5    | 6    | 7    |
+    +-------------------------+------+------+------+------+------+------+------+------+
+
+.. table::
+    :align: center
+    :class: freenove-ow
+
+    +-------------------------+------+------+------+------+------+------+------+------+
+    | 4  bit binary           | 1000 | 1001 | 1010 | 1011 | 1100 | 1101 | 1110 | 1111 |
+    +=========================+======+======+======+======+======+======+======+======+
+    | 1 figure of hexadecimal | 8    | 9    | A    | B    | C    | D    | E    | F    |
+    +-------------------------+------+------+------+------+------+------+------+------+
 
 For example, binary 00010010 is corresponding to hexadecimal 0x12.
 
@@ -113,31 +136,35 @@ A 74HC595 chip is used to convert serial data into parallel data. A 74HC595 chip
 
 The ports of 74HC595 are described as follows:
 
-+----------+------------+-------------------------------------------------------------------------------------------------------+
-| Pin name | Pin number | Description                                                                                           |
-+----------+------------+-------------------------------------------------------------------------------------------------------+
-| Q0-Q7    | 15, 1-7    | Parallel data output                                                                                  |
-+----------+------------+-------------------------------------------------------------------------------------------------------+
-| VCC      | 16         | The positive electrode of power supply, the voltage is 2~6V                                           |
-+----------+------------+-------------------------------------------------------------------------------------------------------+
-| GND      | 8          | The negative electrode of power supply                                                                |
-+----------+------------+-------------------------------------------------------------------------------------------------------+
-| DS       | 14         | Serial data Input                                                                                     |
-+----------+------------+-------------------------------------------------------------------------------------------------------+
-|          |            | Enable output,                                                                                        |
-|          |            |                                                                                                       |
-| OE       | 13         | When this pin is in high level, Q0-Q7 is in high resistance state                                     |
-|          |            |                                                                                                       |
-|          |            | When this pin is in low level, Q0-Q7 is in output mode                                                |
-+----------+------------+-------------------------------------------------------------------------------------------------------+
-| ST_CP    | 12         | Parallel update output: when its electrical level is rising, it will update the parallel data output. |
-+----------+------------+-------------------------------------------------------------------------------------------------------+
-| SH_CP    | 11         | Serial shift clock: when its electrical level is rising, serial data input register will do a shift.  |
-+----------+------------+-------------------------------------------------------------------------------------------------------+
-| MR       | 10         | Remove shift register: When this pin is in low level, the content in shift register will be cleared . |
-+----------+------------+-------------------------------------------------------------------------------------------------------+
-| Q7'      | 9          | Serial data output: it can be connected to more 74HC595 in series.                                    |
-+----------+------------+-------------------------------------------------------------------------------------------------------+
+.. table::
+    :align: center
+    :class: freenove-ow
+
+    +----------+------------+-------------------------------------------------------------------------------------------------------+
+    | Pin name | Pin number | Description                                                                                           |
+    +==========+============+=======================================================================================================+
+    | Q0-Q7    | 15, 1-7    | Parallel data output                                                                                  |
+    +----------+------------+-------------------------------------------------------------------------------------------------------+
+    | VCC      | 16         | The positive electrode of power supply, the voltage is 2~6V                                           |
+    +----------+------------+-------------------------------------------------------------------------------------------------------+
+    | GND      | 8          | The negative electrode of power supply                                                                |
+    +----------+------------+-------------------------------------------------------------------------------------------------------+
+    | DS       | 14         | Serial data Input                                                                                     |
+    +----------+------------+-------------------------------------------------------------------------------------------------------+
+    |          |            | Enable output,                                                                                        |
+    |          |            |                                                                                                       |
+    | OE       | 13         | When this pin is in high level, Q0-Q7 is in high resistance state                                     |
+    |          |            |                                                                                                       |
+    |          |            | When this pin is in low level, Q0-Q7 is in output mode                                                |
+    +----------+------------+-------------------------------------------------------------------------------------------------------+
+    | ST_CP    | 12         | Parallel update output: when its electrical level is rising, it will update the parallel data output. |
+    +----------+------------+-------------------------------------------------------------------------------------------------------+
+    | SH_CP    | 11         | Serial shift clock: when its electrical level is rising, serial data input register will do a shift.  |
+    +----------+------------+-------------------------------------------------------------------------------------------------------+
+    | MR       | 10         | Remove shift register: When this pin is in low level, the content in shift register will be cleared . |
+    +----------+------------+-------------------------------------------------------------------------------------------------------+
+    | Q7'      | 9          | Serial data output: it can be connected to more 74HC595 in series.                                    |
+    +----------+------------+-------------------------------------------------------------------------------------------------------+
 
 For more detail, please refer to the datasheet.
 
@@ -147,7 +174,6 @@ Circuit
 Use pin 11, 12, 13 on the control board to control the 74HC595, and connect it to the 8 LEDs of LED bar graph.
 
 .. list-table:: 
-   :width: 100%
    :align: center
 
    * -  Schematic diagram
@@ -240,23 +266,26 @@ In the previous section, we have used 74HC595 to control 8 LEDs of the LED bar g
 Component List
 ===============================
 
-+------------------------------------------------------+
-| Control board x1                                     |
-|                                                      |
-| |Chapter01_00|                                       |
-+--------------------------+---------------------------+
-| Breadboard x1            | GPIO Extension Board x1   |
-|                          |                           |
-| |Chapter02_00|           | |Chapter02_01|            |
-+------------------+-------+---------------------------+
-| USB cable x1     | Jumper M/M x15                    |
-|                  |                                   |
-| |Chapter01_02|   | |Chapter01_03|                    |
-+----------------+-+--------------+--------------------+
-| 74HC595 x1     | LED matrix x1  | Resistor 220Ω x8   |
-|                |                |                    |
-| |Chapter18_00| | |Chapter18_12| |   |Chapter18_02|   |
-+----------------+----------------+--------------------+
+.. table::
+    :align: center
+
+    +------------------------------------------------------+
+    | Control board x1                                     |
+    |                                                      |
+    | |Chapter01_00|                                       |
+    +--------------------------+---------------------------+
+    | Breadboard x1            | GPIO Extension Board x1   |
+    |                          |                           |
+    | |Chapter02_00|           | |Chapter02_01|            |
+    +------------------+-------+---------------------------+
+    | USB cable x1     | Jumper M/M x15                    |
+    |                  |                                   |
+    | |Chapter01_02|   | |Chapter01_03|                    |
+    +----------------+-+--------------+--------------------+
+    | 74HC595 x1     | LED matrix x1  | Resistor 220Ω x8   |
+    |                |                |                    |
+    | |Chapter18_00| | |Chapter18_12| |   |Chapter18_02|   |
+    +----------------+----------------+--------------------+
 
 .. |Chapter18_12| image:: ../_static/imgs/18_LED_Matrix/Chapter18_12.png
 
@@ -283,25 +312,29 @@ Here is how a Common Anode LED Matrix works. First, choose 16 ports on RPI board
 .. image:: ../_static/imgs/18_LED_Matrix/Chapter18_15.png
     :align: center
 
-+--------+-----------+-------------+
-| Column | Binary    | Hexadecimal |
-+--------+-----------+-------------+
-| 1      | 0001 1100 | 0x1c        |
-+--------+-----------+-------------+
-| 2      | 0010 0010 | 0x22        |
-+--------+-----------+-------------+
-| 3      | 0101 0001 | 0x51        |
-+--------+-----------+-------------+
-| 4      | 0100 0101 | 0x45        |
-+--------+-----------+-------------+
-| 5      | 0100 0101 | 0x45        |
-+--------+-----------+-------------+
-| 6      | 0101 0001 | 0x51        |
-+--------+-----------+-------------+
-| 7      | 0010 0010 | 0x22        |
-+--------+-----------+-------------+
-| 8      | 0001 1100 | 0x1c        |
-+--------+-----------+-------------+
+.. table::
+    :align: center
+    :class: freenove-ow
+
+    +--------+-----------+-------------+
+    | Column | Binary    | Hexadecimal |
+    +========+===========+=============+
+    | 1      | 0001 1100 | 0x1c        |
+    +--------+-----------+-------------+
+    | 2      | 0010 0010 | 0x22        |
+    +--------+-----------+-------------+
+    | 3      | 0101 0001 | 0x51        |
+    +--------+-----------+-------------+
+    | 4      | 0100 0101 | 0x45        |
+    +--------+-----------+-------------+
+    | 5      | 0100 0101 | 0x45        |
+    +--------+-----------+-------------+
+    | 6      | 0101 0001 | 0x51        |
+    +--------+-----------+-------------+
+    | 7      | 0010 0010 | 0x22        |
+    +--------+-----------+-------------+
+    | 8      | 0001 1100 | 0x1c        |
+    +--------+-----------+-------------+
 
 Scanning rows is another option to display on an LED Matrix (dot matrix grid). Whether scanning by row or column, 16 GPIO is required. In order to save GPIO ports of control board, two 74HC595 IC Chips are used in the circuit. 
 
@@ -311,7 +344,6 @@ Circuit
 Use pin 11, 12, 13 on control board to control the 74HC595. And connect 74HC595 to the 8 anode pins of LED Matrix, in the meanwhile, connect 8 digitals port on control board to the 8 cathode pins of LED Matrix.
 
 .. list-table:: 
-   :width: 100%
    :align: center
 
    * -  Schematic diagram

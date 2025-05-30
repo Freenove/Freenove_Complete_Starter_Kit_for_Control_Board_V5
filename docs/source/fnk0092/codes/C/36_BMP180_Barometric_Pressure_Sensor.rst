@@ -12,23 +12,26 @@ This project uses the BMP180 barometric pressure sensor to display real-time bar
 Component List
 ==============================
 
-+------------------------------------------------------+
-| Control board x1                                     |
-|                                                      |
-| |Chapter01_00|                                       |
-+--------------------------+---------------------------+
-| Breadboard x1            | GPIO Extension Board x1   |
-|                          |                           |
-| |Chapter02_00|           | |Chapter02_01|            |
-+------------------+-------+---------------------------+
-| USB cable x1     | Jumper M/M x3                     |
-|                  |                                   |
-| |Chapter01_02|   | |Chapter01_03|                    |
-+------------------+-----------------------------------+
-| BMP180 barometric pressure sensor x1                 |
-|                                                      |
-| |Chapter36_00|                                       |
-+------------------------------------------------------+
+.. table::
+    :align: center
+
+    +------------------------------------------------------+
+    | Control board x1                                     |
+    |                                                      |
+    | |Chapter01_00|                                       |
+    +--------------------------+---------------------------+
+    | Breadboard x1            | GPIO Extension Board x1   |
+    |                          |                           |
+    | |Chapter02_00|           | |Chapter02_01|            |
+    +------------------+-------+---------------------------+
+    | USB cable x1     | Jumper M/M x3                     |
+    |                  |                                   |
+    | |Chapter01_02|   | |Chapter01_03|                    |
+    +------------------+-----------------------------------+
+    | BMP180 barometric pressure sensor x1                 |
+    |                                                      |
+    | |Chapter36_00|                                       |
+    +------------------------------------------------------+
 
 .. |Chapter01_00| image:: ../_static/imgs/1_LED_Blink/Chapter01_00.png
 .. |Chapter01_02| image:: ../_static/imgs/1_LED_Blink/Chapter01_02.png
@@ -73,17 +76,20 @@ Below is the pinout of BMP180 barometric pressure sensor.
 
 :orange:`Pin description:`
 
-+--------+-----------------------------------+
-| symbol |             Function              |
-+========+===================================+
-| VIN    | Power supply pin, +1.6V~3.6V      |
-+--------+-----------------------------------+
-| GND    | GND                               |
-+--------+-----------------------------------+
-| SCL    | Serial clock pin of I2C interface |
-+--------+-----------------------------------+
-| SDA    | Serial data pin of I2C interface  |
-+--------+-----------------------------------+
+.. table::
+    :class: freenove-ow
+
+    +--------+-----------------------------------+
+    | symbol |             Function              |
+    +========+===================================+
+    | VIN    | Power supply pin, +1.6V~3.6V      |
+    +--------+-----------------------------------+
+    | GND    | GND                               |
+    +--------+-----------------------------------+
+    | SCL    | Serial clock pin of I2C interface |
+    +--------+-----------------------------------+
+    | SDA    | Serial data pin of I2C interface  |
+    +--------+-----------------------------------+
 
 Please do not use voltage beyond the power supply range to avoid damage to the BMP180 barometric pressure sensor.
 
@@ -91,7 +97,6 @@ Circuit
 ============================
 
 .. list-table:: 
-   :width: 100%
    :align: center
 
    * -  Schematic diagram

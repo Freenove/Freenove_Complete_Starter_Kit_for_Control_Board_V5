@@ -12,23 +12,23 @@ First, let's get the servo to rotate.
 Component List
 ================================
 
-+------------------------------------------------------+
-| Control board x1                                     |
-|                                                      |
-| |Chapter01_00|                                       |
-+--------------------------+---------------------------+
-| Breadboard x1            | GPIO Extension Board x1   |
-|                          |                           |
-| |Chapter02_00|           | |Chapter02_01|            |
-+------------------+-------+---------------------------+
-| USB cable x1     | Jumper M/M x3                     |
-|                  |                                   |
-| |Chapter01_02|   | |Chapter01_03|                    |
-+------------------+-----------------------------------+
-| Servo x1                                             |
-|                                                      |
-| |Chapter14_00|                                       |
-+------------------------------------------------------+
++-----------------------------------------------------+
+| Control board x1                                    |
+|                                                     |
+| |Chapter01_00|                                      |
++--------------------------+--------------------------+
+| Breadboard x1            | GPIO Extension Board x1  |
+|                          |                          |
+| |Chapter02_00|           | |Chapter02_01|           |
++------------------+-------+--------------------------+
+| USB cable x1     | Jumper M/M x3                    |
+|                  |                                  |
+| |Chapter01_02|   | |Chapter01_03|                   |
++------------------+----------------------------------+
+| Servo x1                                            |
+|                                                     |
+| |Chapter14_00|                                      |
++-----------------------------------------------------+
 
 .. |Chapter01_00| image:: ../_static/imgs/1_LED_Blink/Chapter01_00.png
 .. |Chapter01_02| image:: ../_static/imgs/1_LED_Blink/Chapter01_02.png
@@ -50,19 +50,23 @@ Servo is a compact package which consists of a DC Motor, a set of reduction gear
 
 We will use a 50Hz PWM signal with a duty cycle in a certain range to drive the Servo. The lasting time 0.5ms-2.5ms of PWM single cycle high level corresponds to the Servo angle 0 degrees - 180 degree linearly. Part of the corresponding values are as follows:
 
-+-----------------+-------------+
-| High level time | Servo angle |
-+-----------------+-------------+
-| 0.5ms           | 0 degree    |
-+-----------------+-------------+
-| 1ms             | 45 degree   |
-+-----------------+-------------+
-| 1.5ms           | 90 degree   |
-+-----------------+-------------+
-| 2ms             | 135 degree  |
-+-----------------+-------------+
-| 2.5ms           | 180 degree  |
-+-----------------+-------------+
+.. table::
+    :align: center
+    :class: freenove-ow
+
+    +-----------------+-------------+
+    | High level time | Servo angle |
+    +-----------------+-------------+
+    | 0.5ms           | 0 degree    |
+    +-----------------+-------------+
+    | 1ms             | 45 degree   |
+    +-----------------+-------------+
+    | 1.5ms           | 90 degree   |
+    +-----------------+-------------+
+    | 2ms             | 135 degree  |
+    +-----------------+-------------+
+    | 2.5ms           | 180 degree  |
+    +-----------------+-------------+
 
 When you change the servo signal, the servo will rotate to the designated position.
 
@@ -74,7 +78,6 @@ Use pin 3 of the control board to drive the servo.
 Pay attention to the color of servo lead wire: VCC (red), GND (brown), and signal line (orange). The wrong connection can cause damage to servo.
 
 .. list-table:: 
-   :width: 100%
    :align: center
 
    * -  Schematic diagram
@@ -191,7 +194,6 @@ Circuit
 Use pin A0 of the control board to detect the voltage of rotary potentiometer, and pin 3 to drive the servo.
 
 .. list-table:: 
-   :width: 100%
    :align: center
 
    * -  Schematic diagram

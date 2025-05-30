@@ -12,27 +12,30 @@ Now let us try to use vibration switch to detect vibration.
 Component List
 ==============================
 
-+-----------------------------------------------------------------------------+
-| Control board x1                                                            |
-|                                                                             |
-| |Chapter01_00|                                                              |
-+--------------------------+--------------------------------------------------+
-| Breadboard x1            | GPIO Extension Board x1                          |
-|                          |                                                  |
-| |Chapter02_00|           | |Chapter02_01|                                   |
-+------------------+-------+--------------------------------------------------+
-| USB cable x1     | Jumper M/M x15                                           |
-|                  |                                                          |
-| |Chapter01_02|   | |Chapter01_03|                                           |
-+------------------+-------+--------------------------------------------------+
-| NPN transistorx1         | Active buzzer x1                                 |
-|                          |                                                  |
-| |Chapter24_00|           | |Chapter24_01|                                   |
-+--------------------------+--------------------------------------------------+
-| Resistor 1kΩ x1          | Vibration switch x1                              |
-|                          |                                                  |
-| |Chapter24_02|           | |Chapter24_03|                                   |
-+--------------------------+--------------------------------------------------+
+.. table::
+    :align: center
+
+    +-----------------------------------------------------+
+    | Control board x1                                    |
+    |                                                     |
+    | |Chapter01_00|                                      |
+    +--------------------------+--------------------------+
+    | Breadboard x1            | GPIO Extension Board x1  |
+    |                          |                          |
+    | |Chapter02_00|           | |Chapter02_01|           |
+    +------------------+-------+--------------------------+
+    | USB cable x1     | Jumper M/M x15                   |
+    |                  |                                  |
+    | |Chapter01_02|   | |Chapter01_03|                   |
+    +------------------+-------+--------------------------+
+    | NPN transistorx1         | Active buzzer x1         |
+    |                          |                          |
+    | |Chapter24_00|           | |Chapter24_01|           |
+    +--------------------------+--------------------------+
+    | Resistor 1kΩ x1          | Vibration switch x1      |
+    |                          |                          |
+    | |Chapter24_02|           | |Chapter24_03|           |
+    +--------------------------+--------------------------+
 
 .. |Chapter01_00| image:: ../_static/imgs/1_LED_Blink/Chapter01_00.png
 .. |Chapter01_02| image:: ../_static/imgs/1_LED_Blink/Chapter01_02.png
@@ -70,17 +73,21 @@ Some of the control board digital pins can be configured to interrupt mode, whic
 
 Pin 2 and 3 of the control board can be configured to interrupt mode. Conditions that trigger interrupt can be configured to:
 
-+-----------+---------------------------------------------------------+
-| Condition | Function                                                |
-+-----------+---------------------------------------------------------+
-| LOW       | to trigger the interrupt whenever the pin is low        |
-+-----------+---------------------------------------------------------+
-| CHANGE    | to trigger the interrupt whenever the pin changes value |
-+-----------+---------------------------------------------------------+
-| RISING    | to trigger when the pin goes from low to high           |
-+-----------+---------------------------------------------------------+
-| FALLING   | to trigger for when the pin goes from high to low       |
-+-----------+---------------------------------------------------------+
+.. table::
+    :align: center
+    :class: freenove-ow
+
+    +-----------+---------------------------------------------------------+
+    | Condition | Function                                                |
+    +===========+=========================================================+
+    | LOW       | to trigger the interrupt whenever the pin is low        |
+    +-----------+---------------------------------------------------------+
+    | CHANGE    | to trigger the interrupt whenever the pin changes value |
+    +-----------+---------------------------------------------------------+
+    | RISING    | to trigger when the pin goes from low to high           |
+    +-----------+---------------------------------------------------------+
+    | FALLING   | to trigger for when the pin goes from high to low       |
+    +-----------+---------------------------------------------------------+
 
 Interrupts are useful for making things happen automatically in microcontroller programs, and they can help solve timing problems. Ideal tasks for using an interrupt may include reading a rotary encoder, or monitoring user input.
 
@@ -90,7 +97,6 @@ Circuit
 Use pin 3 on the control board to connect vibration switch, and pin 13 to drive buzzer.
 
 .. list-table:: 
-   :width: 100%
    :align: center
 
    * -  Schematic diagram

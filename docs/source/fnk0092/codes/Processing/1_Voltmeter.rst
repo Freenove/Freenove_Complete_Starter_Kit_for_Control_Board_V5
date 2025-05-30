@@ -14,23 +14,26 @@ First, make a simple voltmeter.
 Component List
 ==============================
 
-+------------------------------------------------------+
-| Control board x1                                     |
-|                                                      |
-| |Chapter01_00|                                       |
-+--------------------------+---------------------------+
-| Breadboard x1            | GPIO Extension Board x1   |
-|                          |                           |
-| |Chapter02_00|           | |Chapter02_01|            |
-+------------------+-------+---------------------------+
-| USB cable x1     | Jumper M/M x3                     |
-|                  |                                   |
-| |Chapter01_02|   | |Chapter01_03|                    |
-+------------------+-----------------------------------+
-| Rotary potentiometer x2                              |
-|                                                      |
-| |Chapter08_00|                                       |
-+------------------------------------------------------+
+.. table::
+    :align: center
+
+    +------------------------------------------------------+
+    | Control board x1                                     |
+    |                                                      |
+    | |Chapter01_00|                                       |
+    +--------------------------+---------------------------+
+    | Breadboard x1            | GPIO Extension Board x1   |
+    |                          |                           |
+    | |Chapter02_00|           | |Chapter02_01|            |
+    +------------------+-------+---------------------------+
+    | USB cable x1     | Jumper M/M x3                     |
+    |                  |                                   |
+    | |Chapter01_02|   | |Chapter01_03|                    |
+    +------------------+-----------------------------------+
+    | Rotary potentiometer x2                              |
+    |                                                      |
+    | |Chapter08_00|                                       |
+    +------------------------------------------------------+
 
 .. |Chapter01_00| image:: ../_static/imgs/1_LED_Blink/Chapter01_00.png
 .. |Chapter01_01| image:: ../_static/imgs/1_LED_Blink/Chapter01_01.png
@@ -47,7 +50,6 @@ Circuit
 Use A0 port to detect the voltage of rotary potentiometer. 
 
 .. list-table:: 
-   :width: 100%
    :align: center
 
    * -  Schematic diagram
@@ -96,7 +98,7 @@ voltage value of other circuits. Note that the measurement voltage cannot exceed
 
 The left side of the software interface is a voltage scale, which is used to indicate the voltage of the waveform.
 
-The "1000ms" on top left corner is the time of a square, and you can press “↑” and “↓” key on keyboard to adjust it.
+The "1000ms" on top left corner is the time of a square, and you can press "↑" and "↓" key on keyboard to adjust it.
 
 The "0.00V" on top right corner is the voltage value of current signal.
 
@@ -112,23 +114,26 @@ Now, let's make a dual-channel voltmeter.
 Component list
 ==================================
 
-+------------------------------------------------------+
-| Control board x1                                     |
-|                                                      |
-| |Chapter01_00|                                       |
-+--------------------------+---------------------------+
-| Breadboard x1            | GPIO Extension Board x1   |
-|                          |                           |
-| |Chapter02_00|           | |Chapter02_01|            |
-+------------------+-------+---------------------------+
-| USB cable x1     | Jumper M/M x3                     |
-|                  |                                   |
-| |Chapter01_02|   | |Chapter01_03|                    |
-+------------------+-----------------------------------+
-| Rotary potentiometer x2                              |
-|                                                      |
-| |Chapter08_00|                                       |
-+------------------------------------------------------+
+.. table::
+    :align: center
+
+    +------------------------------------------------------+
+    | Control board x1                                     |
+    |                                                      |
+    | |Chapter01_00|                                       |
+    +--------------------------+---------------------------+
+    | Breadboard x1            | GPIO Extension Board x1   |
+    |                          |                           |
+    | |Chapter02_00|           | |Chapter02_01|            |
+    +------------------+-------+---------------------------+
+    | USB cable x1     | Jumper M/M x3                     |
+    |                  |                                   |
+    | |Chapter01_02|   | |Chapter01_03|                    |
+    +------------------+-----------------------------------+
+    | Rotary potentiometer x2                              |
+    |                                                      |
+    | |Chapter08_00|                                       |
+    +------------------------------------------------------+
 
 Circuit
 ====================================
@@ -136,7 +141,6 @@ Circuit
 Use A0, A1 ports on the control board to detect the voltage of rotary potentiometers.
 
 .. list-table:: 
-   :width: 100%
    :align: center
 
    * -  Schematic diagram
