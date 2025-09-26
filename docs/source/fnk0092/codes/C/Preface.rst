@@ -22,6 +22,7 @@ There are multiple versions of Freenove control board. Your purchase may be one 
 .. list-table:: 
    :header-rows: 1 
    :align: center
+   :class: table-line
    
    * -  Freenove Control Board (WiFi)
      -  Freenove Control Board (minina)
