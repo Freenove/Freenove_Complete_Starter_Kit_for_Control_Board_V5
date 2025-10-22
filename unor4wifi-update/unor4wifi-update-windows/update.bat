@@ -13,7 +13,7 @@ IF %ERRORLEVEL% NEQ 0 (
 
 echo Start flashing firmware
 timeout /t 5 /nobreak > NUL
-CALL bin\espflash write-bin -b 115200 0x0 firmware\UNOR4-WIFI-S3-0.5.2.bin
+CALL bin\espflash write-bin -b 115200 0x0 firmware\UNOR4-WIFI-S3-0.6.0.bin
 
 @pause
 exit /b 0

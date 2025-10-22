@@ -1,37 +1,59 @@
-/**********************************************************************
-  Filename    : Sketch_23.1.1_Get_Input_Characters
-  Description : Get Input Characters
-  Auther      : www.freenove.com
-  Modification: 2024/08/05
-**********************************************************************/
+/**
+ * @author: Vegetable-SYC
+ *
+ * @file: Sketch_23.1.1_Get_Input_Characters.ino
+ *
+ * @date: 2025/10/22
+**/
 
-#include <Keypad.h>
+// Define row and column pins
+const byte ROWS = 4;
+const byte COLS = 4;
+byte rowPins[ROWS] = {11, 10, 9, 8};  // Row pins
+byte colPins[COLS] = {7, 6, 5, 4};    // Column pins
 
-// define the symbols on the buttons of the keypad
-char keys[4][4] = {
-  {'1', '2', '3', 'A'},
-  {'4', '5', '6', 'B'},
-  {'7', '8', '9', 'C'},
-  {'*', '0', '#', 'D'}
+// Key mapping table
+char keys[ROWS][COLS] = {
+  {'1','2','3','A'},
+  {'4','5','6','B'},
+  {'7','8','9','C'},
+  {'*','0','#','D'}
 };
 
-byte rowPins[4] = {11, 10, 9, 8}; // connect to the row pinouts of the keypad
-byte colPins[4] = {7, 6, 5, 4};   // connect to the column pinouts of the keypad
-
-// initialize an instance of class NewKeypad
-Keypad myKeypad = Keypad(makeKeymap(keys), rowPins, colPins, 4, 4);
-
 void setup() {
-  Serial.begin(9600); // Initialize the serial port and set the baud rate to 9600
-  Serial.println("UNO is ready!");  // Print the string "UNO is ready!"
-}
-
-void loop() {
-  // Get the character input
-  char keyPressed = myKeypad.getKey();
-  // If there is a character input, sent it to the serial port
-  if (keyPressed) {
-    Serial.println(keyPressed);
+  Serial.begin(9600);
+  // Configure row pins as OUTPUT and set HIGH initially
+  for (byte r = 0; r < ROWS; r++) {
+    pinMode(rowPins[r], OUTPUT);
+    digitalWrite(rowPins[r], HIGH);
+  }
+  // Configure column pins as INPUT with pull-up resistors
+  for (byte c = 0; c < COLS; c++) {
+    pinMode(colPins[c], INPUT_PULLUP);
   }
 }
 
+void loop() {
+  char key = getKey();
+  if (key != '\0') {
+    Serial.print("Pressed: ");
+    Serial.println(key);
+  }
+}
+
+char getKey() {
+  // Scan each row sequentially
+  for (byte r = 0; r < ROWS; r++) {
+    digitalWrite(rowPins[r], LOW);              // Activate current row
+    for (byte c = 0; c < COLS; c++) {
+      if (digitalRead(colPins[c]) == LOW) {     // Check if key is pressed (LOW)
+        delay(20);                              // Debounce delay
+        while (digitalRead(colPins[c]) == LOW); // Wait for key release
+        digitalWrite(rowPins[r], HIGH);         // Deactivate current row
+        return keys[r][c];                      // Return corresponding key value
+      }
+    }
+    digitalWrite(rowPins[r], HIGH);             // Deactivate current row
+  }
+  return '\0';                                  // No key pressed
+}
