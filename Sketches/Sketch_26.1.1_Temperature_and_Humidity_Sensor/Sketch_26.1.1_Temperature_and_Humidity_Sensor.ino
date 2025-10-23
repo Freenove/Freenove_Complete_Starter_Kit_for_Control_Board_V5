@@ -1,42 +1,60 @@
-/**********************************************************************
-  Filename    : Sketch_26.1.1_Temperature_and_Humidity_Sensor
-  Description : Temperature & Humidity Sensor
-  Auther      : www.freenove.com
-  Modification: 2024/08/05
-**********************************************************************/
+/**
+ * @author: Vegetable-SYC
+ *
+ * @file: Sketch_26.1.1_Temperature_and_Humidity_Sensor
+ *
+ * @description: Temperature & Humidity Sensor
+ *
+ * @date: 2025/10/23
+**/
 
-#include <dht.h>
+#include <Adafruit_Sensor.h>
+#include <DHT.h>
+#include <DHT_U.h>
 
-dht DHT;          // create dht object
-int dhtPin = 10;  // the number of the DHT11 sensor pin
+#define DHTPIN 10     // Digital pin connected to the DHT sensor 
+
+#define DHTTYPE    DHT11     // DHT 11
+
+DHT_Unified dht(DHTPIN, DHTTYPE);
+
+uint32_t delayMS;
 
 void setup() {
-  Serial.begin(9600); // Initialize the serial port and set the baud rate to 9600
+  Serial.begin(9600);
+  // Initialize device.
+  dht.begin();
   Serial.println("UNO is ready!");  // Print the string "UNO is ready!"
+  sensor_t sensor;
+  // Set delay between sensor readings based on sensor details.
+  dht.humidity().getSensor(&sensor);
+  dht.temperature().getSensor(&sensor);
 }
 
 void loop() {
-  // read DHT11 and judge the state according to the return value
-  int chk = DHT.read11(dhtPin);
-  switch (chk)
-  {
-    case DHTLIB_OK: // When read data successfully, print temperature and humidity data
-      Serial.print("Humidity: ");
-      Serial.print(DHT.humidity);
-      Serial.print("%, Temperature: ");
-      Serial.print(DHT.temperature);
-      Serial.println("C");
-      break;
-    case DHTLIB_ERROR_CHECKSUM: // Checksum error
-      Serial.println("Checksum error");
-      break;
-    case DHTLIB_ERROR_TIMEOUT:  // Time out error
-      Serial.println("Time out error");
-      break;
-    default:                    // Unknown error
-      Serial.println("Unknown error");
-      break;
-  }
+  // Delay between measurements.
   delay(1000);
-}
+  // Get temperature event and print its value.
+  sensors_event_t event;
 
+  // Get humidity event and print its value.
+  dht.humidity().getEvent(&event);
+  if (isnan(event.relative_humidity)) {
+    Serial.println("Error reading humidity!");
+  }
+  else {
+    Serial.print("Humidity: ");
+    Serial.print(event.relative_humidity);
+    Serial.print("%, ");
+  }
+
+  dht.temperature().getEvent(&event);
+  if (isnan(event.temperature)) {
+    Serial.println("Error reading temperature!");
+  }
+  else {
+    Serial.print("Temperature: ");
+    Serial.print(event.temperature);
+    Serial.println("℃");
+  }
+}
