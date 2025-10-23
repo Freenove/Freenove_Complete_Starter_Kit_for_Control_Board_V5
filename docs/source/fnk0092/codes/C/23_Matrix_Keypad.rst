@@ -80,37 +80,9 @@ Sketch
 Sketch Get_Input_Characters
 --------------------------------------------------
 
-Before writing code, we need to import the library needed.
-
-Click "Add .ZIP Library..." and then find Keypad.zip in libraries folder (this folder is in the folder unzipped form the ZIP file we provided). This library can facilitate our operation of keypad.
- 
-You can also type "Keypad" into the library search bar to install the library.
-
-.. image:: ../_static/imgs/23_Matrix_Keypad/Chapter23_05.png
-    :align: center
-
-Now write the code to obtain the keypad characters, and send them to the serial port.
-
 .. literalinclude:: ../../../freenove_Kit/Sketches/Sketch_23.1.1_Get_Input_Characters/Sketch_23.1.1_Get_Input_Characters.ino
     :linenos: 
     :language: c
-    :lines: 1-36
-    :dedent:
-
-In the code, we use a Keypad class provided by the Keypad library to operate the keypad. The following code is to instantiate a keypad object, and the last two parameters represent the number of the row and column of the keypad.
-
-.. literalinclude:: ../../../freenove_Kit/Sketches/Sketch_23.1.1_Get_Input_Characters/Sketch_23.1.1_Get_Input_Characters.ino
-    :linenos: 
-    :language: c
-    :lines: 22-22
-    :dedent:
-
-The two-dimensional arrays record the keypad characters, and these characters can be returned when you press the keyboard.
-
-.. literalinclude:: ../../../freenove_Kit/Sketches/Sketch_23.1.1_Get_Input_Characters/Sketch_23.1.1_Get_Input_Characters.ino
-    :linenos: 
-    :language: c
-    :lines: 11-16
     :dedent:
 
 These two arrays record the row and column's connection pins of keypad.
@@ -118,7 +90,15 @@ These two arrays record the row and column's connection pins of keypad.
 .. literalinclude:: ../../../freenove_Kit/Sketches/Sketch_23.1.1_Get_Input_Characters/Sketch_23.1.1_Get_Input_Characters.ino
     :linenos: 
     :language: c
-    :lines: 18-19
+    :lines: 12-13
+    :dedent:
+
+The two-dimensional arrays record the keypad characters, and these characters can be returned when you press the keyboard.
+
+.. literalinclude:: ../../../freenove_Kit/Sketches/Sketch_23.1.1_Get_Input_Characters/Sketch_23.1.1_Get_Input_Characters.ino
+    :linenos: 
+    :language: c
+    :lines: 16-21
     :dedent:
 
 Send the input that get from the keyboard to the computer via the serial port in function loop().
@@ -126,7 +106,7 @@ Send the input that get from the keyboard to the computer via the serial port in
 .. literalinclude:: ../../../freenove_Kit/Sketches/Sketch_23.1.1_Get_Input_Characters/Sketch_23.1.1_Get_Input_Characters.ino
     :linenos: 
     :language: c
-    :lines: 29-36
+    :lines: 36-42
     :dedent:
 
 Verify and upload the code, open the Serial Monitor and press the keypad, and then you will see the characters you press being printed out.
@@ -199,7 +179,6 @@ Now write the code to obtain the keypad characters, and compare them with the pr
 .. literalinclude:: ../../../freenove_Kit/Sketches/Sketch_23.2.1_Combination_Lock/Sketch_23.2.1_Combination_Lock.ino
     :linenos: 
     :language: c
-    :lines: 1-47
     :dedent:
 
 Based on the last section, this code adds a comparison function, the corresponding action will be different whenever the password is right or wrong.
@@ -232,7 +211,7 @@ Compare with the preset password after 4 characters are input and adopt the corr
 .. literalinclude:: ../../../freenove_Kit/Sketches/Sketch_23.2.1_Combination_Lock/Sketch_23.2.1_Combination_Lock.ino
     :linenos: 
     :language: c
-    :lines: 50-67
+    :lines: 62-81
     :dedent:
 
 Verify and upload the code, and press the keypad to input password with 4 characters. If the input is correct, the servo will move to a certain degree, and then return to the original position. If the input is error, an input error alarm will be generated.

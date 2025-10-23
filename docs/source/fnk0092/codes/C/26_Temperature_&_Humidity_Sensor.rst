@@ -76,30 +76,27 @@ Sketch
 Sketch Temperature_&_Humidity_Sensor
 -----------------------------------------------------
 
-This code uses a library named "DHTlib", if you have not installed it, please do so first.
+This code uses a library named " DHT kxn ", if you have not installed it, please do so first.
 
-Library is an important feature of the open source world, and we know that Arduino is an open source platform
-
-that everyone can contribute to.
+Library is an important feature of the open source world, and we know that Arduino is an open source platform that everyone can contribute to.
 
 How to install the library
 -----------------------------
 
 There are two ways to add libraries.
 
-you can search "DHTlib" in library manager to install.
+you can search "DHT kxn" in library manager to install.
 
 .. image:: ../_static/imgs/26_Temperature_&_Humidity_Sensor/Chapter26_05.png
     :align: center
 
-The second way, Click "Add .ZIP Library..." and then find DHT.zip in libraries folder (this folder is in the folder unzipped from the ZIP file we provided). This library can make it convenient for us to control DHT11.
+The second way, Click "Add .ZIP Library..." and then find DHT_kxn.zip in libraries folder (this folder is in the folder unzipped from the ZIP file we provided). This library can make it convenient for us to control DHT11.
 
 Now, write code to get the temperature and humidity data measured by DHT11, and sent it to the serial port.
 
 .. literalinclude:: ../../../freenove_Kit/Sketches/Sketch_26.1.1_Temperature_and_Humidity_Sensor/Sketch_26.1.1_Temperature_and_Humidity_Sensor.ino
     :linenos: 
     :language: c
-    :lines: 1-41
     :dedent:
 
 In the code, we use the dht class provided by the DHT library to control DHT11. The following is a DHT object. As shown below, instantiate one dht object.
@@ -107,34 +104,15 @@ In the code, we use the dht class provided by the DHT library to control DHT11. 
 .. literalinclude:: ../../../freenove_Kit/Sketches/Sketch_26.1.1_Temperature_and_Humidity_Sensor/Sketch_26.1.1_Temperature_and_Humidity_Sensor.ino
     :linenos: 
     :language: c
-    :lines: 10-10
+    :lines: 19-19
     :dedent:
 
 Read DHT11 data and send the result to the serial port in the loop() function.
 
-.. code-block:: c
-    :linenos:
-
-    // read DHT11 and judge the state according to the return value
-    int chk = DHT.read11(dhtPin);
-    switch (chk)
-    {
-        case DHTLIB_OK: // When read data successfully print temperature and humidity data
-        Serial.print("Humidity: ");
-        Serial.print(DHT.humidity);
-        Serial.print("%, Temperature: ");
-        Serial.print(DHT.temperature);
-        Serial.println("C");
-        break;
-        ......
-    }
-
-Send the failure reason when fail to read.
-
 .. literalinclude:: ../../../freenove_Kit/Sketches/Sketch_26.1.1_Temperature_and_Humidity_Sensor/Sketch_26.1.1_Temperature_and_Humidity_Sensor.ino
     :linenos: 
     :language: c
-    :lines: 30-38
+    :lines: 40-59
     :dedent:
 
 Verify and upload the code, open the Serial Monitor, and then you will see the temperature and humidity data being sent from control board.
