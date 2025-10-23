@@ -59,26 +59,26 @@ void loop() {
     // Save the input characters
     keyIn[keyInNum++] = keyPressed;
 
-// Judge the correctness after input
-if (keyInNum == 4) {
-  bool isRight = true;            // Save whether password is correct or not
-  for (int i = 0; i < 4; i++) {   // Judge whether each character of the password is correct or not
-      if (keyIn[i] != passWord[i])
-          isRight = false;        // Mark wrong password if there is any wrong character.
-  }
+    // Judge the correctness after input
+    if (keyInNum == 4) {
+      bool isRight = true;            // Save whether password is correct or not
+      for (int i = 0; i < 4; i++) {   // Judge whether each character of the password is correct or not
+          if (keyIn[i] != passWord[i])
+              isRight = false;        // Mark wrong password if there is any wrong character.
+      }
 
-  if (isRight) {                  // If the input password is right
-      myservo.write(135);         // Open the switch
-      delay(2000);                // Delay a period of time
-      myservo.write(45);          // Close the switch
-  }
-  else {                          // If the input password is wrong
-      digitalWrite(buzzerPin, HIGH);// Make a wrong password prompt tone
-      delay(500);
-      digitalWrite(buzzerPin, LOW);
-  }
-  keyInNum = 0; // Reset the number of the input characters to 0
-}
+      if (isRight) {                  // If the input password is right
+          myservo.write(135);         // Open the switch
+          delay(2000);                // Delay a period of time
+          myservo.write(45);          // Close the switch
+      }
+      else {                          // If the input password is wrong
+          digitalWrite(buzzerPin, HIGH);// Make a wrong password prompt tone
+          delay(500);
+          digitalWrite(buzzerPin, LOW);
+      }
+      keyInNum = 0; // Reset the number of the input characters to 0
+    }
   }
 }
 
