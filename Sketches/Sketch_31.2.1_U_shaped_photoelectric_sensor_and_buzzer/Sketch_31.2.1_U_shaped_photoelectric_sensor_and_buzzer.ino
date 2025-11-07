@@ -5,7 +5,7 @@
   Modification: 2024/08/05
 **********************************************************************/
 
-int sensorPin = 2;  // the number of the infrared motion sensor pin
+int sensorPin = 3;  // the number of the infrared motion sensor pin
 int ledPin = 13;     // the number of the LED pin
 int buzzerPin = 5;  // the number of the LED pin
 
