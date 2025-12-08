@@ -68,6 +68,21 @@ Programs written with Arduino IDE are called sketches. These sketches are writte
 .. |Arduino10| image:: ../_static/imgs/ArduinoIDE/Preface10.png
 .. |Arduino11| image:: ../_static/imgs/ArduinoIDE/Preface11.png
 
+Installation of Development Board Support Package
+*********************************************************
+
+1. Open Arduino IDE. Click **Tools** > **Board** > **Boards Manager...** on the menu bar.
+
+.. image:: ../_static/imgs/0_Ready/Chapter00_26.png
+    :align: center
+
+Enter **Arduino UNO R4** in the searching box, and select ”**Arduino UNO R4**” and click on Install.
+
+.. image:: ../_static/imgs/0_Ready/Chapter00_27.png
+    :align: center
+
+Click Yes in the pop-up “**dpinst-amd64.exe**” installation window. (Without it, you will fail to communicate with Arduino.) Thus far, we have finished installing the development support package.
+
 First Use
 ********************************
 
