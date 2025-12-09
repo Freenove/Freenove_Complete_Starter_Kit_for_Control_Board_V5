@@ -105,6 +105,7 @@ To export the sketch to the application, you must first save it.
 So far, we have completed the first use. I believe you have felt the joy of it.
 
 Communication protocol (Important)
+*********************************************
 
 We need to write code for control board and Processing respectively to complete the interaction project of them.
 
