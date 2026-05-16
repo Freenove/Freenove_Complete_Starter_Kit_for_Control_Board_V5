@@ -341,13 +341,13 @@ Use pin A0 of the control board to detect the voltage of rotary potentiometer; p
    * -  Schematic diagram
    * -  |Chapter13_25|
    * -  Hardware connection 
-     
+
         If you need any support, please feel free to contact us via: support@freenove.com
 
-   * -  |Chapter13_26|
+   * -  |Chapter13_27|
 
 .. |Chapter13_25| image:: ../_static/imgs/13_Motor/Chapter13_25.png
-.. |Chapter13_26| image:: ../_static/imgs/13_Motor/Chapter13_26.png
+.. |Chapter13_27| image:: ../_static/imgs/13_Motor/Chapter13_27.png
 
 The DC electric power here can also be powered using 5V or 3.3V on the control board.
 
