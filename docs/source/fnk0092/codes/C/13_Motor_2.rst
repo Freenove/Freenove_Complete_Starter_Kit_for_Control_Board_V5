@@ -37,6 +37,11 @@ Component List
     | |Chapter13_19|   | |Chapter13_20|  |  |Chapter13_21| |
     +------------------+-----------------+-----------------+
 
+.. |Chapter01_00| image:: ../_static/imgs/1_LED_Blink/Chapter01_00.png
+.. |Chapter01_02| image:: ../_static/imgs/1_LED_Blink/Chapter01_02.png
+.. |Chapter01_03| image:: ../_static/imgs/1_LED_Blink/Chapter01_03.png
+.. |Chapter02_00| image:: ../_static/imgs/2_Two_LEDs_Blink/Chapter02_00.png
+.. |Chapter02_01| image:: ../_static/imgs/2_Two_LEDs_Blink/Chapter02_01.png
 .. |Chapter13_19| image:: ../_static/imgs/13_Motor/Chapter13_19.png
 .. |Chapter13_20| image:: ../_static/imgs/13_Motor/Chapter13_20.png
 .. |Chapter13_21| image:: ../_static/imgs/13_Motor/Chapter13_21.png

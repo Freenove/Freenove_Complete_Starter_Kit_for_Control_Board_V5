@@ -381,7 +381,7 @@ In the loop () function, detect the digital value of rotary potentiometer, and c
     :lines: 22-34
     :dedent:
 
-.. py:function:: abs(x)	
+.. py:function:: abs(x)
     
     Computes the absolute value of a number.
 
